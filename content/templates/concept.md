@@ -1,5 +1,6 @@
 ---
 title: 개념 이름
+# aliases에 파일 이름과 같은 값(대소문자만 다른 것 포함)을 넣지 않는다. 링크가 리디렉트 페이지로 빠진다.
 aliases: [다른 이름, English name]
 tags: [분야]
 date: YYYY-MM-DD
@@ -11,7 +12,8 @@ description: 이 개념이 답하는 질문을 한 문장으로.
 
 ## 정의
 
-![그림 설명](../images/<글 이름>/<그림>.png)
+![그림 설명](../../images/<글 이름>/<그림>.png)
+<!-- 그림 경로는 이 파일의 깊이에 맞춘다. content/papers/처럼 한 단계면 ../images/, content/courses/<과목>/처럼 두 단계면 ../../images/ -->
 *그림 1. 그림이 보여 주는 것 한 줄.*
 
 ## 직관 / 왜 그런가

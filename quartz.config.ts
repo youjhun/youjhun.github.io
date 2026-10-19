@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "유지훈의 공부 위키",
+    pageTitle: "Jihun Yu's Engineering Note",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
@@ -18,11 +18,11 @@ const config: QuartzConfig = {
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
-      fontOrigin: "googleFonts",
+      fontOrigin: "local",
       cdnCaching: true,
       typography: {
-        header: "Noto Sans KR",
-        body: "Noto Sans KR",
+        header: "Pretendard Variable",
+        body: "Pretendard Variable",
         code: "JetBrains Mono",
       },
       colors: {

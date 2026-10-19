@@ -1,7 +1,8 @@
 """모든 그림이 같은 글꼴·색·여백을 쓰게 하는 공통 설정.
 
 그림은 흰 배경 PNG로 저장한다. 사이트의 다크 모드에서도 카드처럼 읽히게 하려는 것이다.
-한글 라벨은 나눔고딕을 쓴다(Ubuntu: `apt-get install fonts-nanum`).
+한글 라벨은 사이트 본문과 같은 Pretendard를 쓴다. 없으면 나눔고딕, 그다음 DejaVu Sans로 넘어간다.
+Pretendard OTF는 npm 패키지 `pretendard`의 dist/public/static에 있다.
 """
 
 from pathlib import Path
@@ -26,7 +27,7 @@ LIGHT = "#e9eef2"
 def setup():
     plt.rcParams.update(
         {
-            "font.family": ["NanumGothic", "DejaVu Sans"],
+            "font.family": ["Pretendard", "NanumGothic", "DejaVu Sans"],
             "axes.unicode_minus": False,
             "mathtext.fontset": "dejavusans",
             "savefig.dpi": 160,
