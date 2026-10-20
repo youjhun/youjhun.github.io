@@ -17,3 +17,5 @@ description: 뇌파를 재서 의도를 읽어 내기까지의 과정을 단계�
 | 공간 필터 | 두 조건을 가장 잘 가르는 채널 조합 | [[csp\|CSP]] |
 | 분류 | 선형 판별, 로그 분산 특징 | [[lda\|LDA]] |
 | 검증 | 시행 단위·사람 단위 교차검증, 통계 | [[data-leakage\|데이터 누수와 검증 단위]] · [[multiple-comparisons-fdr\|다중비교와 FDR]] |
+
+같은 내용을 신경 인터페이스 과목 쪽에서 다룬 글: [[motor-imagery-eeg|운동상상 EEG와 ERD·ERS]], [[eeg-variability|MI-BCI의 EEG 변이성]]
