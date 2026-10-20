@@ -20,14 +20,14 @@ $$
 $f_s$를 **샘플링 주파수**라고 부른다. 초당 몇 번 재는지를 뜻한다. ADC(아날로그-디지털 변환기)가 하는 일의 절반이 이것이고, 나머지 절반은 읽은 값을 유한한 비트로 반올림하는 [[quantization-adc|양자화]]다.
 
 ![연속 신호와 그 표본](../../images/sampling-aliasing/sampling.png)
-*그림 1. 2 Hz 사인파를 초당 20번 잰 모습. 컴퓨터에 남는 것은 파란 점들뿐이다.*
+_그림 1. 2 Hz 사인파를 초당 20번 잰 모습. 컴퓨터에 남는 것은 파란 점들뿐이다._
 
 ## 앨리어싱: 표본은 거짓말을 할 수 있다
 
 점만 남았으니 점 사이에서 신호가 무엇을 했는지는 알 길이 없다. 그래서 **서로 다른 연속 신호가 똑같은 점을 남기는** 일이 생긴다. 그림 2가 그 예다. 9 Hz 코사인을 초당 10번 재면, 찍힌 점들이 1 Hz 코사인 위에 정확히 올라앉는다. 표본만 받은 사람은 원래 신호가 9 Hz였는지 1 Hz였는지 구별할 수 없다.
 
 ![9 Hz 코사인을 10 Hz로 샘플링하면 1 Hz처럼 보인다](../../images/sampling-aliasing/aliasing-time.png)
-*그림 2. 회색 9 Hz 신호를 빨간 점에서만 재면, 점들은 주황색 1 Hz 신호와 구별되지 않는다.*
+_그림 2. 회색 9 Hz 신호를 빨간 점에서만 재면, 점들은 주황색 1 Hz 신호와 구별되지 않는다._
 
 이렇게 높은 주파수가 낮은 주파수의 탈을 쓰는 현상을 **앨리어싱**(aliasing)이라 한다. alias는 '가명'이라는 뜻이다.
 
@@ -48,7 +48,7 @@ $$
 이고, 이 값은 언제나 $0$과 $f_s/2$ 사이에 떨어진다. 실제 주파수를 가로축에 놓고 보이는 주파수를 그리면 톱니가 접힌 모양이 나온다(그림 3). 그래서 앨리어싱을 **주파수 접힘**(folding)이라고도 부르고, 접히는 경계인 $f_s/2$를 **나이퀴스트 주파수**라 한다.
 
 ![실제 주파수와 보이는 주파수의 관계](../../images/sampling-aliasing/folding.png)
-*그림 3. $f_s = 200$ Hz일 때. 360 Hz 성분은 $|360 - 2 \times 200| = 40$ Hz로 접혀 들어온다.*
+_그림 3. $f_s = 200$ Hz일 때. 360 Hz 성분은 $|360 - 2 \times 200| = 40$ Hz로 접혀 들어온다._
 
 ## 주파수 영역에서 보면: 스펙트럼의 복사
 
@@ -61,7 +61,7 @@ $$
 원래 신호의 대역폭 $B$가 $f_s/2$보다 작으면 복사본들이 서로 떨어져 있어서, 가운데 하나만 저역통과 필터로 잘라 내면 원래 신호를 되살릴 수 있다. $B$가 $f_s/2$를 넘으면 이웃한 복사본의 꼬리가 가운데로 넘어와 **겹치고**, 겹친 부분은 무엇이 원래 것이었는지 구별할 수 없게 더해진다(그림 4의 빨간 부분).
 
 ![샘플링된 스펙트럼의 복사본이 겹치는 모습](../../images/sampling-aliasing/aliasing-spectrum.png)
-*그림 4. 위: 대역폭이 좁아 복사본이 떨어져 있다. 아래: 대역폭이 넓어 복사본이 겹친다.*
+_그림 4. 위: 대역폭이 좁아 복사본이 떨어져 있다. 아래: 대역폭이 넓어 복사본이 겹친다._
 
 ## 나이퀴스트-섀넌 샘플링 정리
 
@@ -91,5 +91,5 @@ $$
 ## 참고 자료
 
 - MIT OCW, [6.003 Signals and Systems (Fall 2011)](https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/), 샘플링 단원
-- MIT OCW, [HST.582J Biomedical Signal and Image Processing](https://ocw.mit.edu/courses/hst-582j-biomedical-signal-and-image-processing-spring-2007/), Chapter 1 *Data acquisition: ADC*
-- A. V. Oppenheim, A. S. Willsky, *Signals and Systems*, 2nd ed., Ch. 7 *Sampling*
+- MIT OCW, [HST.582J Biomedical Signal and Image Processing](https://ocw.mit.edu/courses/hst-582j-biomedical-signal-and-image-processing-spring-2007/), Chapter 1 _Data acquisition: ADC_
+- A. V. Oppenheim, A. S. Willsky, _Signals and Systems_, 2nd ed., Ch. 7 _Sampling_

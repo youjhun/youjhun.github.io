@@ -20,7 +20,7 @@ $$
 $$
 
 ![3비트 양자화의 입출력](../../images/quantization-adc/staircase.png)
-*그림 1. 3비트면 단계가 8개다. 출력은 계단 모양이 되고, 오차(아래)는 $\pm\Delta/2$ 사이를 오가는 톱니 모양이다.*
+_그림 1. 3비트면 단계가 8개다. 출력은 계단 모양이 되고, 오차(아래)는 $\pm\Delta/2$ 사이를 오가는 톱니 모양이다._
 
 ## 양자화 오차는 잡음처럼 더해진다
 
@@ -33,7 +33,7 @@ $$
 이다. 양자화한 신호는 '원래 신호 + 전력이 $\Delta^2/12$인 잡음'으로 볼 수 있다. 다만 이 근사는 신호가 여러 단계를 넘나들 때만 맞는다(그림 2).
 
 ![비트 수에 따른 양자화 오차의 모양](../../images/quantization-adc/sine.png)
-*그림 2. 왼쪽: 3비트로 양자화한 느린 사인파. 오차가 신호를 따라 규칙적으로 움직여 잡음이라기보다 왜곡이다. 오른쪽: 비슷한 느린 사인파에 작은 고주파 성분을 더하고 8비트로 양자화하면, 오차(확대)가 불규칙한 잡음처럼 보인다. 아래 줄은 오차를 $\Delta$ 단위로 그린 것이다.*
+_그림 2. 왼쪽: 3비트로 양자화한 느린 사인파. 오차가 신호를 따라 규칙적으로 움직여 잡음이라기보다 왜곡이다. 오른쪽: 비슷한 느린 사인파에 작은 고주파 성분을 더하고 8비트로 양자화하면, 오차(확대)가 불규칙한 잡음처럼 보인다. 아래 줄은 오차를 $\Delta$ 단위로 그린 것이다._
 
 ## 비트 하나에 6 dB
 
@@ -48,7 +48,7 @@ $$
 가 된다. 비트가 하나 늘면 $\Delta$가 반으로 줄고, 잡음 전력은 1/4, 곧 약 6 dB 줄어든다. 16비트면 약 98 dB다.
 
 ![비트 수와 신호 대 양자화 잡음비](../../images/quantization-adc/sqnr.png)
-*그림 3. 파란 점은 범위를 꽉 채운 사인파로 계산한 값이고, 이론선과 거의 겹친다. 주황 점은 진폭이 범위의 1/10인 사인파로, 약 20 dB 낮다(비트가 적을 때는 조금 어긋난다).*
+_그림 3. 파란 점은 범위를 꽉 채운 사인파로 계산한 값이고, 이론선과 거의 겹친다. 주황 점은 진폭이 범위의 1/10인 사인파로, 약 20 dB 낮다(비트가 적을 때는 조금 어긋난다)._
 
 ## 범위를 덜 쓰면 비트를 잃는다
 
@@ -73,6 +73,6 @@ $$
 
 ## 참고 자료
 
-- MIT OCW, [HST.582J Biomedical Signal and Image Processing](https://ocw.mit.edu/courses/hst-582j-biomedical-signal-and-image-processing-spring-2007/), Chapter 1 *Data acquisition: ADC*
-- A. V. Oppenheim, R. W. Schafer, *Discrete-Time Signal Processing*, 3rd ed., §4.8 (아날로그 신호의 디지털 처리와 양자화 오차)
-- W. Kester (ed.), *The Data Conversion Handbook*, Analog Devices (2005), Ch. 2
+- MIT OCW, [HST.582J Biomedical Signal and Image Processing](https://ocw.mit.edu/courses/hst-582j-biomedical-signal-and-image-processing-spring-2007/), Chapter 1 _Data acquisition: ADC_
+- A. V. Oppenheim, R. W. Schafer, _Discrete-Time Signal Processing_, 3rd ed., §4.8 (아날로그 신호의 디지털 처리와 양자화 오차)
+- W. Kester (ed.), _The Data Conversion Handbook_, Analog Devices (2005), Ch. 2

@@ -36,7 +36,7 @@ $$
 $e^{j\omega}$는 복소평면에서 반지름 1인 원 위의 점이다. $\omega$가 0에서 $2\pi$까지 커지면 이 점은 원을 한 바퀴 돌아 제자리로 온다(그림 1). 그래서 DTFT를 **z 변환을 단위원 위에서만 본 것**으로 이해할 수 있다. 시스템 함수 $H(z)$에 $z = e^{j\omega}$를 넣으면 주파수 응답 $H(e^{j\omega})$가 된다. 극점과 영점이 단위원의 어느 쪽에 가까운지를 보면 어떤 주파수가 커지고 작아질지 짐작할 수 있는 것도 이 때문이다.
 
 ![단위원과 주파수 ω](../../images/dtft/unit-circle.png)
-*그림 1. $\omega = 0$은 원의 오른쪽 끝, $\omega = \pi$는 왼쪽 끝이다. 한 바퀴 돌면 같은 점으로 돌아온다.*
+_그림 1. $\omega = 0$은 원의 오른쪽 끝, $\omega = \pi$는 왼쪽 끝이다. 한 바퀴 돌면 같은 점으로 돌아온다._
 
 ## 왜 2π마다 반복되나
 
@@ -55,7 +55,7 @@ X(e^{j\omega}) = e^{-j2\omega}\, \frac{\sin(5\omega/2)}{\sin(\omega/2)}
 $$
 
 ![사각 펄스의 DTFT 크기](../../images/dtft/periodic-spectrum.png)
-*그림 2. $|X(e^{j\omega})|$는 $\omega = 0$에서 5(펄스의 합)이고, $2\pi$마다 같은 모양이 반복된다.*
+_그림 2. $|X(e^{j\omega})|$는 $\omega = 0$에서 5(펄스의 합)이고, $2\pi$마다 같은 모양이 반복된다._
 
 이 반복은 [[sampling-aliasing|샘플링]]에서 스펙트럼 복사본이 $f_s$ 간격으로 생기는 것과 같은 이야기다. $f = f_s$를 위의 변환식에 넣으면 $\omega = 2\pi$가 된다.
 
@@ -64,7 +64,7 @@ $$
 연속시간에서는 주파수를 높일수록 끝없이 빨라진다. 이산시간은 다르다. $\cos(\omega n)$에서 $\omega$를 0부터 키우면 $\pi$까지는 빨라지지만, 그 다음부터는 **도로 느려진다**(그림 3). $\omega = \pi$이면 $\cos(\pi n) = (-1)^n$으로 표본마다 부호가 바뀌는데, 이보다 빨리 변할 방법이 없다. $\omega = 7\pi/4$는 $-\pi/4$와 같은 점이므로 $\pi/4$와 똑같이 느리게 보인다.
 
 ![여러 ω에서 cos(ωn)](../../images/dtft/dt-frequencies.png)
-*그림 3. $\omega = 0$, $\pi/4$, $\pi$, $7\pi/4$. 마지막 줄은 두 번째 줄과 같은 신호다.*
+_그림 3. $\omega = 0$, $\pi/4$, $\pi$, $7\pi/4$. 마지막 줄은 두 번째 줄과 같은 신호다._
 
 $\omega = \pi$는 실제 주파수로 $f_s/2$, 곧 나이퀴스트 주파수다. 저역통과 필터를 설계할 때 '높은 주파수'라고 하면 $\pi$ 근처를, '낮은 주파수'라고 하면 0과 $2\pi$ 근처를 가리키는 것도 같은 이유다.
 
@@ -82,11 +82,11 @@ $$
 
 푸리에 표현은 시간 축이 연속인지 이산인지, 신호가 주기적인지 아닌지에 따라 네 가지로 갈린다. 규칙은 하나다. **한쪽이 이산이면 다른 쪽은 주기적이고, 한쪽이 주기적이면 다른 쪽은 이산이다.**
 
-| | 시간 영역 | 주파수 영역 |
-|---|---|---|
-| 연속시간 푸리에 급수 (CTFS) | 연속, 주기적 | 이산, 비주기 |
-| 연속시간 푸리에 변환 (CTFT) | 연속, 비주기 | 연속, 비주기 |
-| 이산시간 푸리에 급수 (DTFS) | 이산, 주기적 | 이산, 주기적 |
+|                             | 시간 영역    | 주파수 영역      |
+| --------------------------- | ------------ | ---------------- |
+| 연속시간 푸리에 급수 (CTFS) | 연속, 주기적 | 이산, 비주기     |
+| 연속시간 푸리에 변환 (CTFT) | 연속, 비주기 | 연속, 비주기     |
+| 이산시간 푸리에 급수 (DTFS) | 이산, 주기적 | 이산, 주기적     |
 | 이산시간 푸리에 변환 (DTFT) | 이산, 비주기 | **연속, 주기적** |
 
 DTFT의 결과는 $\omega$에 대한 연속 함수라서 컴퓨터가 그대로 다룰 수 없다. 컴퓨터가 실제로 계산하는 것은 길이 $N$인 신호의 [[dft-fft|DFT]]이고, 이는 DTFT를 $\omega_k = 2\pi k / N$ 지점 $N$개에서 뽑아낸 값과 같다. **FFT**는 이 DFT를 $N^2$번 대신 $N \log N$번 정도의 연산으로 구하는 알고리즘의 이름이다. 새로운 변환이 아니라 빠른 계산법이다.
@@ -107,5 +107,5 @@ DTFT의 결과는 $\omega$에 대한 연속 함수라서 컴퓨터가 그대로 
 
 ## 참고 자료
 
-- MIT OCW, [6.003 Signals and Systems (Fall 2011)](https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/), Lecture 17 *Discrete-time frequency representations*, Lecture 18 *Discrete-time Fourier representations*, Lecture 19 *Relations among Fourier representations*
-- A. V. Oppenheim, R. W. Schafer, *Discrete-Time Signal Processing*, 3rd ed., Ch. 2
+- MIT OCW, [6.003 Signals and Systems (Fall 2011)](https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/), Lecture 17 _Discrete-time frequency representations_, Lecture 18 _Discrete-time Fourier representations_, Lecture 19 _Relations among Fourier representations_
+- A. V. Oppenheim, R. W. Schafer, _Discrete-Time Signal Processing_, 3rd ed., Ch. 2
