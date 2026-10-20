@@ -28,7 +28,7 @@ $$
 그런데 $x[n] = -a^n u[-n-1]$(−1부터 왼쪽으로 뻗는 신호)을 변환해도 **똑같은 식** $1/(1 - az^{-1})$이 나온다. 다른 점은 수렴영역이 $|z| < |a|$라는 것뿐이다. 식만 보고는 어느 신호인지 알 수 없다(그림 1).
 
 ![같은 식, 다른 수렴영역](../../images/z-transform/roc.png)
-*그림 1. $X(z) = z/(z - 0.8)$이므로 극점(×)은 0.8, 영점(○)은 원점에 있다. 수렴영역이 원 바깥이면 오른쪽으로 뻗는 신호, 원 안쪽이면 왼쪽으로 뻗는 신호다.*
+_그림 1. $X(z) = z/(z - 0.8)$이므로 극점(×)은 0.8, 영점(○)은 원점에 있다. 수렴영역이 원 바깥이면 오른쪽으로 뻗는 신호, 원 안쪽이면 왼쪽으로 뻗는 신호다._
 
 일반적으로 오른쪽으로 뻗는 신호의 수렴영역은 가장 바깥 극점의 바깥이고, 왼쪽으로 뻗는 신호는 가장 안쪽 극점의 안쪽이다. 인과 시스템(현재와 과거 입력만 쓰는 시스템)의 임펄스 응답은 오른쪽으로 뻗으므로 수렴영역이 바깥쪽이다.
 
@@ -50,7 +50,7 @@ $$
 - **단위원 밖**에 있으면 응답이 계속 커진다. 인과 시스템은 극점이 모두 단위원 안에 있어야 안정하다.
 
 ![극점 위치와 단위 표본 응답](../../images/z-transform/pole-positions.png)
-*그림 2. 왼쪽은 극점(×)과 영점(○) 위치, 오른쪽은 단위 표본 응답 $h[n]$. $H(z)$를 $z$의 거듭제곱으로 고쳐 쓰면(예: $\frac{1}{1-az^{-1}} = \frac{z}{z-a}$) 원점에 극점 개수만큼 영점이 생긴다. 마지막 줄만 극점이 단위원 밖이라 응답이 커진다.*
+_그림 2. 왼쪽은 극점(×)과 영점(○) 위치, 오른쪽은 단위 표본 응답 $h[n]$. $H(z)$를 $z$의 거듭제곱으로 고쳐 쓰면(예: $\frac{1}{1-az^{-1}} = \frac{z}{z-a}$) 원점에 극점 개수만큼 영점이 생긴다. 마지막 줄만 극점이 단위원 밖이라 응답이 커진다._
 
 ## 단위원 위에서 보면: 주파수 응답
 
@@ -65,7 +65,7 @@ $$
 그림 3에서 극점은 0.8, 영점은 −1에 있다. $\omega = 0$ 근처에서는 극점에 가까워 응답이 크고, $\omega = \pi$에서는 영점 위에 놓여 응답이 0이 된다. 저역통과 필터다.
 
 ![극점·영점 기하와 주파수 응답](../../images/z-transform/geometry.png)
-*그림 3. $H(z) = (1 + z^{-1})/(1 - 0.8z^{-1})$. 단위원 위의 점이 극점에 다가가면 크기가 커지고, 영점에 닿으면 0이 된다.*
+_그림 3. $H(z) = (1 + z^{-1})/(1 - 0.8z^{-1})$. 단위원 위의 점이 극점에 다가가면 크기가 커지고, 영점에 닿으면 0이 된다._
 
 ## 자주 하는 오해
 
@@ -82,6 +82,6 @@ $$
 
 ## 참고 자료
 
-- MIT OCW, [6.003 Signals and Systems (Fall 2011)](https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/), Lecture 5 *Z transform*
+- MIT OCW, [6.003 Signals and Systems (Fall 2011)](https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/), Lecture 5 _Z transform_
 - MIT OCW, [HST.582J Biomedical Signal and Image Processing](https://ocw.mit.edu/courses/hst-582j-biomedical-signal-and-image-processing-spring-2007/), 이산 스펙트럼 방법(Z 변환) 단원
-- A. V. Oppenheim, R. W. Schafer, *Discrete-Time Signal Processing*, 3rd ed., Ch. 3
+- A. V. Oppenheim, R. W. Schafer, _Discrete-Time Signal Processing_, 3rd ed., Ch. 3

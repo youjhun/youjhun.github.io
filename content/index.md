@@ -18,6 +18,7 @@ description: 공부한 과목, 직접 설계한 과목, 프로젝트, 읽은 논
 - [[courses/mit-hst582j/index|MIT HST.582J 생체 신호·영상 처리]]
 - [[courses/mit-1805/index|MIT 18.05 확률과 통계]]
 - [[courses/mit-1806/index|MIT 18.06 선형대수]]
+- [[courses/kaist/index|KAIST 과목 기록]]
 
 ## 내가 만든 과목
 
@@ -29,7 +30,15 @@ description: 공부한 과목, 직접 설계한 과목, 프로젝트, 읽은 논
 
 ## 논문
 
-- [[asbit-wireless-sensor-network|수천 개 센서를 위한 비동기 무선 네트워크 (ASBIT)]], *Nature Electronics* 2024
+- [[asbit-wireless-sensor-network|수천 개 센서를 위한 비동기 무선 네트워크 (ASBIT)]], _Nature Electronics_ 2024
+- [[neurograin-wireless-microimplants|Neurograin 무선 마이크로임플란트]], _Nature Electronics_ 2021
+- [[on-chip-fuse-programming|fuse 기반 on-chip programming]], _Advanced Science_ 2023
+- [[patterned-wireless-brain-stimulation|분산 무선 칩의 패턴형 뇌 자극]], _Nature Communications_ 2024
+
+## 프로젝트
+
+- [[projects/event-driven-neural-decoding|이벤트 기반 신경 디코더의 오류 내성]]
+- [[projects/neural-data-augmentation|VAE 기반 신경 스파이크 데이터 증강]]
 
 ## 쓰는 사람
 
