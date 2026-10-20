@@ -36,14 +36,14 @@ $$
 $\lambda$가 1에 가까운 고유벡터는 A의 분산은 크고 B의 분산은 작은 방향이다. 0에 가까운 쪽은 그 반대다. 보통 양 끝에서 몇 개씩(예: 3쌍) 골라 쓴다.
 
 ![두 채널에서의 CSP 방향](../../images/csp/two-channel.png)
-*그림 1. 합성한 두 채널 자료다. 조건 A(파랑)와 B(주황)의 분산 타원은 방향이 다르다. CSP 방향 $w_1$에서는 B의 분산이 크고 $w_2$에서는 A의 분산이 크다. 오른쪽은 각 방향으로 투영한 분산이다. 두 조건의 분산 합이 1이 되게 $\mathbf{w}$의 크기를 맞췄다.*
+_그림 1. 합성한 두 채널 자료다. 조건 A(파랑)와 B(주황)의 분산 타원은 방향이 다르다. CSP 방향 $w_1$에서는 B의 분산이 크고 $w_2$에서는 A의 분산이 크다. 오른쪽은 각 방향으로 투영한 분산이다. 두 조건의 분산 합이 1이 되게 $\mathbf{w}$의 크기를 맞췄다._
 
 ## 특징과 분류
 
 특징으로는 CSP 필터를 거친 신호마다 시행 분산을 구해 로그를 취한 값을 흔히 쓴다. 로그를 취하면 분산의 곱셈적 차이가 덧셈 차이로 바뀐다. 분포도 정규분포에 가까워져 [[lda|LDA]] 같은 선형 분류기에 잘 맞는다.
 
 ![원래 채널과 CSP 필터의 로그 분산 특징](../../images/csp/features.png)
-*그림 2. 합성 8채널 자료. 소스 두 개의 11 Hz 리듬이 조건에 따라 약해지게 만든 뒤 무작위로 섞었다. 원래 채널 두 개로 보면 조건이 겹친다. 학습 시행으로 구한 CSP 필터 두 개를 쓰면 따로 떼어 둔 시험 시행도 깨끗하게 갈린다.*
+_그림 2. 합성 8채널 자료. 소스 두 개의 11 Hz 리듬이 조건에 따라 약해지게 만든 뒤 무작위로 섞었다. 원래 채널 두 개로 보면 조건이 겹친다. 학습 시행으로 구한 CSP 필터 두 개를 쓰면 따로 떼어 둔 시험 시행도 깨끗하게 갈린다._
 
 그림 2는 합성 자료라 이만큼 깨끗할 뿐 실제 뇌파에서는 잡음과 아티팩트, 시행마다의 변동 때문에 훨씬 많이 겹친다.
 
@@ -66,6 +66,6 @@ $\lambda$가 1에 가까운 고유벡터는 A의 분산은 크고 B의 분산은
 
 ## 참고 자료
 
-- H. Ramoser, J. Müller-Gerking, G. Pfurtscheller, "Optimal spatial filtering of single trial EEG during imagined hand movement," *IEEE Transactions on Rehabilitation Engineering* 8(4), 441–446 (2000)
-- B. Blankertz, R. Tomioka, S. Lemm, M. Kawanabe, K.-R. Müller, "Optimizing spatial filters for robust EEG single-trial analysis," *IEEE Signal Processing Magazine* 25(1), 41–56 (2008)
-- S. Haufe et al., "On the interpretation of weight vectors of linear models in multivariate neuroimaging," *NeuroImage* 87, 96–110 (2014)
+- H. Ramoser, J. Müller-Gerking, G. Pfurtscheller, "Optimal spatial filtering of single trial EEG during imagined hand movement," _IEEE Transactions on Rehabilitation Engineering_ 8(4), 441–446 (2000)
+- B. Blankertz, R. Tomioka, S. Lemm, M. Kawanabe, K.-R. Müller, "Optimizing spatial filters for robust EEG single-trial analysis," _IEEE Signal Processing Magazine_ 25(1), 41–56 (2008)
+- S. Haufe et al., "On the interpretation of weight vectors of linear models in multivariate neuroimaging," _NeuroImage_ 87, 96–110 (2014)

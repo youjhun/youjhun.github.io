@@ -3,7 +3,7 @@ title: p-value
 aliases: [p값, 유의확률, 귀무가설 유의성 검정, NHST]
 tags: [통계, 18.05]
 date: 2026-10-19
-description: '효과가 없다면 이만큼 극단적인 결과가 나올 확률. p-value가 말해 주는 것과 말해 주지 않는 것.'
+description: "효과가 없다면 이만큼 극단적인 결과가 나올 확률. p-value가 말해 주는 것과 말해 주지 않는 것."
 ---
 
 > [!abstract] 한눈에
@@ -28,7 +28,7 @@ p = P(X \ge 60) + P(X \le 40) \approx 0.028 + 0.028 = 0.057
 $$
 
 ![공정한 동전에서 나올 앞면 개수의 분포](../../images/p-value/coin-null.png)
-*그림 1. 공정한 동전이라면 앞면 개수는 회색 막대처럼 분포한다. 60 이상과 40 이하에 해당하는 빨간 막대를 모두 더한 값이 p-value다.*
+_그림 1. 공정한 동전이라면 앞면 개수는 회색 막대처럼 분포한다. 60 이상과 40 이하에 해당하는 빨간 막대를 모두 더한 값이 p-value다._
 
 유의수준을 0.05로 정했다면 0.057은 그보다 커서 귀무가설을 기각하지 못한다. 60번이면 꽤 치우쳐 보여도 공정한 동전에서 스무 번에 한 번 남짓은 이만큼 치우친다.
 
@@ -37,7 +37,7 @@ $$
 귀무가설이 실제로 참이면 p-value는 0과 1 사이에 고르게 퍼진다. 효과가 전혀 없는 실험을 반복해도 약 5%에서 p < 0.05가 나온다. 유의수준 0.05로 검정하면 효과가 없는데 있다고 할 확률(1종 오류)이 5%로 묶인다.
 
 ![효과 유무에 따른 p-value의 분포](../../images/p-value/p-distribution.png)
-*그림 2. 집단당 20명씩 두 집단을 t-검정하는 실험을 2만 번 반복했다. 효과가 없으면 p-value가 고르게 퍼지고(왼쪽) 효과가 있으면 0 근처로 몰린다(오른쪽).*
+_그림 2. 집단당 20명씩 두 집단을 t-검정하는 실험을 2만 번 반복했다. 효과가 없으면 p-value가 고르게 퍼지고(왼쪽) 효과가 있으면 0 근처로 몰린다(오른쪽)._
 
 효과가 있을 때 p < 0.05가 나오는 비율을 **검정력**이라 한다. 그림 2 오른쪽은 차이가 표준편차의 0.8배, 집단당 20명인 경우로 검정력이 약 70%이니 진짜 효과가 있어도 열 번에 세 번은 놓친다.
 
@@ -46,7 +46,7 @@ $$
 p-value에는 효과의 크기와 표본의 크기가 함께 섞여 있다. 그림 3은 효과 크기를 표준편차의 0.1배로 고정한 채 표본만 늘린 결과다. 집단당 수십 명에서는 p-value가 큰 편이지만 수천 명이 되면 0.05보다 한참 작아져, 효과는 그대로인데 '유의'한 결과가 된다.
 
 ![표본 크기와 p-value](../../images/p-value/sample-size.png)
-*그림 3. 효과는 0.1 표준편차로 고정했다. 표본이 늘면 p-value만 계속 작아진다.*
+_그림 3. 효과는 0.1 표준편차로 고정했다. 표본이 늘면 p-value만 계속 작아진다._
 
 "얼마나 확실한가"와 "얼마나 큰가"는 다른 질문이므로 결과를 보고할 때는 p-value와 함께 효과 크기와 그 신뢰구간을 적는 편이 좋다.
 
@@ -70,4 +70,4 @@ p-value에는 효과의 크기와 표본의 크기가 함께 섞여 있다. 그�
 ## 참고 자료
 
 - MIT OCW, [18.05 Introduction to Probability and Statistics (Spring 2022)](https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/), 귀무가설 유의성 검정(NHST) 단원
-- R. L. Wasserstein, N. A. Lazar, "The ASA statement on p-values: context, process, and purpose," *The American Statistician* 70(2), 129–133 (2016)
+- R. L. Wasserstein, N. A. Lazar, "The ASA statement on p-values: context, process, and purpose," _The American Statistician_ 70(2), 129–133 (2016)

@@ -27,7 +27,7 @@ $$
 평균도 자료에서 추정하느라 자유도를 하나 썼으므로 $n$ 대신 $n-1$로 나눈다.
 
 ![공분산 행렬과 자료 모양](../../images/covariance-matrix/shapes.png)
-*그림 1. 점 개수는 같고 공분산 행렬만 다르다. 빨간 타원은 2σ 등고선이다. 대각선 밖 값의 부호에 따라 타원이 기우는 방향이 달라진다.*
+_그림 1. 점 개수는 같고 공분산 행렬만 다르다. 빨간 타원은 2σ 등고선이다. 대각선 밖 값의 부호에 따라 타원이 기우는 방향이 달라진다._
 
 ## 성질
 
@@ -43,7 +43,7 @@ $$
 고유벡터 $\mathbf{q}_i$ 방향으로 투영한 분산은 $\mathbf{q}_i^\top \Sigma\, \mathbf{q}_i = \lambda_i$다. 따라서 고유벡터는 자료 타원의 축 방향, 고유값은 그 축 방향의 분산이다(그림 2). 고유값이 가장 큰 고유벡터가 분산이 가장 큰 방향이고 이 방향이 [[pca-svd|PCA]]의 첫 주성분이다.
 
 ![공분산 행렬의 고유벡터와 고유값](../../images/covariance-matrix/eigen.png)
-*그림 2. 각 화살표는 고유벡터에 표준편차($\sqrt{\lambda}$)를 곱한 벡터다. 자료가 가장 넓게 퍼진 쪽이 긴 화살표 방향이다.*
+_그림 2. 각 화살표는 고유벡터에 표준편차($\sqrt{\lambda}$)를 곱한 벡터다. 자료가 가장 넓게 퍼진 쪽이 긴 화살표 방향이다._
 
 ## 상관 행렬
 
@@ -58,7 +58,7 @@ $$
 뇌파처럼 채널 $C$개에서 $T$표본씩 잰 신호는 $C \times T$ 행렬 $X$로 나타낸다. 채널마다 평균을 빼고 $XX^\top/(T-1)$을 구하면 $C \times C$ **공간 공분산 행렬**이 된다. 어느 채널끼리 함께 흔들리는지가 이 행렬에 들어 있어서 [[csp|CSP]] 같은 공간 필터와 리만 기하 기반 분류기 모두 이 행렬에서 출발한다.
 
 ![여러 채널 신호의 상관 행렬](../../images/covariance-matrix/channels.png)
-*그림 3. 합성한 4채널 신호다. 1·2번 채널은 주로 10 Hz 성분을, 3·4번 채널은 주로 느린 변동을 공유하게 섞었고 상관 행렬에서도 두 묶음이 그대로 보인다.*
+_그림 3. 합성한 4채널 신호다. 1·2번 채널은 주로 10 Hz 성분을, 3·4번 채널은 주로 느린 변동을 공유하게 섞었고 상관 행렬에서도 두 묶음이 그대로 보인다._
 
 ## 자주 하는 오해
 
@@ -75,6 +75,6 @@ $$
 
 ## 참고 자료
 
-- 강완모, 「데이터과학을 위한 선형대수학」(Linear Algebra for Data Science), KAIST, Version 1.2 (2023), *Covariance Matrices* 절(161쪽~)
-- MIT OCW, [18.06 Linear Algebra (Spring 2010)](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/), Lecture 25 *Symmetric matrices and positive definiteness*
+- 강완모, 「데이터과학을 위한 선형대수학」(Linear Algebra for Data Science), KAIST, Version 1.2 (2023), _Covariance Matrices_ 절(161쪽~)
+- MIT OCW, [18.06 Linear Algebra (Spring 2010)](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/), Lecture 25 _Symmetric matrices and positive definiteness_
 - MIT OCW, [18.05 Introduction to Probability and Statistics (Spring 2022)](https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/), 공분산과 상관 단원

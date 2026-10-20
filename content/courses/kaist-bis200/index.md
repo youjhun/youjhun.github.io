@@ -19,9 +19,14 @@ aliases:
 
 ## 이 사이트의 연결 글
 
-- 생체 신호가 디지털 값이 되는 과정: [[courses/mit-hst582j/quantization-adc|양자화와 ADC]]
-- 신경 인터페이스의 신호·통신 기반: [[my-courses/neural-interface/index|Human Sensing & Neural Interface Foundations]]
-- 여러 센서 신호의 공통 측정 사슬: [[my-courses/human-sensing/index|Physiological & Human Sensing]]
+- 암: [[cancer-genes-metastasis|암을 유전자와 조직 환경의 문제로 보기]]
+- 면역공학: [[antibodies-vaccines-immunotherapy|항체·백신·면역치료]]
+- 조직공학: [[tissue-engineering-scaffolds|조직공학과 분해성 스캐폴드]]
+- 바이오계측: [[biosensor-performance|바이오센서의 구성과 성능]] · [[biosignal-measurement-chain|생체신호 측정 사슬]]
+- 전기 생체신호: [[ecg|ECG는 무엇을 측정하는가]]
+- 광학 생체신호: [[pulse-oximetry-ppg|PPG와 맥박산소측정]]
+- 디지털화: [[courses/mit-hst582j/quantization-adc|양자화와 ADC]]
+- 신경 인터페이스: [[my-courses/neural-interface/index|Human Sensing & Neural Interface Foundations]]
 
 > [!note] 공개 범위
-> 이 페이지는 개인 강의 기록에서 확인한 과목 구조를 공개용 개념 지도로 다시 쓴 것이다. 강의 자료나 평가 문항은 포함하지 않는다.
+> 이 페이지와 연결 글은 개인 강의 기록에서 확인한 과목 구조와 요약을 공개용 개념 지도로 다시 쓴 것이다. 강의 자료나 평가 문항은 포함하지 않는다.
