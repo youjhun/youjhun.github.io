@@ -11,6 +11,7 @@ content/
   index.md              첫 화면
   courses/<과목>/       대학 강의 (MIT OCW 등). index.md가 단원표, 나머지가 개념 글
   my-courses/<과목>/    직접 설계한 과목
+  projects/             프로젝트와, 프로젝트에서 배운 개념
   papers/               논문 리뷰
   images/<글 이름>/     글에 들어가는 그림
   templates/            새 글 틀 (사이트에는 나가지 않음)
