@@ -1,6 +1,7 @@
 ---
 title: 피어슨과 스피어먼 상관
-aliases: [상관계수, 피어슨 상관, 스피어먼 상관, Pearson correlation, Spearman correlation, 순위 상관]
+aliases:
+  [상관계수, 피어슨 상관, 스피어먼 상관, Pearson correlation, Spearman correlation, 순위 상관]
 tags: [통계, 18.05]
 date: 2026-10-19
 description: 두 변수가 함께 움직이는 정도를 재는 두 방법. 피어슨은 직선 관계를, 스피어먼은 순서가 함께 움직이는지를 본다.
@@ -24,7 +25,7 @@ $$
 각 변수의 값을 크기 순위(1등, 2등, …)로 바꾼 뒤 피어슨 상관을 계산한다. 순위로 바꾸면 '얼마나 큰가'는 사라지고 '몇 번째인가'만 남기 때문에, 관계가 휘어져 있어도 한쪽이 커질 때 다른 쪽도 늘 커지기만 하면(단조 증가) $\rho = 1$이 된다(그림 1).
 
 ![순위로 바꾸기](../../images/pearson-spearman/rank-transform.png)
-*그림 1. 지수 함수 모양의 관계. 원래 값으로 구한 피어슨 $r$은 1보다 작다. 순위로 바꾸면 점들이 거의 일직선으로 늘어서서 스피어먼 $\rho$는 1에 가깝다.*
+_그림 1. 지수 함수 모양의 관계. 원래 값으로 구한 피어슨 $r$은 1보다 작다. 순위로 바꾸면 점들이 거의 일직선으로 늘어서서 스피어먼 $\rho$는 1에 가깝다._
 
 동점이 없을 때는 순위 차이 $d_i$만으로 계산하는 간단한 공식도 있다.
 
@@ -35,7 +36,7 @@ $$
 ## 네 가지 경우 비교
 
 ![네 가지 관계에서 r과 ρ](../../images/pearson-spearman/four-cases.png)
-*그림 2. 각 60개 점. 직선 관계에서는 두 값이 비슷하고, 휘어진 단조 관계에서는 $\rho$가 더 크다. 튀는 점(빨강) 하나가 $r$은 크게 끌어올리지만 $\rho$는 거의 움직이지 않는다. U자 관계에서는 둘 다 0에 가깝다.*
+_그림 2. 각 60개 점. 직선 관계에서는 두 값이 비슷하고, 휘어진 단조 관계에서는 $\rho$가 더 크다. 튀는 점(빨강) 하나가 $r$은 크게 끌어올리지만 $\rho$는 거의 움직이지 않는다. U자 관계에서는 둘 다 0에 가깝다._
 
 - **직선 관계**: 두 값이 거의 같다.
 - **단조롭지만 휘어진 관계**: $\rho$는 1에 가깝고 $r$은 그보다 작다. 관계의 모양보다 방향이 일관된지를 보려면 스피어먼이 맞다.
@@ -65,4 +66,4 @@ $$
 ## 참고 자료
 
 - MIT OCW, [18.05 Introduction to Probability and Statistics (Spring 2022)](https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/), 공분산과 상관 단원
-- C. Spearman, "The proof and measurement of association between two things," *The American Journal of Psychology* 15(1), 72–101 (1904)
+- C. Spearman, "The proof and measurement of association between two things," _The American Journal of Psychology_ 15(1), 72–101 (1904)

@@ -22,7 +22,7 @@ $$
 이다. 좌표축을 돌리기만 했으므로 $d$개 주성분을 다 쓰면 잃는 정보가 없으며 앞의 몇 개만 남겨야 차원이 줄어든다.
 
 ![주성분 방향과 투영](../../images/pca-svd/directions.png)
-*그림 1. PC1(빨강)은 자료가 가장 길게 늘어선 방향이다. 점들을 PC1 위로 투영하면(주황) 투영 거리(회색 선)의 제곱합이 최소가 된다.*
+_그림 1. PC1(빨강)은 자료가 가장 길게 늘어선 방향이다. 점들을 PC1 위로 투영하면(주황) 투영 거리(회색 선)의 제곱합이 최소가 된다._
 
 분산이 가장 큰 방향은 투영으로 잃는 거리가 가장 작은 방향이기도 하다. 각 점까지의 거리 제곱은 피타고라스 정리에 따라 '축 위 성분 제곱 + 축에 수직인 성분 제곱'이므로 앞의 것을 키우면 뒤의 것이 줄어든다.
 
@@ -57,14 +57,14 @@ $$
 $i$번째 주성분이 전체 분산에서 차지하는 비율은 $\lambda_i / \sum_j \lambda_j$다. 그림 2의 10차원 자료는 숨은 요인 3개를 섞고 잡음을 더해 만들었는데 앞의 세 주성분이 분산 대부분을 차지하고 나머지는 잡음 수준에서 평평하다.
 
 ![설명 분산 비율](../../images/pca-svd/scree.png)
-*그림 2. 앞의 세 막대는 숨은 요인 셋에 해당하고 그 뒤로 고르게 낮은 막대는 잡음 몫이다.*
+_그림 2. 앞의 세 막대는 숨은 요인 셋에 해당하고 그 뒤로 고르게 낮은 막대는 잡음 몫이다._
 
 ## 저계수 근사
 
 SVD에서 큰 특잇값 $k$개만 남기면 $A_k = \sum_{i=1}^{k} \sigma_i \mathbf{u}_i \mathbf{v}_i^\top$가 된다. 에커트–영(Eckart–Young) 정리에 따르면 계수가 $k$ 이하인 모든 행렬 가운데 $A$와의 오차(프로베니우스 노름)가 가장 작은 행렬이 이 $A_k$다. 그림 3은 120×160 그림을 특잇값 몇 개만 써서 다시 만든 결과다.
 
 ![특잇값 몇 개로 다시 만든 그림](../../images/pca-svd/low-rank.png)
-*그림 3. 특잇값 1개로는 가로·세로 패턴의 곱 하나만 남아 거친 격자가 된다. 10개면 모양이 드러나고 40개면 대각선 무늬까지 거의 돌아온다.*
+_그림 3. 특잇값 1개로는 가로·세로 패턴의 곱 하나만 남아 거친 격자가 된다. 10개면 모양이 드러나고 40개면 대각선 무늬까지 거의 돌아온다._
 
 ## 자주 하는 오해
 
@@ -81,7 +81,7 @@ SVD에서 큰 특잇값 $k$개만 남기면 $A_k = \sum_{i=1}^{k} \sigma_i \math
 
 ## 참고 자료
 
-- 강완모, 「데이터과학을 위한 선형대수학」(Linear Algebra for Data Science), KAIST, Version 1.2 (2023), *Singular Value Decomposition*(109쪽~), *Application to Statistics: PCA from SVD*(124쪽~)
-- MIT OCW, [18.06 Linear Algebra (Spring 2010)](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/), Lecture 29 *Singular value decomposition*
-- C. Eckart, G. Young, "The approximation of one matrix by another of lower rank," *Psychometrika* 1(3), 211–218 (1936)
-- I. T. Jolliffe, J. Cadima, "Principal component analysis: a review and recent developments," *Philosophical Transactions of the Royal Society A* 374, 20150202 (2016)
+- 강완모, 「데이터과학을 위한 선형대수학」(Linear Algebra for Data Science), KAIST, Version 1.2 (2023), _Singular Value Decomposition_(109쪽~), _Application to Statistics: PCA from SVD_(124쪽~)
+- MIT OCW, [18.06 Linear Algebra (Spring 2010)](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/), Lecture 29 _Singular value decomposition_
+- C. Eckart, G. Young, "The approximation of one matrix by another of lower rank," _Psychometrika_ 1(3), 211–218 (1936)
+- I. T. Jolliffe, J. Cadima, "Principal component analysis: a review and recent developments," _Philosophical Transactions of the Royal Society A_ 374, 20150202 (2016)

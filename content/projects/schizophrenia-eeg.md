@@ -16,7 +16,7 @@ description: 공개 뇌파 자료로 조현병 환자와 대조군을 가르는 
 ## 흐름
 
 ![실습의 흐름](../images/project-scz/pipeline.png)
-*그림 1. 원자료부터 사람 단위 검증까지.*
+_그림 1. 원자료부터 사람 단위 검증까지._
 
 1. **전처리**: 대역 필터를 건 뒤 일정한 길이의 구간(epoch)으로 자른다. 그러면 (구간 수, 채널 수, 시간 표본 수) 모양의 배열이 나온다.
 2. **특징**: 구간과 채널마다 통계값 12개를 뽑는다. 평균, 표준편차, 분산, 최솟값과 최댓값, 그 위치, 봉우리 간 진폭, RMS, 1차 차분의 절댓값 합, 왜도, 첨도다. 이를 이어 붙여 구간 하나를 (채널 수 × 12)차원 벡터로 만든다.
@@ -47,5 +47,5 @@ description: 공개 뇌파 자료로 조현병 환자와 대조군을 가르는 
 
 ## 참고 자료
 
-- E. Olejarczyk, W. Jernajczyk, "Graph-based analysis of brain connectivity in schizophrenia," *PLOS ONE* 12(11), e0188629 (2017)
+- E. Olejarczyk, W. Jernajczyk, "Graph-based analysis of brain connectivity in schizophrenia," _PLOS ONE_ 12(11), e0188629 (2017)
 - 자료: RepOD, 「EEG in schizophrenia」, [doi:10.18150/repod.0107441](https://doi.org/10.18150/repod.0107441)

@@ -23,7 +23,7 @@ description: 시험 자료의 정보가 학습에 섞여 들어가 성능이 부
 4. **미래가 과거에 들어왔다.** 실시간으로 쓸 디코더라면 입력 창에 현재보다 뒤의 표본이 들어가서는 안 된다.
 
 ![구간 단위 분할과 시행 단위 분할](../images/data-leakage/split-unit.png)
-*그림 1. 파랑은 학습, 주황은 시험. 위: 구간 단위로 섞으면 한 시행 안에서 학습과 시험이 번갈아 나온다. 아래: 시행 단위로 나누면 한 시행이 통째로 한쪽에만 들어간다.*
+_그림 1. 파랑은 학습, 주황은 시험. 위: 구간 단위로 섞으면 한 시행 안에서 학습과 시험이 번갈아 나온다. 아래: 시행 단위로 나누면 한 시행이 통째로 한쪽에만 들어간다._
 
 ## 사람 단위 분할
 
@@ -32,7 +32,7 @@ description: 시험 자료의 정보가 학습에 섞여 들어가 성능이 부
 그림 2는 합성 자료로 만든 예다. 사람마다 라벨과 무관한 고유 패턴을 두고 집단 사이의 진짜 차이는 아주 작게 넣었다. 자료와 분류기(1-최근접 이웃)는 같고 나누는 단위만 다르다.
 
 ![나누는 단위에 따른 정확도](../images/data-leakage/subject-split.png)
-*그림 2. 합성 자료(40명, 사람당 표본 20개). 표본 단위로 섞으면 90%가 넘지만 사람 단위로 나누면 우연 수준인 50% 근처다. 앞의 숫자는 사람을 알아봐서 나온 결과다.*
+_그림 2. 합성 자료(40명, 사람당 표본 20개). 표본 단위로 섞으면 90%가 넘지만 사람 단위로 나누면 우연 수준인 50% 근처다. 앞의 숫자는 사람을 알아봐서 나온 결과다._
 
 다른 사람에게 일반화하려는 모델은 사람 단위(leave-subject-out, GroupKFold)로, 같은 사람의 다른 시행에 일반화하려는 모델은 시행 단위로 나눈다. 평가 단위는 실제로 쓸 때 처음 마주칠 단위와 같아야 한다.
 
@@ -55,5 +55,5 @@ description: 시험 자료의 정보가 학습에 섞여 들어가 성능이 부
 
 ## 참고 자료
 
-- S. Kaufman, S. Rosset, C. Perlich, O. Stitelman, "Leakage in data mining: formulation, detection, and avoidance," *ACM Transactions on Knowledge Discovery from Data* 6(4), 15 (2012)
-- S. Kapoor, A. Narayanan, "Leakage and the reproducibility crisis in machine-learning-based science," *Patterns* 4(9), 100804 (2023)
+- S. Kaufman, S. Rosset, C. Perlich, O. Stitelman, "Leakage in data mining: formulation, detection, and avoidance," _ACM Transactions on Knowledge Discovery from Data_ 6(4), 15 (2012)
+- S. Kapoor, A. Narayanan, "Leakage and the reproducibility crisis in machine-learning-based science," _Patterns_ 4(9), 100804 (2023)

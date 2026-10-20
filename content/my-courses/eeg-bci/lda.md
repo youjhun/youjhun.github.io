@@ -26,7 +26,7 @@ $$
 두 평균을 잇는 방향 $\boldsymbol\mu_2 - \boldsymbol\mu_1$으로 투영하는 방법이 가장 단순하다. 하지만 클래스가 길쭉하게 퍼져 있고 그 방향이 평균 차이와 비스듬하면 투영한 두 분포가 크게 겹친다. $S_W^{-1}$을 곱하면 퍼짐이 큰 방향의 성분이 줄어들어 투영 방향이 두 분포가 덜 겹치는 쪽으로 돌아간다(그림 1).
 
 ![평균 차이 방향과 피셔 방향](../../images/lda/fisher-direction.png)
-*그림 1. 공분산이 같은 두 클래스. 평균 차이 방향(회색)으로 투영하면 많이 겹치지만 피셔 방향(빨강)으로 투영하면 덜 겹친다. 분리도 $J$는 약 1.3에서 4.9로 커진다.*
+_그림 1. 공분산이 같은 두 클래스. 평균 차이 방향(회색)으로 투영하면 많이 겹치지만 피셔 방향(빨강)으로 투영하면 덜 겹친다. 분리도 $J$는 약 1.3에서 4.9로 커진다._
 
 ## 분류기
 
@@ -53,6 +53,6 @@ $$
 
 ## 참고 자료
 
-- R. A. Fisher, "The use of multiple measurements in taxonomic problems," *Annals of Eugenics* 7(2), 179–188 (1936)
-- B. Blankertz, S. Lemm, M. Treder, S. Haufe, K.-R. Müller, "Single-trial analysis and classification of ERP components — a tutorial," *NeuroImage* 56(2), 814–825 (2011)
-- T. Hastie, R. Tibshirani, J. Friedman, *The Elements of Statistical Learning*, 2nd ed., §4.3
+- R. A. Fisher, "The use of multiple measurements in taxonomic problems," _Annals of Eugenics_ 7(2), 179–188 (1936)
+- B. Blankertz, S. Lemm, M. Treder, S. Haufe, K.-R. Müller, "Single-trial analysis and classification of ERP components — a tutorial," _NeuroImage_ 56(2), 814–825 (2011)
+- T. Hastie, R. Tibshirani, J. Friedman, _The Elements of Statistical Learning_, 2nd ed., §4.3

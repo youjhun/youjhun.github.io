@@ -7,7 +7,7 @@ description: MIT HST.582J Biomedical Signal and Image Processing을 따라가며
 
 ## 단원
 
-| 단원               | 다루는 것                                   | 글                                                                             |
+| 단원               | 다루는 것                                   | 글                                                                                |
 | ------------------ | ------------------------------------------- | --------------------------------------------------------------------------------- |
 | 생체 신호 획득     | ADC, 샘플링, 디지털 필터                    | [[quantization-adc\|양자화와 ADC]] · [[sampling-aliasing\|샘플링과 앨리어싱]]     |
 | 이산 스펙트럼 방법 | DTFT, DFT, Z 변환, STFT                     | [[dtft\|이산시간 푸리에 변환]] · [[dft-fft\|DFT와 FFT]] · [[z-transform\|z 변환]] |

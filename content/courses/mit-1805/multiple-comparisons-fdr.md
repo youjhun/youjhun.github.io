@@ -20,7 +20,7 @@ $$
 이다. 10번이면 40%, 20번이면 64%, 50번이면 92%다(그림 1). 뇌파 채널 수십 개, 주파수 대역 여러 개, 지표 여러 개를 각각 검정하면 '유의한' 결과가 몇 개쯤 나오는 것이 보통이다.
 
 ![검정 횟수와 거짓 양성 확률](../../images/multiple-comparisons-fdr/fwer.png)
-*그림 1. 모든 검정에 효과가 없을 때 거짓 양성이 한 번 이상 나올 확률.*
+_그림 1. 모든 검정에 효과가 없을 때 거짓 양성이 한 번 이상 나올 확률._
 
 ## FWER와 FDR
 
@@ -46,7 +46,7 @@ FWER 통제는 발견 목록 전체가 다 맞을 확률을 보장하고 FDR 통
 그림으로 그리면 정렬한 p-value를 기울기가 $q/m$인 직선과 견주는 모양이 된다(그림 2). Bonferroni라면 이 직선 대신 높이 $q/m$의 수평선 하나를 쓴다. 두 기준은 첫 번째 칸에서만 같고 순위가 올라갈수록 BH 쪽이 너그러워진다.
 
 ![BH 절차](../../images/multiple-comparisons-fdr/bh-procedure.png)
-*그림 2. 검정 50개 중 10개만 진짜 효과(초록)인 시뮬레이션. 파란 BH 선 아래 마지막 점까지 기각한다. Bonferroni(주황 점선)는 같은 자료에서 더 적게 기각한다.*
+_그림 2. 검정 50개 중 10개만 진짜 효과(초록)인 시뮬레이션. 파란 BH 선 아래 마지막 점까지 기각한다. Bonferroni(주황 점선)는 같은 자료에서 더 적게 기각한다._
 
 2단계는 조건을 만족하는 $k$ 가운데 가장 큰 값을 고른다. 중간에 선 위로 올라간 점이 있더라도 그보다 뒤에 선 아래 점이 있으면 거기까지 모두 기각한다.
 
@@ -57,7 +57,7 @@ FWER 통제는 발견 목록 전체가 다 맞을 확률을 보장하고 FDR 통
 그림 2와 같은 상황(검정 50개 중 진짜 효과 10개)을 1,000번 반복해 평균을 냈다.
 
 ![세 방법의 발견과 거짓 발견](../../images/multiple-comparisons-fdr/methods.png)
-*그림 3. 보정하지 않으면 발견이 많은 대신 약 17%가 거짓이다. Bonferroni는 거짓이 거의 없지만 진짜 효과도 절반 넘게 놓친다. BH는 그 중간에서 거짓 비율을 0.05 아래로 유지한다.*
+_그림 3. 보정하지 않으면 발견이 많은 대신 약 17%가 거짓이다. Bonferroni는 거짓이 거의 없지만 진짜 효과도 절반 넘게 놓친다. BH는 그 중간에서 거짓 비율을 0.05 아래로 유지한다._
 
 ## 자주 하는 오해
 
@@ -74,6 +74,6 @@ FWER 통제는 발견 목록 전체가 다 맞을 확률을 보장하고 FDR 통
 
 ## 참고 자료
 
-- Y. Benjamini, Y. Hochberg, "Controlling the false discovery rate: a practical and powerful approach to multiple testing," *Journal of the Royal Statistical Society: Series B* 57(1), 289–300 (1995)
-- Y. Benjamini, D. Yekutieli, "The control of the false discovery rate in multiple testing under dependency," *The Annals of Statistics* 29(4), 1165–1188 (2001)
+- Y. Benjamini, Y. Hochberg, "Controlling the false discovery rate: a practical and powerful approach to multiple testing," _Journal of the Royal Statistical Society: Series B_ 57(1), 289–300 (1995)
+- Y. Benjamini, D. Yekutieli, "The control of the false discovery rate in multiple testing under dependency," _The Annals of Statistics_ 29(4), 1165–1188 (2001)
 - MIT OCW, [18.05 Introduction to Probability and Statistics (Spring 2022)](https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/), 유의성 검정 단원

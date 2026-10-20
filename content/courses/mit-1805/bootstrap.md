@@ -13,16 +13,16 @@ description: 표본 하나로 추정값이 얼마나 흔들릴지 재는 방법.
 
 두 값은 계산식이 비슷해 자주 헷갈리지만 재는 대상이 다르다.
 
-| | 표준편차 (SD) | 표준오차 (SE) |
-|---|---|---|
-| 무엇의 퍼짐인가 | 관측값 하나하나 | 추정값 (예: 표본평균) |
-| 표본을 키우면 | 그대로 (모집단의 $\sigma$에 가까워짐) | 줄어듦 |
-| 평균의 경우 | $s$ | $s/\sqrt{n}$ |
+|                 | 표준편차 (SD)                         | 표준오차 (SE)         |
+| --------------- | ------------------------------------- | --------------------- |
+| 무엇의 퍼짐인가 | 관측값 하나하나                       | 추정값 (예: 표본평균) |
+| 표본을 키우면   | 그대로 (모집단의 $\sigma$에 가까워짐) | 줄어듦                |
+| 평균의 경우     | $s$                                   | $s/\sqrt{n}$          |
 
 표본평균의 분산이 $\sigma^2/n$이니 SE는 $\sigma/\sqrt{n}$이고, SE를 반으로 줄이려면 표본을 4배로 늘려야 한다(그림 1).
 
 ![SD와 SE](../../images/bootstrap/sd-vs-se.png)
-*그림 1. 표준정규분포에서 뽑은 표본. 자료의 SD는 1 근처에 머물고 표본평균의 SE는 $1/\sqrt{n}$을 따라 줄어든다.*
+_그림 1. 표준정규분포에서 뽑은 표본. 자료의 SD는 1 근처에 머물고 표본평균의 SE는 $1/\sqrt{n}$을 따라 줄어든다._
 
 ## 표본이 하나일 때
 
@@ -38,14 +38,14 @@ SE를 직접 재려면 모집단에서 표본을 여러 번 새로 뽑아 매번
 4. $B$개 추정값의 표준편차를 SE의 추정치로 삼는다. 가운데 95%를 잘라 신뢰구간으로 쓸 수도 있는데, 이것이 백분위수 구간이다.
 
 ![부트스트랩의 흐름](../../images/bootstrap/resampling.png)
-*그림 2. 왼쪽은 원래 표본 10개와 거기서 복원추출한 부트스트랩 표본 3개, 오른쪽은 부트스트랩 평균 1만 개의 분포다. 오른쪽 분포의 표준편차가 SE의 추정치가 된다.*
+_그림 2. 왼쪽은 원래 표본 10개와 거기서 복원추출한 부트스트랩 표본 3개, 오른쪽은 부트스트랩 평균 1만 개의 분포다. 오른쪽 분포의 표준편차가 SE의 추정치가 된다._
 
 ## 상관계수로 확인
 
 그림 3은 참 상관이 0.5인 모집단에서 표본을 30개씩 뽑은 경우다. 회색은 모집단에서 표본을 1만 번 새로 뽑아 얻은 상관계수의 실제 분포로, 현실에서는 볼 수 없다. 파란 선은 표본 하나로 부트스트랩을 돌려 만든 분포다. 중심은 그 표본의 $r$ 쪽으로 치우쳤지만 부트스트랩이 대신 재려는 퍼짐(SE)은 회색과 꽤 비슷하다.
 
 ![상관계수의 표본분포와 부트스트랩 분포](../../images/bootstrap/correlation-se.png)
-*그림 3. 회색은 새로 뽑은 표본 1만 개의 상관계수, 파란 선은 표본 하나로 돌린 부트스트랩이다. 두 분포의 퍼짐이 비슷하다.*
+_그림 3. 회색은 새로 뽑은 표본 1만 개의 상관계수, 파란 선은 표본 하나로 돌린 부트스트랩이다. 두 분포의 퍼짐이 비슷하다._
 
 ## 자주 하는 오해
 
@@ -63,5 +63,5 @@ SE를 직접 재려면 모집단에서 표본을 여러 번 새로 뽑아 매번
 ## 참고 자료
 
 - MIT OCW, [18.05 Introduction to Probability and Statistics (Spring 2022)](https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/), 부트스트랩 신뢰구간 단원
-- B. Efron, "Bootstrap methods: another look at the jackknife," *The Annals of Statistics* 7(1), 1–26 (1979)
-- B. Efron, R. J. Tibshirani, *An Introduction to the Bootstrap*, Chapman & Hall (1993)
+- B. Efron, "Bootstrap methods: another look at the jackknife," _The Annals of Statistics_ 7(1), 1–26 (1979)
+- B. Efron, R. J. Tibshirani, _An Introduction to the Bootstrap_, Chapman & Hall (1993)
