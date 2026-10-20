@@ -3,16 +3,7 @@ title: Jihun Yu's Engineering Note
 description: 공부한 과목, 직접 설계한 과목, 프로젝트, 읽은 논문을 그림과 함께 정리하는 엔지니어링 노트.
 ---
 
-공부한 것을 **그림과 함께** 정리해 두는 노트다. 과목에서 배운 개념, 직접 짠 커리큘럼, 프로젝트를 하며 부딪힌 문제, 읽은 논문을 한곳에 모은다.
-
-글은 같은 순서로 쓴다. 정의로 시작해 그림과 예시로 감을 잡고, 수식으로 정확히 한 다음, 자주 하는 오해로 마무리한다.
-
-> [!tip] 둘러보는 법
-> 왼쪽 목록에서 분야를 고르거나 검색 창에 개념 이름을 쳐 보면 된다. 글 안의 링크를 따라가면 이어진 개념으로 넘어가고, 오른쪽 그래프는 글끼리 어떻게 이어져 있는지 보여 준다.
-
 ## 과목
-
-대학 강의를 따라가며 정리한 개념이다. 과목마다 첫 페이지에 단원 구성과 이 노트의 글을 묶어 두었다.
 
 - [[courses/mit-6003/index|MIT 6.003 신호와 시스템]]
 - [[courses/mit-hst582j/index|MIT HST.582J 생체 신호·영상 처리]]
@@ -22,9 +13,8 @@ description: 공부한 과목, 직접 설계한 과목, 프로젝트, 읽은 논
 
 ## 내가 만든 과목
 
-기존 강의 하나로는 채워지지 않는 주제를 위해 직접 짠 커리큘럼이다. 위의 과목들을 재료로 쓰고, 빠진 부분만 따로 모은다.
-
 - [[my-courses/neural-interface/index|Human Sensing & Neural Interface Foundations]]
+- [[my-courses/eeg-bci/index|EEG–BCI 파이프라인]]
 - [[my-courses/human-sensing/index|Physiological & Human Sensing]]
 - [[my-courses/embedded-sensing/index|Embedded Sensor Systems]]
 
@@ -39,6 +29,7 @@ description: 공부한 과목, 직접 설계한 과목, 프로젝트, 읽은 논
 
 - [[projects/event-driven-neural-decoding|이벤트 기반 신경 디코더의 오류 내성]]
 - [[projects/neural-data-augmentation|VAE 기반 신경 스파이크 데이터 증강]]
+- [[schizophrenia-eeg|EEG로 조현병 분류하기 (실습)]]
 
 ## 쓰는 사람
 

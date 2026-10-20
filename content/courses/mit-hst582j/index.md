@@ -5,9 +5,9 @@ description: MIT HST.582J Biomedical Signal and Image Processing을 따라가며
 
 신호처리 이론을 심전도, 뇌파, 의료 영상 같은 생체 데이터에 적용하는 과목이다. [[courses/mit-6003/index|6.003]]의 신호·시스템 이론과 [[courses/mit-1805/index|18.05]]의 확률을 생체 신호 위에서 잇는다. 공개 강의 자료는 [MIT OpenCourseWare HST.582J](https://ocw.mit.edu/courses/hst-582j-biomedical-signal-and-image-processing-spring-2007/)에 있다.
 
-## 단원과 이 노트의 글
+## 단원
 
-| 단원               | 다루는 것                                   | 이 노트의 글                                                                      |
+| 단원               | 다루는 것                                   | 글                                                                             |
 | ------------------ | ------------------------------------------- | --------------------------------------------------------------------------------- |
 | 생체 신호 획득     | ADC, 샘플링, 디지털 필터                    | [[quantization-adc\|양자화와 ADC]] · [[sampling-aliasing\|샘플링과 앨리어싱]]     |
 | 이산 스펙트럼 방법 | DTFT, DFT, Z 변환, STFT                     | [[dtft\|이산시간 푸리에 변환]] · [[dft-fft\|DFT와 FFT]] · [[z-transform\|z 변환]] |

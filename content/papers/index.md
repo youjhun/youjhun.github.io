@@ -3,8 +3,6 @@ title: 논문
 description: 읽은 논문을 정리한 리뷰.
 ---
 
-읽은 논문을 정리한다. 논문이 말한 것과 내가 읽으며 든 생각은 따로 적는다.
-
 ## 분산형 무선 신경 인터페이스
 
 1. [[neurograin-wireless-microimplants|Neurograin 무선 마이크로임플란트]] — 분산 칩의 기록·자극·TDMA 네트워크를 처음 한 시스템으로 시연.

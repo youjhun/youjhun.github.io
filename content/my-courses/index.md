@@ -3,9 +3,11 @@ title: 내가 만든 과목
 description: 기존 강의 하나로 채워지지 않는 주제를 위해 직접 설계한 커리큘럼.
 ---
 
-관심 있는 주제가 강의 하나에 깔끔하게 들어 있지 않을 때가 많다. 신경 인터페이스를 이해하려면 신호처리, 회로, 무선 통신, 전자기, 전극 물리를 조금씩 알아야 하고, 이것들은 서로 다른 과목에 흩어져 있다.
+신경 인터페이스를 이해하려면 신호처리, 회로, 무선 통신, 전자기, 전극 물리를 조금씩 알아야 한다. 이 내용이 여러 과목에 흩어져 있어서 필요한 단원만 골라 과목을 따로 짰다. 신호와 생체 신호의 기초는 [[courses/mit-6003/index|6.003]]과 [[courses/mit-hst582j/index|HST.582J]]에 맡기고, 여기에는 그 강의들에 없는 단원만 둔다. 단원은 논문이나 프로젝트를 하다 막힐 때 하나씩 채운다.
 
-그래서 과목을 직접 짰다. 원칙은 두 가지다.
+## 과목
 
-1. **이미 있는 강의를 재료로 쓴다.** 신호와 생체 신호의 기반은 [[courses/mit-6003/index|6.003]]과 [[courses/mit-hst582j/index|HST.582J]]가 맡고, 맞춤 과목에는 그 강의들이 다루지 않는 부분만 둔다.
-2. **필요할 때 배운다.** 논문이나 프로젝트에서 막힌 자리가 생기면, 그 단원을 그때 연다.
+- [[my-courses/neural-interface/index|Human Sensing & Neural Interface Foundations]]: 무선 신경 인터페이스의 측정·통신·전력·자극
+- [[my-courses/eeg-bci/index|EEG–BCI 파이프라인]]: 뇌파 획득부터 공간 필터, 분류, 검증까지
+- [[my-courses/human-sensing/index|Physiological & Human Sensing]]: 여러 생체 신호의 공통 구조
+- [[my-courses/embedded-sensing/index|Embedded Sensor Systems]]: 센서에서 기기 안의 추론까지

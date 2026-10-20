@@ -4,6 +4,7 @@ Quartz는 markdownLinkResolution: "shortest"로 [[이름]] 링크를 찾는다. 
 둘 이상이면 링크가 루트의 같은 이름 페이지로 떨어진다. 그래서 다음을 막는다.
 - 별칭의 마지막 부분이 어떤 글의 파일 이름과 같다 (대소문자만 다른 것, 'concepts/dtft' 같은 경로 꼴 포함)
 - index가 아닌 글 두 개가 같은 파일 이름을 쓴다
+- 서로 다른 글 두 개가 같은 별칭을 쓴다
 사용: python3 scripts/check_aliases.py [content 폴더]
 """
 
@@ -55,11 +56,17 @@ for name, paths in sorted(by_name.items()):
     if len(paths) > 1:
         print(f"file name '{name}' is used by {len(paths)} files: " + ", ".join(map(str, paths)))
         bad += 1
+by_alias = defaultdict(list)
 for p in files:
     for alias in aliases(p.read_text(encoding="utf-8")):
         hit = by_name.get(last_part(alias))
         if hit:
             print(f"{p}: alias '{alias}' collides with {hit[0]}")
             bad += 1
+        by_alias[last_part(alias)].append(p)
+for alias, paths in sorted(by_alias.items()):
+    if len(set(paths)) > 1:
+        print(f"alias '{alias}' is used by {len(set(paths))} files: " + ", ".join(map(str, sorted(set(paths)))))
+        bad += 1
 print("aliases ok" if not bad else f"{bad} problem(s)")
 sys.exit(1 if bad else 0)

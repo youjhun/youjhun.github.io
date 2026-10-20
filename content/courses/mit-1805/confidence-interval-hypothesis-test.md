@@ -1,6 +1,6 @@
 ---
 title: 신뢰구간과 가설검정
-aliases: [confidence interval, hypothesis test, p-value]
+aliases: [confidence interval, hypothesis test]
 tags: [통계, 추론, 가설검정]
 date: 2026-10-20
 description: 신뢰구간, p-value, 유의수준이 같은 표본분포를 서로 다른 방향에서 읽는 방식임을 정리한다.
