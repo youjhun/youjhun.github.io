@@ -123,4 +123,4 @@ $$
 
 - MIT OCW, [6.003 Signals and Systems (Fall 2011)](https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/), Lecture 23 _Modulation, part 1_, Lecture 24 _Modulation, part 2_
 - A. V. Oppenheim, A. S. Willsky, _Signals and Systems_, 2nd ed., Ch. 8
-- S. Haykin, _Communication Systems_, 4th ed., Wiley, 각도 변조 장(카슨 규칙)
+- S. Haykin, _Communication Systems_, Wiley (카슨 규칙)
