@@ -19,7 +19,8 @@ n = np.arange(int(T * FS))
 f0 = 100 + 40 * n / len(n)
 phase = np.cumsum(f0 / FS)
 x = np.zeros(len(n))
-x[np.nonzero(np.diff(np.floor(phase)) > 0)[0] + 1] = 1.0
+pulses = np.nonzero(np.diff(np.floor(phase)) > 0)[0] + 1
+x[pulses] = 1.0
 for fc, bw in [(500, 80), (1500, 120), (2500, 160)]:
     r = np.exp(-np.pi * bw / FS)
     a = [1, -2 * r * np.cos(2 * np.pi * fc / FS), r * r]
@@ -27,7 +28,8 @@ for fc, bw in [(500, 80), (1500, 120), (2500, 160)]:
 x = x / np.max(np.abs(x))
 
 # 그림 1: 한 시각에서 10 ms와 40 ms 해밍 창으로 본 스펙트럼
-n0 = int(0.15 * FS)
+# 창 가운데를 0.15 s에 가장 가까운 펄스 25 표본 뒤에 둔다
+n0 = int(pulses[np.argmin(np.abs(pulses - 0.15 * FS))] + 25)
 fig, axes = plt.subplots(1, 2, figsize=(10, 3.4), sharey=True)
 for ax, ms, c in zip(axes, (10, 40), (ORANGE, BLUE)):
     L = int(ms * FS / 1000)
@@ -43,6 +45,7 @@ for ax, ms, c in zip(axes, (10, 40), (ORANGE, BLUE)):
 axes[0].set_ylabel("크기 (dB)")
 fig.tight_layout()
 save(fig, ARTICLE, "window-length-spectra.png")
+print("window centre t =", n0 / FS, "s, f0 =", round(100 + 40 * n0 / len(n), 1), "Hz")
 
 # 그림 2: 광대역·협대역 스펙트로그램
 fig, axes = plt.subplots(1, 2, figsize=(10, 3.6), sharey=True)
