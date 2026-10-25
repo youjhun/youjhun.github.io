@@ -65,7 +65,7 @@ fig, axes = plt.subplots(1, 2, figsize=(10, 3.4))
 tt = np.linspace(-3, 3, 1201)
 for S, color in [(1, BLUE), (2, RED)]:
     axes[0].plot(tt, (np.abs(tt) <= S).astype(float), color=color, lw=2, label=f"폭 {2 * S}")
-    axes[1].plot(w, 2 * S * np.sinc(w * S / np.pi), color=color, lw=2, label=f"$2\\sin({S}\\omega)/\\omega$")
+    axes[1].plot(w, 2 * S * np.sinc(w * S / np.pi), color=color, lw=2, label=r"$2\sin\omega/\omega$" if S == 1 else r"$2\sin 2\omega/\omega$")
 axes[0].set_ylim(-0.1, 1.3)
 axes[0].set_title("시간: 높이 1인 사각 펄스", loc="left")
 axes[0].set_xlabel("t")

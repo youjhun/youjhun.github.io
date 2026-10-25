@@ -50,7 +50,7 @@ $$
 x_1(at) \;\longleftrightarrow\; \frac{1}{|a|}\, X_1\!\left(\frac{j\omega}{a}\right)
 $$
 
-이다. $a < 1$이면 시간이 늘어나고, 주파수는 그만큼 좁아지면서 높이가 커진다.
+이다. $0 < a < 1$이면 시간이 늘어나고, 주파수는 그만큼 좁아지면서 높이가 커진다.
 
 ## 원점의 값
 
@@ -104,7 +104,7 @@ $$
 x(t) = \sum_k a_k e^{jk\frac{2\pi}{T}t} \;\longleftrightarrow\; X(j\omega) = \sum_k 2\pi a_k\, \delta\!\left(\omega - k\frac{2\pi}{T}\right)
 $$
 
-주기 신호와 비주기 신호를 하나의 틀에서 다룰 수 있다.
+이 표현을 쓰면 주기 신호와 비주기 신호를 같은 변환으로 다룰 수 있다.
 
 ## 유의점
 
@@ -118,7 +118,7 @@ $$
 - [[fourier-series|푸리에 급수]]: 주기 신호에서 출발한 같은 생각
 - [[bode-plot|보드 선도]]: $H(j\omega)$를 로그 축에 그리는 방법
 - [[modulation|변조]]: 곱셈이 주파수 이동이 된다는 성질을 쓰는 응용
-- [[sampling-aliasing|샘플링과 앨리어싱]]: 임펄스 열의 변환이 다시 임펄스 열이라는 것
+- [[sampling-aliasing|샘플링과 앨리어싱]]: 표본화가 스펙트럼을 주기적으로 복사하는 현상
 - [[dtft|이산시간 푸리에 변환]]: 이산시간 신호의 푸리에 변환
 
 ## 참고 자료
