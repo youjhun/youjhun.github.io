@@ -1,6 +1,6 @@
 """MIT HST.582J 선형 예측 문서의 그림.
 
-합성 모음: 기본 주파수 120 Hz 펄스 열을 500, 1500, 2500, 3500 Hz 공진기에 통과시켰다.
+합성 모음: 83 표본 간격(약 120.5 Hz) 펄스 열을 500, 1500, 2500, 3500 Hz 공진기에 통과시켰다.
 표본화 주파수 10 kHz, 20 ms 해밍 창 구간을 자기상관법으로 분석한다. 레빈슨-더빈
 재귀는 직접 구현했고 테플리츠 행렬 풀이와 같은 답을 내는지 확인한다. 값은 모두 직접 계산했다.
 """
@@ -51,6 +51,7 @@ axes[0].plot(f, 10 * np.log10(S / S.max()), color=GRAY, lw=1, label="DFT 스펙�
 for p, c in [(4, ORANGE), (8, BLUE), (80, RED)]:
     a, errs = levinson(R, p)
     assert np.allclose(a, solve_toeplitz(R[:p], R[1:p + 1]))
+    assert np.isclose(errs[-1], R[0] - a @ R[1:p + 1])
     A = np.fft.rfft(np.concatenate(([1.0], -a)), NF)
     H = errs[-1] / np.abs(A) ** 2
     axes[0].plot(f, 10 * np.log10(H / S.max()), color=c, lw=1.6, label=f"$p = {p}$")
@@ -65,19 +66,11 @@ P = 30
 _, errs = levinson(R, P)
 pp = np.arange(P + 1)
 aic = np.log(errs / errs[0]) + 2 * pp / L
-axes[1].plot(pp, errs / errs[0], "o-", color=BLUE, ms=3.5, label="$E_e^{(p)}/E_e^{(0)}$")
-axes[1].set_yscale("log")
+axes[1].plot(pp, aic, "o-", color=TEAL, ms=3.5)
+axes[1].axvline(int(np.argmin(aic)), color=GRAY, ls="--", lw=1)
 axes[1].set_xlabel("모형 차수 $p$")
-axes[1].set_ylabel("정규화한 예측 오차 에너지")
-ax2 = axes[1].twinx()
-ax2.plot(pp, aic, "s-", color=TEAL, ms=3, lw=1.2, label="AIC")
-ax2.set_ylabel("AIC")
-ax2.grid(False)
-ax2.spines["right"].set_visible(True)
-axes[1].set_title("차수에 따른 예측 오차와 AIC", loc="left")
-h1, l1 = axes[1].get_legend_handles_labels()
-h2, l2 = ax2.get_legend_handles_labels()
-axes[1].legend(h1 + h2, l1 + l2, fontsize=9, loc="upper right")
+axes[1].set_ylabel("AIC")
+axes[1].set_title("차수에 따른 AIC", loc="left")
 fig.tight_layout()
 save(fig, ARTICLE, "lpc-spectra-order.png")
 print("AIC min at p =", int(np.argmin(aic)), " N =", L)
