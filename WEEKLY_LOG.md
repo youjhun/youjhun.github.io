@@ -122,3 +122,9 @@
 - 쓴 글: Human Sensing & Neural Interface [전극–조직 경계], [무선 전력과 원격 측정]. 과목 단원표의 빈 두 행에 연결.
 - 재료: C.-M. Kyung 편, _Smart Sensors for Health and Environment Monitoring_(Springer, 2015) 3장 §4–5와 4장 §5.1–5.2(Topdown에 올린 원문). 책의 그림은 싣지 않았다. 전극 지름에 따른 임피던스·열잡음과 두 원형 고리의 결합 계수·링크 효율은 단순 모형으로 직접 계산했고, 원문 밖의 계산이라고 글에 밝혔다.
 - 막힌 것: 없음.
+
+## 2026-10-26 (추가 실행 18)
+
+- 보강한 글: [ECG 측정 원리]에 심근 세포와 박동원 세포의 활동 전위, 자율신경의 영향, 전도 경로, 쌍극자 모형과 사지 유도 방향, 리듬 이상의 기전을 더했다. 같은 주제의 글이 있어 새 글을 만들지 않았다.
+- 재료: MIT OCW HST.582J (Spring 2007) A. Reisner 강의 슬라이드 _Introduction to Clinical Electrocardiography_(Topdown에 올린 원문). 슬라이드의 심전도 기록과 그림은 싣지 않았고, 사지 유도 방향 그림은 표준 각도로 직접 그렸다.
+- 막힌 것: 없음.
