@@ -12,7 +12,7 @@ description: MIT 6.012 Microelectronic Devices and Circuits (Fall 2005)를 따�
 | 반도체 물리 | L2–3 | 전자와 정공, 도핑, 드리프트와 확산 | [[semiconductor-carriers\|반도체의 캐리어와 전류]] |
 | pn 접합 정전기 | L4–6 | 볼츠만 관계, 공핍 근사, 바이어스와 공핍 커패시턴스 | [[pn-junction-electrostatics\|pn 접합의 정전기]] |
 | MOS 정전기 | L7–8 | 축적·공핍·반전, 문턱전압, 전하 제어 관계 | [[mos-capacitor-threshold\|MOS 구조와 문턱전압]] |
-| MOSFET | L9–11 | 전류-전압 특성, 소신호 등가회로 | |
+| MOSFET | L9–11 | 전류-전압 특성, 소신호 등가회로 | [[mosfet-iv\|MOSFET의 전류-전압 특성]] · [[mosfet-small-signal\|MOSFET 소신호 모델]] |
 | CMOS 디지털 회로 | L12–14 | 인버터, 전달 특성, 전파 지연 | |
 | pn 다이오드 | L15–16 | 전류-전압 특성, 등가회로 | |
 | 바이폴라 트랜지스터 | L17–18 | 동작 원리, 대신호 모델 | |
