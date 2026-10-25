@@ -20,3 +20,7 @@ aliases: [EE201]
 ## 참고 자료
 
 - 강의 교재: *Engineering Circuit Analysis*
+
+## 추가 단원
+
+- [[second-order-rlc|RLC 2차 회로]]: 특성근, 감쇠와 공진

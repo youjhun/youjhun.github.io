@@ -36,7 +36,39 @@ description: 생물학적 인식 요소, 변환기와 신호처리를 구분하�
 
 측정 사슬 전체는 [[biosignal-measurement-chain|생체신호 측정 사슬]]에 이어진다.
 
-## 출처
+
+## 변환 방식
+
+| 방식 | 원리와 대표 예 | 주된 교란 요인 |
+| --- | --- | --- |
+| 열 | thermocouple의 온도차 전압, thermistor의 저항 변화 | 기준 온도, 자기 발열, 비선형 보정 |
+| 기계 | strain gauge의 변형에 따른 저항 변화 | 온도, 부착 조건, 반복 하중 |
+| 전기화학 | 효소 반응 전류, 전위차형 pH 검출 | 간섭물질, 기준전극, 매질과 표면 변화 |
+| 광학 | 광다이오드의 광전류와 흡수·반사 변화 | 주변광, 광경로, 움직임, 검출기 응답 |
+| 생체전기 | 조직이 만드는 전위를 전극으로 검출 | 접촉 임피던스, 공통모드 간섭, 전극 오프셋 |
+
+Strain gauge에서는 작은 변형률 $\varepsilon$에 대해 $\Delta R/R=GF\varepsilon$로 감도를 표현할 수 있다. Wheatstone bridge는 작은 저항 변화를 차동 전압으로 읽는 데 쓰인다. Thermocouple은 기준 접점과의 온도차를 측정하므로 절대온도를 얻으려면 기준 접점 정보가 필요하다.
+
+## 기계적 측정과 점탄성
+
+AFM은 탐침과 표면의 상호작용으로 생기는 cantilever의 변위를 검출한다. 단순한 탄성 근사에서는 $F=k\delta$이지만 접촉 형상과 시료 모형에 따라 탄성계수 추정이 달라진다. 점탄성 시료는 시간과 변형 속도에도 의존한다. 일정 변형률에서 응력이 감소하는 stress relaxation과 일정 응력에서 변형이 증가하는 creep을 구분한다. 측정 장치의 시간 응답과 시료의 시간 의존성도 분리해야 한다.
+
+## 유의점
+
+- 센서 보정의 기울기인 감도와 분류기의 true-positive rate를 문맥 없이 혼용하지 않는다.
+- 정밀한 반복값에도 체계적 편향이 있을 수 있다.
+- 센서의 출력 단위와 최종 추정한 생리량의 단위를 구별한다.
+
+## 관련 개념
+
+- [[op-amp-circuit-families|전류-전압 변환과 버퍼]]
+- [[pulse-oximetry-ppg|광학 측정]]
+- [[medical-imaging-physics|의료영상]]
+
+## 참고 자료
 
 - 개인 학습 기록, Notion `Studies / 2024 Spring / BiS200`, Bioinstrumentation and Biosensors
 - 개인 학습 기록, Notion `Studies / 2024 Spring / BiS200 / Quiz #4`
+
+- Saltzman, Biomedical Engineering: Bridging Medicine and Technology, 2판.
+- Notion BiS200 Midterm / Final의 해당 단원과 대조했다.

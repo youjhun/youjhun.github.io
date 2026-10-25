@@ -17,16 +17,29 @@ aliases:
 | 개체 | 면역·신경·생리 시스템은 어떻게 상호작용하는가?      | 면역공학, 신경공학, 생리학                 |
 | 계측 | 보이지 않는 생명현상을 어떤 신호로 바꾸는가?        | 바이오센서, bioinstrumentation, bioimaging |
 
-## 개념 글
+## 단원
 
-- 암: [[cancer-genes-metastasis|암을 유전자와 조직 환경의 문제로 보기]]
-- 면역공학: [[antibodies-vaccines-immunotherapy|항체·백신·면역치료]]
-- 조직공학: [[tissue-engineering-scaffolds|조직공학과 분해성 스캐폴드]]
-- 바이오계측: [[biosensor-performance|바이오센서의 구성과 성능]] · [[biosignal-measurement-chain|생체신호 측정 사슬]]
-- 전기 생체신호: [[ecg|ECG 측정 원리]]
-- 광학 생체신호: [[pulse-oximetry-ppg|PPG와 맥박산소측정]]
-- 디지털화: [[courses/mit-hst582j/quantization-adc|양자화와 ADC]]
-- 신경 인터페이스: [[my-courses/neural-interface/index|Human Sensing & Neural Interface Foundations]]
+| 단원 | 본문 |
+| --- | --- |
+| Biomolecular Principles | [[biomolecules-binding\|생체분자와 결합 평형]] · [[transcription-translation\|전사와 번역]] · [[cell-analysis-genetics\|분자 분석법]] |
+| Cellular Principles | [[cell-adhesion-stem-cells\|세포 부착·줄기세포·오가노이드]] · [[cell-cycle-cancer\|세포주기]] |
+| Communication Systems | [[neural-endocrine-control\|신경·내분비 신호와 항상성]] · [[cell-signaling-pathways\|수용체별 신호전달]] |
+| Physiological Principles | [[physiology-mass-balance\|물질수지와 약동학]] · [[physiology-circulation-respiration\|호흡·순환·신장]] |
+| Cancer | [[cancer-genes-metastasis\|암의 유전자·조직 환경·진단]] |
+| Engineering Immunity | [[antibodies-vaccines-immunotherapy\|항체·백신·면역치료]] |
+| Drug Delivery Engineering | [[physiology-mass-balance\|구획 모형과 clearance]] · [[antibodies-vaccines-immunotherapy\|생체분자 전달]] |
+| Tissue Engineering | [[tissue-engineering-scaffolds\|조직공학·스캐폴드·혈관화]] |
+| Bioinstrumentation | [[biosensor-performance\|센서 성능과 변환 방식]] · [[biosignal-measurement-chain\|생체신호 측정 사슬]] |
+| Biomedical Imaging | [[medical-imaging-physics\|X선·CT·초음파·핵의학·MRI]] |
 
-> [!note] 공개 범위
-> 개인 강의 기록에서 확인한 과목 구조와 요약을 공개용 개념 지도로 다시 썼다. 강의 자료나 평가 문항은 포함하지 않는다.
+## 관련 측정
+
+- [[ecg|ECG 측정 원리]]
+- [[pulse-oximetry-ppg|PPG와 맥박산소측정]]
+- [[courses/mit-hst582j/quantization-adc|양자화와 ADC]]
+
+## 참고 자료
+
+- Saltzman, Biomedical Engineering: Bridging Medicine and Technology, 2판.
+- Notion BiS200의 중간·기말 정리와 단원별 기록.
+- Google Drive BiS200 Midterm 정리 PDF.

@@ -17,5 +17,10 @@ aliases: [CS206]
 | ADT       | 스택, 큐, ArrayList, iterator   | [[stacks-queues-trees-heaps\|스택·큐·트리·힙]]        |
 | 계층 구조 | 트리, 우선순위 큐, heapsort     | [[stacks-queues-trees-heaps\|스택·큐·트리·힙]]        |
 
+
+## 추가 단원
+
+- [[maps-hashing-sorting|탐색트리·해시·정렬]]: Google Drive의 2023 Spring 자료에서 확인한 후반 단원. 2024 Fall 단원표와 자료 시기를 구별한다.
+
 > [!note] 근거
 > 2024 Fall `Studies / CS206 데이타구조`의 강의 파일 목록을 범위로 삼았다. 강의 슬라이드나 과제 코드는 옮기지 않았다.

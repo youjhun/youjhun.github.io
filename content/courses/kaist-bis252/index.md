@@ -15,5 +15,10 @@ aliases: [BiS252]
 | 연산증폭기         | 작은 차동 신호를 어떻게 증폭하는가         | [[op-amp-biosignal-front-end\|연산증폭기와 생체신호 앞단]] · [[difference-amplifier-cmrr\|차동 증폭기와 CMRR]] |
 | RC/RL 회로         | 저장소가 과도응답과 필터를 어떻게 만드는가 | [[first-order-rc-rl\|RC·RL 1차 회로]] |
 
+
+## 추가 단원
+
+- [[op-amp-circuit-families|반전·비반전·가산·버퍼·TIA]]
+
 > [!note] 근거
 > 2024 Fall `Studies / BiS252`의 강의 파일과 Op-Amp 기록에서 단원 범위를 확인했다.

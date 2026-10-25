@@ -19,5 +19,11 @@ aliases:
 - 불확실한 관측의 해석: [[courses/mit-1805/index|확률과 통계]]
 - 여러 변수의 결합과 차원 축소: [[courses/mit-1806/index|선형대수]]
 
+
+## 추가 단원
+
+- [[entropy-boltzmann|엔트로피·앙상블·Boltzmann 분포]]
+- [[electrostatics-screening|유전분극과 전기이중층]]
+
 > [!note] 공개 범위
 > 2024 Spring `Studies / BiS223 / Lecture Note`에서 직접 확인한 주제만 옮겼다. 과제·평가 문항과 비공개 강의 PDF는 포함하지 않는다.
