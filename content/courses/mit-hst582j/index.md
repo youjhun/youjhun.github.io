@@ -12,7 +12,7 @@ description: MIT HST.582J Biomedical Signal and Image Processing을 따라가며
 | 생체 신호 획득     | ADC, 샘플링, 디지털 필터                    | [[quantization-adc\|양자화와 ADC]] · [[sampling-aliasing\|샘플링과 앨리어싱]] · [[digital-filters-convolution\|디지털 필터와 컨볼루션]] |
 | 이산 스펙트럼 방법 | DTFT, DFT, Z 변환, STFT                     | [[dtft\|이산시간 푸리에 변환]] · [[dft-fft\|DFT와 FFT]] · [[z-transform\|z 변환]] · [[stft-spectrogram\|단시간 푸리에 변환과 스펙트로그램]] |
 | 랜덤 생체 신호     | 상관, 전력 스펙트럼 밀도, LTI를 지나는 잡음 | [[random-signals-autocorrelation\|랜덤 신호와 자기상관]] · [[power-spectrum-wiener-filter\|전력 스펙트럼과 위너 필터]] |
-| 확률과 판정        | 검출, 분류, ROC                             |                                                                                   |
+| 확률과 판정        | 검출, 분류, ROC                             | [[bayes-classifier-detection\|판정과 베이즈 분류기]] |
 | 심전도 응용        | ECG 생리와 파형                             |                                                                                   |
 | 고급 방법          | 선형 예측, 블라인드 신호 분리               | [[linear-prediction\|선형 예측]] |
 | 의료 영상          | 분할, 정합, 영상 모달리티                   |                                                                                   |
