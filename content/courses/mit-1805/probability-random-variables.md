@@ -53,7 +53,74 @@ $$
 
 생체신호에서는 같은 사람의 연속 구간을 독립 표본으로 취급하기 쉽다. 확률변수를 정의했다고 독립성이 자동으로 생기지는 않는다. 세션, 사람, 시간 의존성을 표본공간과 생성 과정에 포함해야 한다.
 
-## 출처
+## 경우의 수와 이항분포
+
+독립인 N개 시행에서 성공 확률이 p로 같으면 성공 횟수 X의 분포는
+
+$$
+P(X=n)=\binom Nn p^n(1-p)^{N-n},\quad n=0,\ldots,N.
+$$
+
+특정한 성공·실패 순서 하나의 확률에 성공 위치를 고르는 조합 수를 곱한 것이다. 이항정리에서 전체 합은 $(p+(1-p))^N=1$이다. $X=\sum_{i=1}^NB_i$로 쓰면 $E[X]=Np$, $\operatorname{Var}(X)=Np(1-p)$를 얻는다. 분산을 더할 때 독립성을 사용했다.
+
+새 예로 서로 독립이고 활성 확률이 0.2인 분자 스위치 10개의 활성 개수를 잡는다. 평균은 2, 분산은 1.6이고, 정확히 두 개가 활성일 확률은 $\binom{10}2(0.2)^2(0.8)^8\approx0.3020$이다. 평균이 2라는 사실은 관측값이 항상 2라는 뜻이 아니다. 상호작용이나 공통 환경 변동이 있으면 독립 이항모형이 달라질 수 있다.
+
+## Poisson 극한
+
+$N\to\infty$, $p\to0$에서 $Np=\lambda$를 일정하게 두면 고정된 n에 대해
+
+$$
+\binom Nn(\lambda/N)^n(1-\lambda/N)^{N-n}
+\longrightarrow e^{-\lambda}\frac{\lambda^n}{n!}.
+$$
+
+조합 항과 $(\lambda/N)^n$의 곱은 $\lambda^n/n!$으로, 남은 항은 $e^{-\lambda}$로 간다. Poisson 분포는 $n=0,1,\ldots$에 정의되고 평균과 분산이 모두 λ다. 시간당 사건율 r이 일정하고 독립 증분을 갖는 Poisson 과정이면 관측시간 t의 횟수 모수는 λ=rt다. 사건율의 단위와 무차원 평균 횟수를 구분한다.
+
+이항분포는 고정 시행 수 안에서 성공을 세고, Poisson은 이 한도를 제거한 희귀 사건 극한 또는 별도의 과정 모형이다. 위 N=10,p=0.2 예에서 λ=2인 Poisson의 $P(X=2)=2e^{-2}\approx0.2707$은 정확한 이항 확률과 차이가 있다. 평균만 같다고 분포가 같은 것은 아니다. 이항분포의 n>N 확률은 0이지만 Poisson은 일반적으로 양수다.
+
+## Gaussian 근사와 연속성 보정
+
+Np와 N(1−p)가 모두 충분히 크면 이항분포를 평균 Np, 분산 Np(1−p)의 정규분포로 근사할 수 있다. 고정된 숫자 하나를 보편적 합격 기준으로 삼지 말고 꼬리확률·비대칭성과 요구 오차를 본다.
+
+$X\sim\operatorname{Binomial}(100,0.5)$에서 평균 50, 표준편차 5다. $P(45\le X\le55)$를 연속분포로 옮길 때 구간 [44.5,55.5]로 보정하면 표준화 경계는 −1.1과 1.1이며 정규 근삿값은 약 0.7287이다. 정확한 이항합은 약 0.7287이다. 보정 없이 [45,55]를 쓰면 약 0.6827로 차이가 난다. 이는 이 대칭 예의 계산이며 극단적인 꼬리까지 같은 정확도를 보장하지 않는다.
+
+## 큰 수의 법칙과 중심극한정리
+
+독립·동일분포 표본 $X_i$가 유한 평균 μ와 유한 분산 $\sigma^2>0$를 가지면 표본평균 $\overline X_N$은 μ로 수렴하고,
+
+$$
+\frac{\overline X_N-\mu}{\sigma/\sqrt N}
+\xrightarrow{d}\mathcal N(0,1).
+$$
+
+큰 수의 법칙은 평균의 안정성을, 중심극한정리는 적절히 확대해 본 오차의 극한 모양을 기술한다. N이 커진다고 개별 $X_i$의 분포가 정규로 변하지는 않는다. 상관된 연속 표본에는 독립표본 식을 그대로 쓰지 않는다. 일반적으로
+
+$$
+\operatorname{Var}(\overline X_N)=\frac1{N^2}\sum_{i,j}\operatorname{Cov}(X_i,X_j)
+$$
+
+이어서 양의 상관이 있으면 독립 가정의 표준오차보다 클 수 있다. 유한 분산 조건이 깨지거나 매우 무거운 꼬리가 있으면 위 CLT의 적용을 다시 검토한다.
+
+## 분자계와의 연결
+
+독립 두 준위 입자의 들뜬 상태 수는 이항분포로 기술할 수 있다. 입자당 들뜸 확률을 q라고 하면 $P(n)=\binom Nn q^n(1-q)^{N-n}$다. q 자체는 에너지 차·온도·축퇴도를 포함한 Boltzmann 확률로 정한다. 위치의 독립 보폭을 더한 random walk에서는 중앙부의 Gaussian 근사와 분산의 N 비례가 확산 방정식으로 이어진다. 미시 가정이 상관이나 입자 간 결합을 포함하면 독립 모형부터 수정한다.
+
+## 유의점
+
+- 확률밀도는 점확률과 다르며 단위를 가질 수 있다.
+- Poisson 근사는 희귀성·독립성 가정을 확인한 뒤 쓴다.
+- 정규 근사와 정확한 확률을 구별하고, 근사에서 쓴 평균·분산·보정을 적는다.
+
+## 관련 개념
+
+- [[entropy-boltzmann|두 준위 입자의 Boltzmann 확률]]
+- [[diffusion-ficks-law|Random walk와 확산]]
+- [[expectation-variance-covariance|기댓값·분산·공분산]]
+- [[bootstrap|재표본추출과 표준오차]]
+
+## 참고 자료
 
 - 개인 학습 기록, Notion `Studies / LAIDD / Probability and Statistics`, Random Variables and Probability
 - MIT OpenCourseWare, [18.05 Introduction to Probability and Statistics](https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/)
+
+- [MIT 18.05, Readings](https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/pages/classes-reading-and-in-class-materials/), 이산분포·중심극한정리. 분자계 연결은 BiS223의 개념 기록에 맞춘 보충 설명이다.

@@ -3,6 +3,8 @@ title: 과목
 description: 대학 강의를 따라가며 정리한 개념.
 ---
 
+- [[courses/coverage|과목별 단원 대조와 확인 범위]]
+
 ## MIT OpenCourseWare
 
 - [[courses/mit-6003/index|6.003 신호와 시스템]]

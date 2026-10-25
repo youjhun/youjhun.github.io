@@ -150,7 +150,11 @@ export const CrawlLinks: QuartzTransformerPlugin<Partial<Options>> = (userOpts) 
                   dest = node.properties.src = transformLink(
                     file.data.slug!,
                     dest,
-                    transformOptions,
+                    // Explicit media paths are relative to the source document.
+                    // Root/shortest resolution would prepend pathToRoot again.
+                    /^\.{1,2}\//.test(dest)
+                      ? { ...transformOptions, strategy: "relative" }
+                      : transformOptions,
                   )
                   node.properties.src = dest
                 }
