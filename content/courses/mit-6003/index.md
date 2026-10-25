@@ -15,7 +15,7 @@ description: MIT 6.003 Signals and Systems (Fall 2011)를 따라가며 정리한
 | 주파수 응답        | 보드 선도, 필터                                | [[bode-plot\|주파수 응답과 보드 선도]] |
 | 연속시간 푸리에    | 푸리에 급수와 변환                             | [[fourier-series\|푸리에 급수]] · [[fourier-transform\|연속시간 푸리에 변환]] |
 | 이산시간 푸리에    | DTFT, DFT, FFT, 네 가지 표현의 관계            | [[dtft\|이산시간 푸리에 변환]] · [[dft-fft\|DFT와 FFT]]                                                   |
-| 푸리에 응용        | 필터링, 생체 신호                              |                                                                                                           |
+| 푸리에 응용        | 필터링, 생체 신호                              | [[fourier-applications\|푸리에 변환의 응용]] |
 | 샘플링·양자화      | 표본화 정리, 앨리어싱                          | [[sampling-aliasing\|샘플링과 앨리어싱]]                                                                  |
 | 변조               | 진폭·주파수 변조, 무선 통신                    | [[modulation\|변조]] |
 

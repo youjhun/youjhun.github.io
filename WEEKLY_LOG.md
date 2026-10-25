@@ -86,3 +86,9 @@
 - 재료: MIT OCW 6.003 (Fall 2011) Lecture 7 _Discrete Approximation of Continuous-Time Systems_ 슬라이드(Topdown에 올린 원문). 새는 탱크 계단 응답, 극점 사상, 질량-스프링 극점의 크기는 직접 계산했다.
 - 막힌 것: 없음.
 - 고친 것: 6.012 Lecture 23 강의 노트의 공통 소스 증폭기 전달함수는 분모 ω² 계수에서 한 항이 빠져 있어, 글에는 두 마디 방정식을 직접 풀어 고친 식을 적었다.
+
+## 2026-10-25 (추가 실행 12)
+
+- 쓴 글: 6.003 [푸리에 변환의 응용]. 6.003 단원표의 빈 행에 연결.
+- 재료: MIT OCW 6.003 (Fall 2011) Lecture 20 _Applications of Fourier Transforms_ 슬라이드(Topdown에 올린 원문). 강의의 심전도 기록과 DNA X선 회절 사진은 다른 사람의 자료라 싣지 않고 글로만 설명했다. RC 필터 출력과 예시 필터 응답은 직접 계산해 그렸다.
+- 막힌 것: 없음.
