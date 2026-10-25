@@ -14,14 +14,16 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-from style import BLUE, GRAY, ORANGE, TEAL, save, setup
+from scipy.optimize import brentq
+
+from style import BLUE, ORANGE, TEAL, save, setup
 
 setup()
 ARTICLE = "low-power-mac"
 
 P_RADIO = 60e-3  # 주 라디오의 송수신 전력 (W)
 T_S = 2.5e-3  # 채널 확인 시간 (s)
-E_DATA = P_RADIO * 4e-3 * 2  # 데이터와 ACK를 주고받는 동안 두 노드의 에너지 (J)
+E_DATA = P_RADIO * 4e-3 * 2  # 데이터와 ACK를 합친 4 ms 동안 두 노드가 쓰는 에너지 (J)
 E_WAKE = P_RADIO * 1e-3  # 깨우기 신호 한 번의 에너지 (J)
 
 
@@ -71,10 +73,8 @@ i_x = np.argmin(p_xmac(T, lam))
 print(f"lam=1/60: B-MAC T*={T[i_b]:.3f}s P={p_bmac(T[i_b], lam)*1e6:.0f}uW; X-MAC T*={T[i_x]:.3f}s P={p_xmac(T[i_x], lam)*1e6:.0f}uW")
 print(f"always-on receive: {P_RADIO*1e3:.0f} mW")
 for p_ulp in (50e-6, 5e-6):
-    diff_b = p_bmac(T_b, lams) - p_wur(lams, p_ulp)
-    diff_x = p_xmac(T_x, lams) - p_wur(lams, p_ulp)
-    cb = lams[np.argmax(diff_b > 0)]
-    cx = lams[np.argmax(diff_x > 0)]
+    cb = brentq(lambda l: p_bmac(np.sqrt(T_S / (l * 1.5)), l) - p_wur(l, p_ulp), 1e-9, 1)
+    cx = brentq(lambda l: p_xmac(np.sqrt(T_S / (l * 0.5)), l) - p_wur(l, p_ulp), 1e-9, 1)
     print(f"ulp={p_ulp*1e6:g}uW crossover B-MAC lam={cb:.2e} (1 per {1/cb/3600:.2f} h), X-MAC lam={cx:.2e} (1 per {1/cx/3600:.2f} h)")
 for l in (1e-4, 1e-2, 1):
     print(f"lam={l:g}: B {p_bmac(np.sqrt(T_S/(l*1.5)), l)*1e6:.1f}uW T*={np.sqrt(T_S/(l*1.5)):.2f}s; X {p_xmac(np.sqrt(T_S/(l*0.5)), l)*1e6:.1f}uW T*={np.sqrt(T_S/(l*0.5)):.2f}s; WuR50 {p_wur(l,50e-6)*1e6:.1f}uW; WuR5 {p_wur(l,5e-6)*1e6:.1f}")
