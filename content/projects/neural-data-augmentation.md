@@ -7,7 +7,7 @@ description: 적은 신경 기록 trial에서 VAE 합성 데이터가 운동 디
 ---
 
 > [!abstract] 한눈에
-> 실제 BCI에서는 긴 교정 세션이 환자를 지치게 한다. 질문은 단순하다. 실제 데이터가 100 trial뿐일 때, 그 데이터로 학습한 VAE가 만든 `(spike window, velocity)` 쌍을 더하면 디코더가 나아지는가?
+> 실제 BCI에서는 긴 교정 세션이 환자를 지치게 한다. 이 실험은 실제 데이터가 100 trial뿐일 때, 그 데이터로 학습한 VAE가 만든 `(spike window, velocity)` 쌍을 더하면 디코더가 나아지는지 확인한다.
 
 ## 세 조건
 
@@ -19,7 +19,7 @@ description: 적은 신경 기록 trial에서 VAE 합성 데이터가 운동 디
 
 train/test 분할을 먼저 하고, VAE와 디코더는 train fold 안에서만 학습해야 한다. 전체 데이터로 VAE를 먼저 학습하면 test 분포가 생성 모델을 통해 새어 들어간다.
 
-## 무엇을 생성하나
+## 생성 대상
 
 한 샘플은 `20 bins × neurons`의 스파이크 창과 대응하는 $(v_x,v_y)$다. encoder는 둘을 잠재변수 $z$로 압축하고, decoder는 스파이크와 속도를 함께 복원한다.
 
@@ -30,7 +30,7 @@ $$
 +\beta D_{KL}(q_\phi(z\mid x)\|p(z))
 $$
 
-스파이크는 희소한 count 자료이므로 단순 MSE가 적절한지 Poisson 또는 negative-binomial likelihood와 비교해야 한다. 속도를 함께 복원하는 이유는 보기 그럴듯한 스파이크가 아니라 **운동 정보가 보존된 스파이크**를 만들기 위해서다.
+스파이크는 희소한 count 자료이므로 단순 MSE가 적절한지 Poisson 또는 negative-binomial likelihood와 비교해야 한다. 속도도 함께 복원하는 목적은 겉모양만 그럴듯한 데 그치지 않고 운동 정보가 보존된 스파이크를 만드는 데 있다.
 
 ## 생성 데이터 품질
 

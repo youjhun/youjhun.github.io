@@ -6,7 +6,7 @@ aliases: [EE201]
 
 2024 Spring Notion에는 Engineering Circuit Analysis 교재와 Chapter 0–8 강의 기록이 남아 있다. 파일명만으로 세부 단원 제목을 추정하지 않고, 공개 노트에서는 다른 과목 기록과 겹쳐 직접 확인할 수 있는 회로 개념을 연결한다.
 
-## 현재 공개한 공통 기초
+## 공통 기초
 
 - [[thevenin-node-analysis|절점해석과 Thevenin 등가]]: KCL, 중첩, 단자 등가회로
 - [[op-amp-biosignal-front-end|연산증폭기와 생체신호 앞단]]: 음의 피드백, 입력 임피던스와 포화
