@@ -15,7 +15,7 @@ description: 초소형 바이오 ASIC에 metal fuse와 anti-fuse를 넣고 laser
 | 게재 | _Advanced Science_ 10, 2306111 (2023)                                                                  |
 | DOI  | [10.1002/advs.202306111](https://doi.org/10.1002/advs.202306111)                                       |
 
-## 왜 필요한가
+## 필요성
 
 초소형 배터리 없는 바이오 칩은 pad, 메모리, 디지털 제어기를 추가할 면적과 전력이 거의 없다. 그런데 실제 RF 결합, 전원, 아날로그 바이어스는 공정 편차와 사용 환경 때문에 첫 설계값만으로 맞지 않을 수 있다.
 
@@ -23,24 +23,24 @@ description: 초소형 바이오 ASIC에 metal fuse와 anti-fuse를 넣고 laser
 
 ## 두 편집 연산
 
-### Fuse: 연결을 끊는다
+### Fuse로 연결 끊기
 
 최상층 aluminium trace 위 passivation을 355 nm UV laser로 열고, 532 nm pulsed laser로 금속을 절단한다. 65 nm 공정의 설계 규칙에서 약 $3\times3\ \mu m$ 구조까지 다뤘다. 저자들은 주변 회로가 없는 영역에 fuse를 배치해 깊은 활성층 손상을 피했다.
 
-### Anti-fuse: 연결을 만든다
+### Anti-fuse로 연결 만들기
 
 분리된 두 금속 노드 사이에 FIB로 platinum을 증착해 도통시킨다. 이미 끊은 fuse를 다시 연결하거나 원래 열린 선택지를 닫을 수 있다.
 
-둘은 칩이 켜진 동안 값을 바꾸는 firmware programming이 아니다. 현미경 장비로 물리 배선을 영구 편집하는 **post-foundry hardware programming**이다.
+둘 다 칩이 켜진 동안 값을 바꾸는 firmware programming과 다르다. 현미경 장비로 물리 배선을 영구 편집하는 **post-foundry hardware programming**이다.
 
-## 논문이 보인 적용
+## 적용 사례
 
 - 무선 EEG sensor의 analog front-end 파라미터 조정
 - microstimulator 칩의 고유 주소 설정
 - RF energy harvesting 회로의 동작점 선택
 - supply voltage와 내부 회로 조건 최적화
 
-설정 상태를 유지하는 데 정적 전력이 들지 않고, 별도 programming pad나 비휘발성 메모리를 크게 넣지 않아도 된다는 것이 장점이다.
+설정 상태를 유지하는 데 정적 전력이 들지 않고, 별도 programming pad나 비휘발성 메모리를 크게 넣지 않아도 된다는 장점이 있다.
 
 ## 장점과 비용
 
