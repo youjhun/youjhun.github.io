@@ -23,7 +23,7 @@ aliases:
 - 면역공학: [[antibodies-vaccines-immunotherapy|항체·백신·면역치료]]
 - 조직공학: [[tissue-engineering-scaffolds|조직공학과 분해성 스캐폴드]]
 - 바이오계측: [[biosensor-performance|바이오센서의 구성과 성능]] · [[biosignal-measurement-chain|생체신호 측정 사슬]]
-- 전기 생체신호: [[ecg|ECG는 무엇을 측정하는가]]
+- 전기 생체신호: [[ecg|ECG 측정 원리]]
 - 광학 생체신호: [[pulse-oximetry-ppg|PPG와 맥박산소측정]]
 - 디지털화: [[courses/mit-hst582j/quantization-adc|양자화와 ADC]]
 - 신경 인터페이스: [[my-courses/neural-interface/index|Human Sensing & Neural Interface Foundations]]

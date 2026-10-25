@@ -10,10 +10,10 @@ aliases: [BiS252]
 
 | 단원               | 핵심 질문                                  | 공개 글                      |
 | ------------------ | ------------------------------------------ | ---------------------------- |
-| 회로 요소와 저항망 | 전압·전류·전력은 어떻게 연결되는가         | [[thevenin-node-analysis     | 절점해석과 Thevenin 등가]]   |
-| 절점해석·중첩      | 복잡한 선형 회로를 어떻게 나눠 푸는가      | [[thevenin-node-analysis     | 절점해석과 Thevenin 등가]]   |
-| 연산증폭기         | 작은 차동 신호를 어떻게 증폭하는가         | [[op-amp-biosignal-front-end | 연산증폭기와 생체신호 앞단]] |
-| RC/RL 회로         | 저장소가 과도응답과 필터를 어떻게 만드는가 | [[op-amp-biosignal-front-end | 연산증폭기와 생체신호 앞단]] |
+| 회로 요소와 저항망 | 전압·전류·전력은 어떻게 연결되는가         | [[thevenin-node-analysis\|절점해석과 Thevenin 등가]]   |
+| 절점해석·중첩      | 복잡한 선형 회로를 어떻게 나눠 푸는가      | [[thevenin-node-analysis\|절점해석과 Thevenin 등가]]   |
+| 연산증폭기         | 작은 차동 신호를 어떻게 증폭하는가         | [[op-amp-biosignal-front-end\|연산증폭기와 생체신호 앞단]] |
+| RC/RL 회로         | 저장소가 과도응답과 필터를 어떻게 만드는가 | [[op-amp-biosignal-front-end\|연산증폭기와 생체신호 앞단]] |
 
 > [!note] 근거
 > 2024 Fall `Studies / BiS252`의 강의 파일과 Op-Amp 기록에서 단원 범위를 확인했다.

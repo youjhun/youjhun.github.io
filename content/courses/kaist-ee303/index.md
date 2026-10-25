@@ -10,11 +10,11 @@ aliases: [EE303]
 
 | 축          | 단원                                 | 공개 글                          |
 | ----------- | ------------------------------------ | -------------------------------- |
-| 표현        | 수 체계, 불 대수, 논리 최소화        | [[combinational-sequential-logic | 조합논리와 순차논리]] |
-| 조합논리    | 조합회로 설계                        | [[combinational-sequential-logic | 조합논리와 순차논리]] |
-| 상태        | 순차회로, 레지스터, 카운터           | [[combinational-sequential-logic | 조합논리와 순차논리]] |
-| 시간        | setup/hold, 타이밍 분석              | [[timing-memory-rtl              | 타이밍·메모리·RTL]]   |
-| 저장과 구현 | 메모리, programmable logic, RTL, ASM | [[timing-memory-rtl              | 타이밍·메모리·RTL]]   |
+| 표현        | 수 체계, 불 대수, 논리 최소화        | [[combinational-sequential-logic\|조합논리와 순차논리]] |
+| 조합논리    | 조합회로 설계                        | [[combinational-sequential-logic\|조합논리와 순차논리]] |
+| 상태        | 순차회로, 레지스터, 카운터           | [[combinational-sequential-logic\|조합논리와 순차논리]] |
+| 시간        | setup/hold, 타이밍 분석              | [[timing-memory-rtl\|타이밍·메모리·RTL]]   |
+| 저장과 구현 | 메모리, programmable logic, RTL, ASM | [[timing-memory-rtl\|타이밍·메모리·RTL]]   |
 
 > [!note] 근거
 > 2024 Spring `Studies / EE303 디지털시스템설계`의 단원 목록과 Verilog SRAM 기록을 바탕으로 범위를 정했다.

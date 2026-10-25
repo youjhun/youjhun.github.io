@@ -11,11 +11,11 @@ aliases: [CS206]
 | 흐름      | 주제                            | 공개 글                           |
 | --------- | ------------------------------- | --------------------------------- |
 | Java 기초 | 기본형, 조건문·반복문, 함수     | 이 페이지에서 선수지식으로만 표시 |
-| 추상화    | 객체지향, 자료형 사용·생성·설계 | [[data-structure-tradeoffs        | 자료구조를 고르는 기준]] |
-| 선형 구조 | 배열, 연결 리스트               | [[data-structure-tradeoffs        | 자료구조를 고르는 기준]] |
-| 분석      | 알고리즘 분석, 재귀             | [[data-structure-tradeoffs        | 자료구조를 고르는 기준]] |
-| ADT       | 스택, 큐, ArrayList, iterator   | [[stacks-queues-trees-heaps       | 스택·큐·트리·힙]]        |
-| 계층 구조 | 트리, 우선순위 큐, heapsort     | [[stacks-queues-trees-heaps       | 스택·큐·트리·힙]]        |
+| 추상화    | 객체지향, 자료형 사용·생성·설계 | [[data-structure-tradeoffs\|자료구조를 고르는 기준]] |
+| 선형 구조 | 배열, 연결 리스트               | [[data-structure-tradeoffs\|자료구조를 고르는 기준]] |
+| 분석      | 알고리즘 분석, 재귀             | [[data-structure-tradeoffs\|자료구조를 고르는 기준]] |
+| ADT       | 스택, 큐, ArrayList, iterator   | [[stacks-queues-trees-heaps\|스택·큐·트리·힙]]        |
+| 계층 구조 | 트리, 우선순위 큐, heapsort     | [[stacks-queues-trees-heaps\|스택·큐·트리·힙]]        |
 
 > [!note] 근거
 > 2024 Fall `Studies / CS206 데이타구조`의 강의 파일 목록을 범위로 삼았다. 강의 슬라이드나 과제 코드는 옮기지 않았다.

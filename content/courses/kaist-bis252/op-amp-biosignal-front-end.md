@@ -42,4 +42,4 @@ $$
 ## 출처
 
 - 개인 학습 기록, Notion `Studies / 2024 Fall / BiS252`, Op-Amp, RC/RL Circuits
-- 연결 글: [[ecg|ECG는 무엇을 측정하는가]], [[quantization-adc|양자화와 ADC]]
+- 연결 글: [[ecg|ECG 측정 원리]], [[quantization-adc|양자화와 ADC]]
