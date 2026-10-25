@@ -42,7 +42,7 @@ axes[0].text(1.62, 1.22, "$V_{DS} = V_{GS} - V_T$", color=GRAY, fontsize=9.5)
 axes[0].set_xlabel("$V_{DS}$ (V)")
 axes[0].set_ylabel("$I_D$ (mA)")
 axes[0].set_title("출력 특성", loc="left")
-axes[0].legend(fontsize=9, loc="upper left")
+axes[0].legend(fontsize=9, loc="upper left", frameon=True, framealpha=0.92, edgecolor="none")
 
 vgs = np.linspace(0, 2, 600)
 for vbs, c in zip([0, -1, -2, -3], [BLUE, TEAL, ORANGE, RED]):
