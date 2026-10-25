@@ -15,9 +15,9 @@ description: 30개 무선 microstimulator를 쥐 피질에 만성 이식해 공�
 | 게재 | _Nature Communications_ 15, 10093 (2024)                                                 |
 | DOI  | [10.1038/s41467-024-54542-1](https://doi.org/10.1038/s41467-024-54542-1)                 |
 
-## Neurograin에서 무엇이 달라졌나
+## Neurograin 이후 달라진 점
 
-2021년 [[neurograin-wireless-microimplants|Neurograin]] 논문은 분산 칩 네트워크에서 기록과 자극 가능성을 열었다. 이 연구는 자극 기능에 집중해 세 가지를 확장했다.
+2021년 [[neurograin-wireless-microimplants|Neurograin]] 논문은 분산 칩 네트워크에서 기록과 자극 가능성을 보였다. 이 연구는 자극 기능에 집중해 세 가지를 확장했다.
 
 1. 자극 전류를 최대 $120\ \mu A$ peak-to-peak biphasic current로 키웠다.
 2. 칩당 3 μs에 자극 파라미터를 설정하는 collision-free daisy-chain protocol을 만들었다.
@@ -29,7 +29,7 @@ description: 30개 무선 microstimulator를 쥐 피질에 만성 이식해 공�
 
 downlink는 1 Mbps ASK-PWM으로 `sync + 칩별 3-bit command`를 보낸다. 명령은 전류 진폭, phase당 지속 시간, 반복률의 조합을 고른다. 자극이 필요할 때만 RF를 켜므로 연속 전력 방식보다 평균 노출을 크게 줄인다.
 
-`daisy-chain`이라는 이름은 칩들이 선으로 연결됐다는 뜻이 아니다. 미리 정한 순서대로 각 칩의 짧은 command slot을 이어 보내는 무선 register-mapping 방식이다.
+`daisy-chain`이라는 이름과 달리 칩들은 선으로 연결되지 않는다. 미리 정한 순서대로 각 칩의 짧은 command slot을 이어 보내는 무선 register-mapping 방식이다.
 
 ## 실제 시연
 
@@ -38,7 +38,7 @@ downlink는 1 Mbps ASK-PWM으로 `sync + 칩별 3-bit command`를 보낸다. 명
 - 30개 칩을 motor·sensory cortex에 만성 이식하고 lever discrimination 과제에서 자극 위치와 개수에 따른 행동 차이를 측정했다.
 - 30개 동시 50 Hz 자극 조건에서 높은 정답률을 보였고, 낮은 duty cycle에서도 행동 효과가 유지됐다.
 
-## 무엇이 실측이고 무엇이 외삽인가
+## 실측과 외삽
 
 | 주장                        | 근거                             |
 | --------------------------- | -------------------------------- |
