@@ -9,8 +9,8 @@ description: MIT 6.003 Signals and Systems (Fall 2011)를 따라가며 정리한
 
 | 단원               | 다루는 것                                      | 글                                                                                                        |
 | ------------------ | ---------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| 신호·시스템·동역학 | 신호 변환, 차분방정식, 블록 다이어그램, 피드백 | [[signals-transformations\|신호를 읽는 첫 문법]] · [[difference-equations-feedback\|차분방정식과 피드백]] |
-| 변환과 극점        | Z·라플라스 변환, 극점과 영점                   | [[z-transform\|z 변환]]                                                                                   |
+| 신호·시스템·동역학 | 신호 변환, 차분방정식, 블록 다이어그램, 피드백 | [[signals-transformations\|신호를 읽는 첫 문법]] · [[difference-equations-feedback\|차분방정식과 피드백]] · [[ct-systems-operator\|연속시간 시스템과 적분 연산자]] |
+| 변환과 극점        | Z·라플라스 변환, 극점과 영점                   | [[z-transform\|z 변환]] · [[laplace-transform\|라플라스 변환]] |
 | 컨볼루션           | LTI 시스템의 입출력                            | [[digital-filters-convolution\|디지털 필터와 컨볼루션]] (HST.582J) |
 | 주파수 응답        | 보드 선도, 필터                                | [[bode-plot\|주파수 응답과 보드 선도]] |
 | 연속시간 푸리에    | 푸리에 급수와 변환                             | [[fourier-series\|푸리에 급수]] · [[fourier-transform\|연속시간 푸리에 변환]] |
