@@ -89,6 +89,7 @@ $$
 - [[difference-amplifier-cmrr|차동 증폭기와 CMRR]]: 필터 앞단에서 공통모드 간섭을 줄이는 회로
 - [[sampling-aliasing|샘플링과 앨리어싱]]: 저역통과 필터가 ADC 앞에 필요한 이유
 - [[difference-equations-feedback|차분방정식과 피드백]]: 1차 회로의 이산시간 대응($y[n] = a\,y[n-1] + x[n]$)
+- [[bode-plot|주파수 응답과 보드 선도]]: 극점 하나짜리 필터의 보드 선도를 일반 시스템으로 넓힌 것
 
 ## 참고 자료
 
