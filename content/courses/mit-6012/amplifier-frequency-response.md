@@ -41,7 +41,7 @@ $$
 A_v = \frac{-(g_m - j\omega C_{gd})R'_{out}}{1 + j\omega\{R_S C_{gs} + R_S C_{gd}[1 + R'_{out}(\tfrac{1}{R_S} + g_m)] + R'_{out}C_{db}\} - \omega^2 R_S R'_{out} (C_{gs}C_{gd} + C_{gs}C_{db} + C_{gd}C_{db})}
 $$
 
-이다. 강의 슬라이드의 식에는 $\omega^2$ 계수의 $C_{gd}C_{db}$ 항이 빠져 있어, 같은 두 식을 직접 풀어 고쳐 적었다. $\omega = 0$에서 $A_{v,LF} = -g_m R'_{out}$이 된다. 강의는 세 가지를 가정해 이 식을 단순화한다.
+이다. 강의 노트의 식에는 $\omega^2$ 계수의 $C_{gd}C_{db}$ 항이 빠져 있어, 같은 두 식을 직접 풀어 고쳐 적었다. $\omega = 0$에서 $A_{v,LF} = -g_m R'_{out}$이 된다. 강의는 세 가지를 가정해 이 식을 단순화한다.
 
 1. $\omega \ll \omega_T$로 두어 분자의 $j\omega C_{gd}$를 $g_m$에 비해 버린다.
 2. $g_m \gg 1/R_S$로 두어 $1/R_S + g_m \approx g_m$으로 쓴다.
