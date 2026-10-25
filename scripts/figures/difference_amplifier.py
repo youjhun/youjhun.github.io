@@ -51,7 +51,7 @@ vcm = 0.1 * np.sin(2 * np.pi * 60 * t)  # 공통모드 간섭 100 mV
 G = 1000
 fig, axes = plt.subplots(4, 1, figsize=(9, 6.4), sharex=True)
 axes[0].plot(t, (vcm + vd / 2) * 1e3, color=GRAY, lw=0.8)
-axes[0].set_title("한 전극의 전압: 100 mV, 60 Hz 공통모드 간섭 위에 1 mV 심전도 (예시)", loc="left", fontsize=10.5)
+axes[0].set_title("한 전극의 전압: 100 mV, 60 Hz 공통모드 간섭에 묻힌 심전도 (예시, 두 전극 차이 1 mV)", loc="left", fontsize=10.5)
 axes[0].set_ylabel("mV")
 for ax, cmrr_db, color in [(axes[1], 40, RED), (axes[2], 60, ORANGE), (axes[3], 80, BLUE)]:
     acm = G / 10 ** (cmrr_db / 20)

@@ -16,3 +16,7 @@ aliases: [EE201]
 - [[thevenin-node-analysis|절점해석과 Thevenin 등가]]: KCL, 중첩, 단자 등가회로
 - [[op-amp-biosignal-front-end|연산증폭기와 생체신호 앞단]]: 음의 피드백, 입력 임피던스와 포화
 - [[difference-equations-feedback|차분방정식과 피드백]]: 1차 회로의 이산시간 대응
+
+## 참고 자료
+
+- 강의 교재: *Engineering Circuit Analysis*

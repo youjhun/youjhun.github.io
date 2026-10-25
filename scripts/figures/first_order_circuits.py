@@ -72,8 +72,8 @@ for H, color, label in [(H_lp, BLUE, "저역통과 (C 양단에서 출력)"), (H
 for ax in axes:
     ax.axvline(fc, color=GRAY, ls=":", lw=1.2)
 axes[0].axhline(-3.01, color=GRAY, ls="--", lw=1)
-axes[0].text(fc * 1.15, -10, f"$f_c$ = {fc:.0f} Hz", color=GRAY, fontsize=10)
-axes[0].text(1.3, -5.5, "−3 dB", color=GRAY, fontsize=9.5)
+axes[0].text(fc * 0.85, -20, f"$f_c$ = {fc:.0f} Hz", color=GRAY, fontsize=10, ha="right")
+axes[0].text(1.3, -8, "−3 dB", color=GRAY, fontsize=9.5)
 axes[0].set_ylim(-60, 5)
 axes[0].set_ylabel("크기 (dB)")
 axes[0].set_title("RC 1차 필터의 주파수 응답 (R = 10 kΩ, C = 100 nF)", loc="left")
