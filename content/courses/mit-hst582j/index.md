@@ -14,5 +14,5 @@ description: MIT HST.582J Biomedical Signal and Image Processing을 따라가며
 | 랜덤 생체 신호     | 상관, 전력 스펙트럼 밀도, LTI를 지나는 잡음 | [[random-signals-autocorrelation\|랜덤 신호와 자기상관]] · [[power-spectrum-wiener-filter\|전력 스펙트럼과 위너 필터]] |
 | 확률과 판정        | 검출, 분류, ROC                             |                                                                                   |
 | 심전도 응용        | ECG 생리와 파형                             |                                                                                   |
-| 고급 방법          | 선형 예측, 블라인드 신호 분리               |                                                                                   |
+| 고급 방법          | 선형 예측, 블라인드 신호 분리               | [[linear-prediction\|선형 예측]] |
 | 의료 영상          | 분할, 정합, 영상 모달리티                   |                                                                                   |
