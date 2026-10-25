@@ -3,6 +3,7 @@ title: 유전자 발현 조절과 후성유전
 description: 조절 DNA, 전사인자, 세포 기억, DNA 메틸화와 비암호화 RNA를 설명한다.
 date: 2026-10-25
 tags: [BIS222]
+aliases: [gene expression]
 ---
 
 > [!abstract] 한눈에

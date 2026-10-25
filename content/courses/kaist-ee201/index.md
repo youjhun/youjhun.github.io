@@ -6,10 +6,13 @@ aliases: [EE201]
 
 선형 회로를 키르히호프 법칙, 등가회로, 저장 소자가 만드는 동적 응답으로 다루는 과목이다.
 
-## 글
+## 단원
 
-- [[capacitors-inductors|커패시터와 인덕터]]: 전압-전류 관계, 연속성, 저장 에너지
-- [[first-order-rc-rl|RC·RL 1차 회로]]: 계단 응답, 시간상수, 1차 필터
+| 단원 | 주제 | 본문 |
+| --- | --- | --- |
+| 저장 소자 | 전압-전류 관계, 연속성, 저장 에너지 | [[capacitors-inductors\|커패시터와 인덕터]] |
+| 1차 회로 | 계단 응답, 시간상수, 1차 필터 | [[first-order-rc-rl\|RC·RL 1차 회로]] |
+| 2차 회로 | 특성근, 감쇠와 공진 | [[second-order-rlc\|RLC 2차 회로]] |
 
 ## 다른 과목에서 다룬 기초
 
@@ -20,7 +23,3 @@ aliases: [EE201]
 ## 참고 자료
 
 - 강의 교재: *Engineering Circuit Analysis*
-
-## 추가 단원
-
-- [[second-order-rlc|RLC 2차 회로]]: 특성근, 감쇠와 공진

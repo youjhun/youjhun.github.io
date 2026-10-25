@@ -7,23 +7,21 @@ aliases:
 
 이 과목은 확산, 열역학, 통계적 앙상블처럼 생명현상 아래의 물리적 구동력을 수식과 단위로 읽는다.
 
-## 개념 글
+## 단원
 
-- [[diffusion-ficks-law|확산과 Fick 법칙]]
-- [[thermodynamic-driving-forces|열역학적 구동력]]
-- [[lagrange-multipliers|라그랑주 승수법]]
+| 단원 | 본문 |
+| --- | --- |
+| 확산 | [[diffusion-ficks-law\|확산과 Fick 법칙]] |
+| 제약 최적화 | [[lagrange-multipliers\|라그랑주 승수법]] |
+| 엔트로피·앙상블 | [[entropy-boltzmann\|엔트로피·앙상블·Boltzmann 분포]] |
+| 열역학 | [[thermodynamic-driving-forces\|열역학적 구동력]] |
+| 전기적 상호작용 | [[electrostatics-screening\|유전분극과 전기이중층]] |
 
 ## 이어지는 기초
 
 - 시간에 따라 변하는 양과 시스템 응답: [[courses/mit-6003/index|신호와 시스템]]
 - 불확실한 관측의 해석: [[courses/mit-1805/index|확률과 통계]]
 - 여러 변수의 결합과 차원 축소: [[courses/mit-1806/index|선형대수]]
-
-
-## 추가 단원
-
-- [[entropy-boltzmann|엔트로피·앙상블·Boltzmann 분포]]
-- [[electrostatics-screening|유전분극과 전기이중층]]
 
 > [!note] 공개 범위
 > 2024 Spring `Studies / BiS223 / Lecture Note`에서 직접 확인한 주제만 옮겼다. 과제·평가 문항과 비공개 강의 PDF는 포함하지 않는다.

@@ -3,6 +3,7 @@ title: 전사·RNA 가공·번역
 description: 전사 개시에서 RNA 품질관리와 단백질 분해까지 정보의 사용 과정을 설명한다.
 date: 2026-10-25
 tags: [BIS222]
+aliases: [central dogma]
 ---
 
 > [!abstract] 한눈에

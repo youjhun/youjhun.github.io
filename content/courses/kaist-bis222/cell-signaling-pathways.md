@@ -3,6 +3,7 @@ title: 세포 신호전달 경로
 description: GPCR, RTK, JAK–STAT, TGFβ, Notch, Wnt와 NF-κB의 입력·출력을 비교한다.
 date: 2026-10-25
 tags: [BIS222]
+aliases: [cell signaling, signal transduction]
 ---
 
 > [!abstract] 한눈에

@@ -4,7 +4,7 @@ description: 뉴클레오솜, 염색질 재구성, 히스톤 변형과 유전체
 date: 2026-10-25
 tags: [BIS222]
 
-aliases: [central dogma, gene expression, chromatin]
+aliases: [chromatin]
 ---
 
 > [!abstract] 한눈에

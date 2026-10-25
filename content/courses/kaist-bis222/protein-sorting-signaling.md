@@ -4,7 +4,7 @@ description: Ran에 의한 핵 수송, SRP와 막 삽입, 당사슬 기반 접�
 date: 2026-10-25
 tags: [BIS222]
 
-aliases: [protein sorting, cell signaling, signal transduction]
+aliases: [protein sorting]
 ---
 
 > [!abstract] 한눈에
@@ -12,7 +12,7 @@ aliases: [protein sorting, cell signaling, signal transduction]
 
 ## 구획 사이의 이동
 
-세포 내 단백질 이동에는 핵공을 통한 선택적 수송, 막의 translocator를 통한 이동, 소낭의 출아와 융합이 있다. 핵공은 접힌 단백질과 복합체의 수송도 허용한다. 막 전위에서는 목적지와 경로에 따라 단백질을 펼치거나 합성 중인 사슬을 통과시킨다. 소낭은 막과 내강의 연결 관계를 보존하면서 화물을 운반한다.
+세포 내 단백질 이동에는 핵공을 통한 선택적 수송, 막의 translocator를 통한 이동, 소낭의 출아와 융합이 있다. 핵공은 접힌 단백질과 복합체의 수송도 허용한다. 막을 가로지르는 단백질 전위에서는 목적지와 경로에 따라 단백질을 펼치거나 합성 중인 사슬을 통과시킨다. 소낭은 막과 내강의 연결 관계를 보존하면서 화물을 운반한다.
 
 핵막의 바깥막은 소포체 막과 이어지고, 안쪽막은 핵 라미나와 염색질의 조직에 관여한다. 핵공을 통한 이동과 소포체 내강으로 들어가는 이동은 같은 과정이 아니다.
 
