@@ -16,7 +16,7 @@ GM, CGS, CGD, CDB, RS = 1e-3, 50e-15, 5e-15, 10e-15, 10e3
 
 def cs_exact(w, rout):
     num = -(GM - 1j * w * CGD) * rout
-    den = 1 + 1j * w * (RS * CGS + RS * CGD * (1 + rout * (1 / RS + GM)) + rout * CDB) - w**2 * RS * rout * CGS * (CGD + CDB)
+    den = 1 + 1j * w * (RS * CGS + RS * CGD * (1 + rout * (1 / RS + GM)) + rout * CDB) - w**2 * RS * rout * (CGS * CGD + CGS * CDB + CGD * CDB)
     return num / den
 
 
@@ -29,7 +29,7 @@ f = np.logspace(5, 11, 800)
 w = 2 * np.pi * f
 ROUT = 100e3
 fig, axes = plt.subplots(1, 2, figsize=(10, 3.8))
-axes[0].loglog(f, np.abs(cs_exact(w, ROUT)), color=BLUE, lw=2, label="전달함수 그대로")
+axes[0].loglog(f, np.abs(cs_exact(w, ROUT)), color=BLUE, lw=2, label="회로의 전달함수")
 fh = 1 / (2 * np.pi * oct_tau(ROUT))
 axes[0].loglog(f, GM * ROUT / np.sqrt(1 + (f / fh) ** 2), color=ORANGE, lw=1.6, ls="--", label="개방 시상수 근사")
 axes[0].axvline(fh, color=GRAY, ls=":", lw=1)
@@ -54,6 +54,8 @@ save(fig, ARTICLE, "cs-bandwidth.png")
 ft = GM / (2 * np.pi * (CGS + CGD))
 taus = (RS * CGS, (ROUT + RS * (1 + GM * ROUT)) * CGD, ROUT * CDB)
 print(f"fT = {ft/1e9:.2f} GHz, fH = {fh/1e6:.1f} MHz, taus (ns) = {[round(t*1e9,2) for t in taus]}")
+i3 = np.argmin(np.abs(np.abs(cs_exact(w, ROUT)) - GM * ROUT / np.sqrt(2)))
+print(f"exact -3 dB = {f[i3]/1e6:.1f} MHz")
 print(f"Miller C = {CGD*(1+GM*ROUT)*1e15:.0f} fF")
 # 캐스코드: τgd1 ≈ [1/gm2 + RS(1 + gm1/gm2)]Cgd1 (gmb 무시), 출력 마디는 같은 R'out에 Cgd2 + Cdb2
 tau_c = RS * CGS + (1 / GM + RS * 2) * CGD + (1 / GM) * (CDB + CGS) + ROUT * (CGD + CDB)
