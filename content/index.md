@@ -9,6 +9,7 @@ description: 공부한 과목, 직접 설계한 과목, 프로젝트, 읽은 논
 - [[courses/mit-hst582j/index|MIT HST.582J 생체 신호·영상 처리]]
 - [[courses/mit-1805/index|MIT 18.05 확률과 통계]]
 - [[courses/mit-1806/index|MIT 18.06 선형대수]]
+- [[courses/mit-6012/index|MIT 6.012 마이크로전자 소자와 회로]]
 - [[courses/kaist/index|KAIST 과목 기록]]
 
 ## 내가 만든 과목

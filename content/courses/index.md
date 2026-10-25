@@ -9,6 +9,7 @@ description: 대학 강의를 따라가며 정리한 개념.
 - [[courses/mit-hst582j/index|HST.582J 생체 신호·영상 처리]]
 - [[courses/mit-1805/index|18.05 확률과 통계]]
 - [[courses/mit-1806/index|18.06 선형대수]]
+- [[courses/mit-6012/index|6.012 마이크로전자 소자와 회로]]
 
 ## KAIST
 
