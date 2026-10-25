@@ -29,4 +29,4 @@ aliases:
 - 신경 인터페이스: [[my-courses/neural-interface/index|Human Sensing & Neural Interface Foundations]]
 
 > [!note] 공개 범위
-> 이 페이지와 연결 글은 개인 강의 기록에서 확인한 과목 구조와 요약을 공개용 개념 지도로 다시 쓴 것이다. 강의 자료나 평가 문항은 포함하지 않는다.
+> 개인 강의 기록에서 확인한 과목 구조와 요약을 공개용 개념 지도로 다시 썼다. 강의 자료나 평가 문항은 포함하지 않는다.
