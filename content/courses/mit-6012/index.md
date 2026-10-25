@@ -13,7 +13,7 @@ description: MIT 6.012 Microelectronic Devices and Circuits (Fall 2005)를 따�
 | pn 접합 정전기 | L4–6 | 볼츠만 관계, 공핍 근사, 바이어스와 공핍 커패시턴스 | [[pn-junction-electrostatics\|pn 접합의 정전기]] |
 | MOS 정전기 | L7–8 | 축적·공핍·반전, 문턱전압, 전하 제어 관계 | [[mos-capacitor-threshold\|MOS 구조와 문턱전압]] |
 | MOSFET | L9–11 | 전류-전압 특성, 소신호 등가회로 | [[mosfet-iv\|MOSFET의 전류-전압 특성]] · [[mosfet-small-signal\|MOSFET 소신호 모델]] |
-| CMOS 디지털 회로 | L12–14 | 인버터, 전달 특성, 전파 지연 | |
+| CMOS 디지털 회로 | L12–14 | 인버터, 전달 특성, 전파 지연 | [[inverter-noise-margin\|인버터와 잡음 여유]] · [[cmos-inverter\|CMOS 인버터]] |
 | pn 다이오드 | L15–16 | 전류-전압 특성, 등가회로 | |
 | 바이폴라 트랜지스터 | L17–18 | 동작 원리, 대신호 모델 | |
 | 증폭기 | L19–22 | 단일·다단 증폭기, 바이어스 | |
