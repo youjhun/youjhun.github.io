@@ -67,8 +67,3 @@ ax.set_ylabel("$V_{OUT}$ (V)")
 ax.set_title("저항 풀업 NMOS 인버터의 전달 특성", loc="left")
 ax.legend(fontsize=9.5, loc="upper right")
 save(fig, ARTICLE, "resistor-pullup-vtc.png")
-
-vm1 = cmos_vtc(1.0, np.array([1.25]))[0]
-gm = KN * (1.25 - VTN)
-ro = 1 / (LAM * KN / 2 * 0.75**2)
-print("VM check (kp=kn):", vm1, "Av ≈", -(2 * gm) * ro / 2)

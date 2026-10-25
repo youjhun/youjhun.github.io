@@ -47,13 +47,13 @@ $$
 A_v = -(g_{mn} + g_{mp})(r_{on}\,/\!/\,r_{op})
 $$
 
-이다. 두 트랜스컨덕턴스가 더해지고 출력 저항이 둘 다 크므로 이득이 꽤 크다. $V_{OL} = 0$, $V_{OH} = V_{DD}$이므로 [[inverter-noise-margin|잡음 여유]]의 근사식은
+이다. 두 트랜스컨덕턴스가 더해지고 출력 저항이 둘 다 크므로 이득이 크다. $V_{OL} = 0$, $V_{OH} = V_{DD}$이므로 [[inverter-noise-margin|잡음 여유]]의 근사식은
 
 $$
 NM_L = V_M - \frac{V_{DD} - V_M}{|A_v|}, \qquad NM_H = V_{DD} - V_M\left(1 + \frac{1}{|A_v|}\right)
 $$
 
-가 된다. $|A_v| \to \infty$이면 $NM_L \to V_M$, $NM_H \to V_{DD} - V_M$이고, $V_M = V_{DD}/2$이면 두 여유가 모두 $V_{DD}/2$다. 그림 1의 대칭 경우를 수치로 미분하면 $|A_v| \approx 57$이고, 두 잡음 여유는 약 1.23 V다.
+가 된다. $|A_v| \to \infty$이면 $NM_L \to V_M$, $NM_H \to V_{DD} - V_M$이고, $V_M = V_{DD}/2$이면 두 여유가 모두 $V_{DD}/2$다. 그림 1의 대칭 경우를 수치로 미분하면 $|A_v| \approx 57$이고, 근사식으로는 두 잡음 여유가 약 1.23 V다. 같은 모형에서 기울기 $-1$인 점을 수치로 찾으면 $V_{IL} \approx 1.04$ V, $V_{OH} \approx 2.31$ V, $V_{IH} \approx 1.46$ V, $V_{OL} \approx 0.19$ V이고, 정의대로 계산한 두 잡음 여유는 약 0.85 V다. 근사식은 $V_{OL} = 0$, $V_{OH} = V_{DD}$로 두고 전달 특성을 직선으로 바꾸므로 여유를 크게 잡는다.
 
 ## 전파 지연
 
