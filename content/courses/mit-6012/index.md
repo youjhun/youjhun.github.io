@@ -14,7 +14,7 @@ description: MIT 6.012 Microelectronic Devices and Circuits (Fall 2005)를 따�
 | MOS 정전기 | L7–8 | 축적·공핍·반전, 문턱전압, 전하 제어 관계 | [[mos-capacitor-threshold\|MOS 구조와 문턱전압]] |
 | MOSFET | L9–11 | 전류-전압 특성, 소신호 등가회로 | [[mosfet-iv\|MOSFET의 전류-전압 특성]] · [[mosfet-small-signal\|MOSFET 소신호 모델]] |
 | CMOS 디지털 회로 | L12–14 | 인버터, 전달 특성, 전파 지연 | [[inverter-noise-margin\|인버터와 잡음 여유]] · [[cmos-inverter\|CMOS 인버터]] |
-| pn 다이오드 | L15–16 | 전류-전압 특성, 등가회로 | |
+| pn 다이오드 | L15–16 | 전류-전압 특성, 등가회로 | [[pn-diode\|pn 다이오드]] |
 | 바이폴라 트랜지스터 | L17–18 | 동작 원리, 대신호 모델 | |
 | 증폭기 | L19–22 | 단일·다단 증폭기, 바이어스 | |
 | 주파수 응답 | L23–25 | 증폭기의 대역폭 | |
