@@ -93,7 +93,7 @@ $$
 
 $g_m = \sqrt{2\frac{W}{L}\mu_n C_{ox}I_D}$와 $r_o \approx 1/(\lambda I_D) \propto L/I_D$에서, 다른 값이 바뀌지 않도록 $V_{GG}$를 맞춘다고 할 때 소자 변수에 따른 변화는 다음과 같다.
 
-| 소자 변수를 키우면 | $\|A_{vo}\|$ | $R_{in}$ | $R_{out}$ |
+| 소자 변수를 키우면 | $\lvert A_{vo}\rvert$ | $R_{in}$ | $R_{out}$ |
 |---|---|---|---|
 | $I_{SUP}$ | 줄어든다 | 무한대 그대로 | 줄어든다 |
 | $W$ | 커진다 | 무한대 그대로 | 그대로 |
@@ -112,7 +112,7 @@ $$
 A_{vo} = \frac{g_m}{g_m + \frac{1}{r_o/\!/r_{oc}}} \approx 1, \qquad R_{in} = \infty, \qquad R_{out} = \frac{1}{g_m + \frac{1}{r_o/\!/r_{oc}}} \approx \frac{1}{g_m}
 $$
 
-이다. 출력 저항이 작아 부하를 달아도 $A_v = A_{vo}\frac{R_L}{R_L + R_{out}} \approx 1$이다.
+이다. 출력 저항이 작아 $R_L \gg 1/g_m$인 부하를 달면 $A_v = A_{vo}\frac{R_L}{R_L + R_{out}} \approx 1$이다.
 
 ### 몸체 효과
 
