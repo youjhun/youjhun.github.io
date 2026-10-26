@@ -47,6 +47,7 @@ $e^{At}$를 구하는 방법은 셋이다.
 1. 대각화: $A = PDP^{-1}$이면 $e^{At} = Pe^{Dt}P^{-1}$, $e^{Dt}$는 대각 원소 $e^{\lambda_it}$.
 2. 라플라스 변환: $e^{At} = \mathcal L^{-1}\{(sI - A)^{-1}\}$.
 3. 기본 행렬: $e^{At} = \Phi(t)\Phi(0)^{-1}$.
+4. Cayley-Hamilton: $2\times2$이면 $e^{At} = \alpha_0I + \alpha_1A$이고, 서로 다른 고윳값마다 $e^{\lambda_it} = \alpha_0 + \alpha_1\lambda_i$를 풀어 $\alpha_0$, $\alpha_1$을 구한다.
 
 위의 $A = \begin{bmatrix}0 & 1\\ -2 & -3\end{bmatrix}$이면 $(sI - A)^{-1} = \dfrac{1}{(s+1)(s+2)}\begin{bmatrix}s + 3 & 1\\ -2 & s\end{bmatrix}$이고, 원소마다 부분분수로 역변환하면
 
@@ -77,16 +78,17 @@ $2\times2$ 행렬에서 $\tau = \operatorname{tr}A$, $\Delta = \det A$로 두면
 | $\Delta > 0$, $\tau^2 - 4\Delta = 0$ | 실수 중근 | 퇴화 마디점 또는 별 모양 마디점 | $\tau$의 부호로 정함 |
 | $\Delta > 0$, $\tau^2 - 4\Delta < 0$, $\tau \ne 0$ | 실수부가 0이 아닌 복소수 | 나선점 | $\tau < 0$이면 안정, $\tau > 0$이면 불안정 |
 | $\Delta > 0$, $\tau = 0$ | 순허수 | 중심 | 안정이지만 점근 안정은 아님 |
-| $\Delta = 0$ | 0인 고윳값 포함 | 평형점이 직선 위에 늘어섬 | 다른 고윳값으로 판정 |
+| $\Delta = 0$, $\tau \ne 0$ | 0과 $\tau$ | 평형점이 직선 위에 늘어섬 | $\tau < 0$이면 그 직선으로 다가감 |
+| $\Delta = 0$, $\tau = 0$ | 0인 중근 | $A = 0$이면 모든 점이 평형점, 아니면 해가 $t$에 비례해 자람 | 불안정($A = 0$ 제외) |
 
 ![[../../images/linear-systems-ode/phase-portraits.png]]
 *그림 1. 행렬 넷의 위상 초상. 왼쪽부터 $\begin{bmatrix}1&3\\3&1\end{bmatrix}$, $\begin{bmatrix}-3&1\\1&-3\end{bmatrix}$, $\begin{bmatrix}-1&2\\-2&-1\end{bmatrix}$, $\begin{bmatrix}0&2\\-2&0\end{bmatrix}$이다. 중심은 보존량 $x^2 + y^2$의 등고선과 방향 화살표로 그렸다. 직접 계산했다.*
 
 ## 비선형계의 선형화
 
-$X' = F(X)$의 평형점 $X^*$($F(X^*) = 0$) 근처에서는 Jacobian $J = \partial F/\partial X\,\big|_{X^*}$로 $U' = JU$($U = X - X^*$)를 본다. $J$의 고윳값 실수부가 모두 0이 아니면 선형화의 분류(안장점, 마디점, 나선점)가 평형점 근처의 원래 흐름에도 그대로 맞는다.
+$X' = F(X)$의 평형점 $X^*$($F(X^*) = 0$) 근처에서는 Jacobian $J = \partial F/\partial X\,\big|_{X^*}$로 $U' = JU$($U = X - X^*$)를 본다. $J$의 고윳값 실수부가 모두 0이 아니면 평형점 근처의 원래 흐름은 선형화와 위상적으로 같다(Hartman-Grobman 정리). 안장점, 안정·불안정은 그대로 맞지만, 중근에서 나온 퇴화 마디점이나 별 모양 마디점은 원래 계에서 나선점이 될 수 있다.
 
-선형화가 중심이나 0인 고윳값을 주면 원래 계는 중심일 수도, 느린 나선일 수도 있다. 이때는 보존량이나 Lyapunov 함수 같은 다른 방법으로 판정한다.
+선형화가 중심을 주면 원래 계는 중심일 수도, 느린 나선일 수도 있다. 0인 고윳값이 있으면 선형화로는 거의 아무것도 정할 수 없다. 이때는 보존량이나 Lyapunov 함수 같은 다른 방법으로 판정한다.
 
 ## 유의점
 
@@ -104,5 +106,5 @@ $X' = F(X)$의 평형점 $X^*$($F(X^*) = 0$) 근처에서는 Jacobian $J = \part
 
 ## 참고 자료
 
-- Dennis G. Zill, _Advanced Engineering Mathematics_, Ch. 10 (Systems of Linear Differential Equations), Ch. 11 (Systems of Nonlinear Differential Equations).
+- Dennis G. Zill, _Advanced Engineering Mathematics_, «Systems of Linear Differential Equations»와 «Systems of Nonlinear Differential Equations» 장(판에 따라 장 번호가 다르다).
 - 예의 해와 행렬 지수는 직접 계산했고, 원식에 대입해 확인했다.

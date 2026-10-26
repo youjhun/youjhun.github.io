@@ -36,6 +36,9 @@ $a$, $\omega$는 상수, $n$은 0 이상의 정수다. 모든 쌍은 $\operatorn
 | $t\sin\omega t$ | $2\omega s/(s^2 + \omega^2)^2$ |
 | $t\cos\omega t$ | $(s^2 - \omega^2)/(s^2 + \omega^2)^2$ |
 | $\sin\omega t - \omega t\cos\omega t$ | $2\omega^3/(s^2 + \omega^2)^2$ |
+| $1 - \cos\omega t$ | $\omega^2/\big(s(s^2 + \omega^2)\big)$ |
+| $\sin\omega t + \omega t\cos\omega t$ | $2\omega s^2/(s^2 + \omega^2)^2$ |
+| $t^\nu$ ($\nu > -1$) | $\Gamma(\nu + 1)/s^{\nu+1}$ |
 | $\mathcal U(t - a)$ | $e^{-as}/s$ |
 | $\delta(t - a)$ | $e^{-as}$ |
 
@@ -54,11 +57,11 @@ $\mathcal U(t - a)$는 $t < a$에서 0, $t \ge a$에서 1인 단위 계단 함�
 | $n$계 도함수 | $f^{(n)}(t)$ | $s^nF - s^{n-1}f(0) - \cdots - f^{(n-1)}(0)$ |
 | 적분 | $\int_0^t f(\tau)\,d\tau$ | $F(s)/s$ |
 | $t$ 곱 | $t^nf(t)$ | $(-1)^nF^{(n)}(s)$ |
-| $t$로 나눔 | $f(t)/t$ | $\int_s^\infty F(u)\,du$ |
+| $t$로 나눔 | $f(t)/t$ ($\lim_{t\to0^+}f(t)/t$가 있을 때) | $\int_s^\infty F(u)\,du$ |
 | 합성곱 | $(f * g)(t) = \int_0^t f(\tau)g(t - \tau)\,d\tau$ | $F(s)G(s)$ |
 | 주기 $T$ | $f(t + T) = f(t)$ | $\dfrac{1}{1 - e^{-sT}}\int_0^T e^{-st}f(t)\,dt$ |
 
-초기값 정리 $f(0^+) = \lim_{s\to\infty}sF(s)$와 최종값 정리 $\lim_{t\to\infty}f(t) = \lim_{s\to0}sF(s)$도 자주 쓴다. 최종값 정리는 $sF(s)$의 극점이 모두 왼쪽 반평면에 있을 때만 쓸 수 있다.
+초기값 정리 $f(0^+) = \lim_{s\to\infty}sF(s)$와 최종값 정리 $\lim_{t\to\infty}f(t) = \lim_{s\to0}sF(s)$도 자주 쓴다. 최종값 정리는 $sF(s)$의 극점이 모두 왼쪽 반평면에 있을 때 성립한다. 이 조건이 깨지면 극한이 없거나 공식이 틀린 값을 준다.
 
 ## 부분분수
 
@@ -70,7 +73,7 @@ $Y(s) = P(s)/Q(s)$에서 분자의 차수가 분모보다 낮으면 분모의 �
 | $(s - a)^m$ | $A_1/(s-a) + \cdots + A_m/(s-a)^m$ | $\sum_k A_k\dfrac{t^{k-1}}{(k-1)!}e^{at}$ |
 | $(s - \alpha)^2 + \beta^2$ | $\dfrac{B(s - \alpha) + C\beta}{(s - \alpha)^2 + \beta^2}$ | $e^{\alpha t}(B\cos\beta t + C\sin\beta t)$ |
 
-서로 다른 1차 인수의 계수는 $A = \lim_{s\to a}(s - a)Y(s)$로 바로 구한다(Heaviside 덮개법). 복소 인수는 완전제곱으로 바꾸어 $s$축 이동 쌍에 맞춘다.
+서로 다른 1차 인수의 계수는 $A = \lim_{s\to a}(s - a)Y(s)$로 구한다(Heaviside 덮개법). 복소 인수는 완전제곱으로 바꾸어 $s$축 이동 쌍에 맞춘다.
 
 ## 예
 
@@ -81,10 +84,12 @@ $Y(s) = P(s)/Q(s)$에서 분자의 차수가 분모보다 낮으면 분모의 �
 
 네 예는 모두 직접 계산했다. 첫째 예의 $y$는 이 계의 임펄스 응답이고, 임의의 입력 $g$에 대한 영상태 응답은 $y = (e^{-t} - e^{-2t}) * g$다.
 
+$\delta$는 적분 안에서 한 점의 값을 골라낸다. $\int_0^\infty f(t)\delta(t - a)\,dt = f(a)$($a > 0$)이고, 영상태 응답의 변환을 입력의 변환으로 나눈 $H(s) = Y(s)/G(s)$를 전달함수라 한다. 위 계는 $H(s) = 1/(s^2 + 3s + 2)$다.
+
 ## 유의점
 
 - 단방향 변환은 $t \ge 0$만 본다. 공학에서는 $f(0)$을 $0^-$의 값으로 쓰는 관례가 많아, 임펄스가 $t = 0$에 들어오면 $0^-$와 $0^+$의 초기값이 다를 수 있다.
-- $t$축 이동은 $f(t - a)\,\mathcal U(t - a)$ 꼴에만 바로 적용된다. $f(t)\,\mathcal U(t - a)$는 표의 «계단과 곱» 공식으로 바꾼다.
+- $t$축 이동은 $f(t - a)\,\mathcal U(t - a)$ 꼴에만 적용된다. $f(t)\,\mathcal U(t - a)$는 표의 «계단과 곱» 공식으로 바꾼다.
 - 최종값 정리를 진동하거나 발산하는 해에 쓰면 틀린 값이 나온다. 극점의 위치를 먼저 확인한다.
 - 신호처리에서 쓰는 양방향 변환은 수렴영역까지 적어야 역변환이 하나로 정해진다. 초기값 문제에는 단방향 변환을 쓴다.
 
@@ -97,5 +102,5 @@ $Y(s) = P(s)/Q(s)$에서 분자의 차수가 분모보다 낮으면 분모의 �
 
 ## 참고 자료
 
-- Dennis G. Zill, _Advanced Engineering Mathematics_, Ch. 4 (The Laplace Transform).
+- Dennis G. Zill, _Advanced Engineering Mathematics_, «The Laplace Transform» 장(판에 따라 장 번호가 다르다).
 - 표의 쌍과 예는 직접 계산해 확인했다.

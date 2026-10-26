@@ -18,18 +18,22 @@ setup()
 wn = 1.0
 t = np.linspace(0, 20, 1000)
 fig, axes = plt.subplots(1, 2, figsize=(10.5, 3.7))
-for z, c in [(0.0, GRAY), (0.2, BLUE), (1.0, TEAL), (2.0, ORANGE)]:
+# 감쇠비마다 색을 하나로 정해 두 패널에서 같게 쓴다
+COLOR = {0.0: (GRAY, "-"), 0.1: (RED, "-"), 0.2: (BLUE, "-"), 0.5: (TEAL, "-"), 1.0: (ORANGE, "-"), 2.0: (GRAY, "--")}
+for z in (0.0, 0.2, 1.0, 2.0):
+    c, ls = COLOR[z]
     sol = solve_ivp(lambda tt, y: [y[1], -2 * z * wn * y[1] - wn**2 * y[0]], (0, 20), [1, 0], t_eval=t, rtol=1e-9, atol=1e-12)
-    axes[0].plot(t, sol.y[0], color=c, lw=2, label=f"ζ = {z:g}")
+    axes[0].plot(t, sol.y[0], color=c, ls=ls, lw=2, label=f"ζ = {z:g}")
 axes[0].set_xlabel("시간 $\\omega_n t$")
 axes[0].set_ylabel("$x(t)$")
 axes[0].set_title("감쇠비에 따른 자유 응답 ($x(0)=1$, $x'(0)=0$)", loc="left")
 axes[0].legend(fontsize=9)
 
 r = np.linspace(0, 3, 1200)
-for z, c in [(0.1, RED), (0.2, BLUE), (0.5, TEAL), (1.0, ORANGE)]:
+for z in (0.1, 0.2, 0.5, 1.0):
+    c, ls = COLOR[z]
     m = 1 / np.sqrt((1 - r**2) ** 2 + (2 * z * r) ** 2)
-    axes[1].plot(r, m, color=c, lw=2, label=f"ζ = {z:g}")
+    axes[1].plot(r, m, color=c, ls=ls, lw=2, label=f"ζ = {z:g}")
 axes[1].set_ylim(0, 5.5)
 axes[1].set_xlabel("주파수비 $\\omega/\\omega_n$")
 axes[1].set_ylabel("진폭비 $\\omega_n^2 A / (F_0/m)$")
@@ -57,7 +61,9 @@ for ax, (name, A) in zip(axes, cases):
     V = A[1, 0] * Xg + A[1, 1] * Yg
     if name == "중심":
         # 닫힌 궤도는 streamplot이 끝을 잇지 못해 나선처럼 보이므로 보존량 x² + y²의 등고선으로 그린다
-        ax.contour(Xg, Yg, Xg**2 + Yg**2, levels=[0.1, 0.4, 0.9, 1.6, 2.5, 3.6], colors=BLUE, linewidths=0.9)
+        gf = np.linspace(-2, 2, 401)
+        Xf, Yf = np.meshgrid(gf, gf)
+        ax.contour(Xf, Yf, Xf**2 + Yf**2, levels=[0.1, 0.4, 0.9, 1.6, 2.5, 3.6], colors=BLUE, linewidths=0.9)
         ax.quiver(Xg[::2, ::2], Yg[::2, ::2], U[::2, ::2], V[::2, ::2], color=GRAY, angles="xy", scale=60, width=0.006)
     else:
         ax.streamplot(Xg, Yg, U, V, color=BLUE, density=0.9, linewidth=0.8, arrowsize=0.8)

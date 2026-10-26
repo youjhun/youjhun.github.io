@@ -7,7 +7,7 @@ description: 계수가 상수가 아닌 2계 선형식을 거듭제곱급수로 
 ---
 
 > [!abstract] 한눈에
-> 계수가 $x$의 함수인 2계 선형식은 대개 닫힌 꼴의 해가 없어, 해를 거듭제곱급수로 두고 계수의 점화식을 구한다. 계수가 매끄러운 보통점에서는 Taylor 급수로, 정칙특이점에서는 $x^r$을 곱한 Frobenius 급수로 푼다. 이렇게 얻는 해 가운데 원통·구 좌표의 문제에 되풀이해 나오는 것이 Bessel 함수와 Legendre 다항식이다.
+> 계수가 $x$의 함수인 2계 선형식은 대개 닫힌 꼴의 해가 없어, 해를 거듭제곱급수로 두고 계수의 점화식을 구한다. 계수가 매끄러운 보통점에서는 Taylor 급수로, 정칙특이점에서는 $x^r$을 곱한 Frobenius 급수로 푼다. Bessel 함수와 Legendre 다항식은 이렇게 얻는 해로, 원통·구 좌표 문제에 되풀이해 나온다.
 
 ## 보통점과 특이점
 
@@ -60,6 +60,7 @@ $(1 - x^2)y'' - 2xy' + n(n+1)y = 0$은 $x = \pm1$에 정칙특이점이 있다. 
 - Rodrigues 공식: $P_n(x) = \dfrac{1}{2^nn!}\dfrac{d^n}{dx^n}(x^2 - 1)^n$
 - 점화식: $(n+1)P_{n+1} = (2n+1)xP_n - nP_{n-1}$
 - 직교성: $\int_{-1}^{1}P_mP_n\,dx = \dfrac{2}{2n+1}\delta_{mn}$
+- Fourier-Legendre 전개: $f(x) = \sum c_nP_n(x)$, $c_n = \dfrac{2n+1}{2}\int_{-1}^{1}f(x)P_n(x)\,dx$
 
 구 좌표에서 축 대칭인 라플라스 방정식을 변수분리하면 각도 부분이 $x = \cos\theta$인 Legendre 방정식이 된다.
 
@@ -86,6 +87,7 @@ $$
 - $J_{1/2}(x) = \sqrt{\dfrac{2}{\pi x}}\sin x$, $J_{-1/2}(x) = \sqrt{\dfrac{2}{\pi x}}\cos x$
 - $J_0$의 영점은 약 2.405, 5.520이고 $J_1$의 첫 영점은 약 3.832다.
 - $J_n(\alpha_ib) = 0$인 서로 다른 $\alpha_i$, $\alpha_j$에 대해 $\int_0^b xJ_n(\alpha_ix)J_n(\alpha_jx)\,dx = 0$이다(가중치 $x$의 직교성).
+- Fourier-Bessel 전개: $f(x) = \sum_i c_iJ_n(\alpha_ix)$, $c_i = \dfrac{2}{b^2J_{n+1}(\alpha_ib)^2}\int_0^b xJ_n(\alpha_ix)f(x)\,dx$
 
 감마 함수는 $\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}\,dt$이고 $\Gamma(z+1) = z\Gamma(z)$, $\Gamma(n+1) = n!$, $\Gamma(1/2) = \sqrt\pi$다.
 
@@ -104,5 +106,5 @@ $$
 
 ## 참고 자료
 
-- Dennis G. Zill, _Advanced Engineering Mathematics_, Ch. 5 (Series Solutions of Linear Differential Equations).
+- Dennis G. Zill, _Advanced Engineering Mathematics_, «Series Solutions of Linear Differential Equations» 장(판에 따라 장 번호가 다르다).
 - 예와 점화식은 직접 계산했고, Legendre 다항식과 Bessel 함수의 성질은 수치로 확인했다.

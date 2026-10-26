@@ -1,6 +1,6 @@
 ---
 title: 1계 미분방정식 풀이법 모음
-aliases: [1계 ODE 풀이법, 분리형 미분방정식, separable equation, 동차형 미분방정식, Riccati 방정식, Riccati equation, 자율 미분방정식, autonomous equation, 위상선, phase line, 로지스틱 방정식, logistic equation, 뉴턴 냉각 법칙]
+aliases: [1계 ODE 풀이법, 분리형 미분방정식, separable equation, 동차형 미분방정식, Riccati 방정식, Riccati equation, 자율 미분방정식, autonomous equation, 위상선, phase line, 로지스틱 방정식, logistic equation, Newton 냉각 법칙]
 date: 2026-10-26
 tags: [MAS201, 공학수학, 공식집]
 description: 1계 상미분방정식을 꼴에 따라 분류하고, 분리형·선형·완전·동차형·Bernoulli·Riccati·자율 방정식의 풀이 공식과 대표 응용 모형을 한곳에 모은 공식집.
@@ -30,23 +30,27 @@ $y' = f(x,y)$ 또는 $M\,dx + N\,dy = 0$을 받으면 다음 순서로 확인한
 | Bernoulli | $y' + Py = Qy^n$ | $u = y^{1-n}$ | $u' + (1-n)Pu = (1-n)Q$ |
 | Riccati | $y' = P + Qy + Ry^2$, 한 해 $y_1$을 앎 | $y = y_1 + 1/v$ | $v' + (Q + 2Ry_1)v = -R$ |
 
-선형식, 완전미분, 적분인자, Bernoulli의 유도는 [[first-order-linear-exact|적분인자와 완전미분방정식]]에 있다. 이 글은 공식과 예를 모아 둔다.
+선형식, 완전미분, 적분인자, Bernoulli의 유도와 완전미분식의 예는 [[first-order-linear-exact|적분인자와 완전미분방정식]]에 있다.
+
+$f$와 $\partial f/\partial y$가 초기점 $(x_0, y_0)$을 둘러싼 직사각형에서 연속이면, 그 근처의 어떤 구간에서 $y(x_0) = y_0$을 만족하는 해가 하나만 있다. 조건과 반례는 [[ode-solutions-initial-values|미분방정식과 초기값 문제]]에 있다.
+
+$y' = f(ax + by + c)$ 꼴은 $u = ax + by + c$로 두면 $u' = a + bf(u)$의 분리형이 된다.
 
 ## 분리형
 
 $y' = g(x)h(y)$에서 $h(y) \ne 0$인 구간을 잡아 양변을 $h(y)$로 나누고 적분한다. 나눌 때 버린 $h(y_0) = 0$인 상수해 $y = y_0$은 따로 확인한다.
 
-예를 들어 $y' = xy^2$, $y(0) = 1$이면 $-1/y = x^2/2 + C$에서 $C = -1$이고 $y = 2/(2 - x^2)$다. 해는 $\lvert x\rvert < \sqrt2$에서만 정의되어, 계수가 매끄러워도 해가 유한한 시간에 발산할 수 있다(직접 계산한 예).
+예를 들어 $y' = xy^2$, $y(0) = 1$이면 $-1/y = x^2/2 + C$에서 $C = -1$이고 $y = 2/(2 - x^2)$다. 해는 $\lvert x\rvert < \sqrt2$에서만 정의된다. 우변이 모든 곳에서 매끄러워도 비선형식의 해는 유한한 구간 끝에서 발산할 수 있다(직접 계산한 예).
 
 ## 선형
 
-$y' + 2y = e^{-x}$이면 $\mu = e^{2x}$를 곱해 $(e^{2x}y)' = e^{x}$이고, $y = e^{-x} + Ce^{-2x}$다(직접 계산한 예). 계수가 상수인 $y' + ay = b$의 해 $y = b/a + Ce^{-ax}$는 RC 회로, 1차 제거 모형, 뉴턴 냉각에 공통으로 나타난다.
+$y' + 2y = e^{-x}$이면 $\mu = e^{2x}$를 곱해 $(e^{2x}y)' = e^{x}$이고, $y = e^{-x} + Ce^{-2x}$다(직접 계산한 예). 계수가 상수인 $y' + ay = b$의 해 $y = b/a + Ce^{-ax}$는 RC 회로, 1차 제거 모형, Newton 냉각에 공통으로 나타난다.
 
 ## 동차형
 
 $y' = F(y/x)$이면 $y = ux$로 두어 $y' = u + xu'$를 넣는다. $xu' = F(u) - u$는 분리형이다.
 
-예를 들어 $y' = (x + y)/x = 1 + y/x$이면 $xu' = 1$에서 $u = \ln\lvert x\rvert + C$이고, $y = x\ln\lvert x\rvert + Cx$다(직접 계산한 예). 여기서 «동차»는 $y/x$의 함수라는 뜻이다. 2계 선형식의 «동차»(우변이 0)와는 다른 용어다.
+예를 들어 $y' = (x + y)/x = 1 + y/x$이면 $xu' = 1$에서 $u = \ln\lvert x\rvert + C$이고, $y = x\ln\lvert x\rvert + Cx$다(직접 계산한 예). 여기서 «동차»는 우변이 $y/x$만의 함수임을 가리킨다. 2계 선형식의 «동차»(우변이 0)와는 다른 용어다.
 
 ## Bernoulli와 Riccati
 
@@ -68,7 +72,7 @@ $y' = f(y)$에서 $f(y^*) = 0$인 $y^*$가 평형해다. $y^*$ 근처에서 $f$�
 | --- | --- | --- |
 | $f'(y^*) < 0$ | 양쪽에서 $y^*$로 다가감 | 안정(끌개) |
 | $f'(y^*) > 0$ | 양쪽에서 멀어짐 | 불안정(밀개) |
-| $f'(y^*) = 0$ | 한쪽은 다가가고 한쪽은 멀어질 수 있음 | 반안정이거나 고계 항으로 판정 |
+| $f'(y^*) = 0$ | 안정, 불안정, 반안정 모두 가능 | $y^*$ 양쪽에서 $f$의 부호를 직접 확인 |
 
 로지스틱 방정식 $y' = ry(1 - y/K)$는 $y = 0$(불안정)과 $y = K$(안정)를 평형점으로 가진다. 해는
 
@@ -83,7 +87,7 @@ $$
 | 모형 | 방정식 | 해 |
 | --- | --- | --- |
 | 지수 성장·감쇠 | $y' = ky$ | $y = y_0e^{kt}$, 반감기 $\ln 2/\lvert k\rvert$ |
-| 뉴턴 냉각 | $T' = -k(T - T_m)$ | $T = T_m + (T_0 - T_m)e^{-kt}$ |
+| Newton 냉각 | $T' = -k(T - T_m)$ | $T = T_m + (T_0 - T_m)e^{-kt}$ |
 | 혼합 탱크 | $A' = r_\text{in}c_\text{in} - \dfrac{r_\text{out}}{V(t)}A$ | 선형식, $V(t) = V_0 + (r_\text{in} - r_\text{out})t$ |
 | RC 회로 | $RCv' + v = v_s$ | $v = v_s + (v_0 - v_s)e^{-t/RC}$ |
 | 로지스틱 | $y' = ry(1 - y/K)$ | 위의 식 |
@@ -93,7 +97,8 @@ $$
 ## 유의점
 
 - 분리형으로 나눌 때 $h(y) = 0$인 상수해를 잃기 쉽다. 풀이 끝에 따로 확인한다.
-- 해의 정의 구간은 계수의 연속 구간보다 짧을 수 있다. 비선형식은 유한한 시간에 발산하기도 한다.
+- 선형식의 해는 계수가 연속인 구간 전체에서 정의된다. 비선형식의 해는 그보다 짧은 구간에서 끝날 수 있고, 유한한 시간에 발산하기도 한다.
+- $f'(y^*) = 0$인 평형점은 $y' = -y^3$(안정), $y' = y^3$(불안정), $y' = y^2$(반안정)처럼 무엇이든 될 수 있다.
 - 동차형의 «동차»와 선형식의 «동차»는 서로 다른 뜻이다.
 - Riccati 식을 $y = y_1 + 1/v$로 푼 일반해에는 출발점으로 쓴 $y_1$ 자신이 들어 있지 않다. $y_1$도 해 목록에 따로 적는다.
 
@@ -107,5 +112,5 @@ $$
 
 ## 참고 자료
 
-- Dennis G. Zill, _Advanced Engineering Mathematics_, Ch. 2 (First-Order Differential Equations).
+- Dennis G. Zill, _Advanced Engineering Mathematics_, «First-Order Differential Equations» 장(판에 따라 장 번호가 다르다).
 - 예의 해는 모두 직접 계산했고, 원식에 대입해 확인했다.

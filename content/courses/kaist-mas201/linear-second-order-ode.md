@@ -7,7 +7,7 @@ description: 2계 선형 상미분방정식의 해 구조, 상수계수 특성�
 ---
 
 > [!abstract] 한눈에
-> 2계 선형식의 일반해는 동차식의 독립인 두 해의 선형결합에 특수해 하나를 더한 것이다. 상수계수 동차식은 특성방정식의 근으로 바로 풀리고, 특수해는 강제항의 꼴에 따라 미정계수법이나 매개변수 변환법으로 구한다. 질량-용수철과 RLC 회로는 같은 방정식이어서 감쇠비 하나로 응답의 모양이 정해진다.
+> 2계 선형식의 일반해는 동차식의 독립인 두 해의 선형결합에 특수해 하나를 더한 것이다. 상수계수 동차식은 특성방정식의 근으로 풀리고, 특수해는 강제항의 꼴에 따라 미정계수법이나 매개변수 변환법으로 구한다. 질량-용수철과 RLC 회로는 같은 방정식이어서 감쇠비 하나로 응답의 모양이 정해진다.
 
 ## 해의 구조
 
@@ -34,7 +34,7 @@ $$
 y_2 = y_1\int\frac{e^{-\int P\,dx}}{y_1^2}\,dx
 $$
 
-예를 들어 $x^2y'' - 3xy' + 4y = 0$($x > 0$)은 $y_1 = x^2$을 가진다. 표준형의 $P = -3/x$이므로 $e^{-\int P} = x^3$이고, $y_2 = x^2\int x^3/x^4\,dx = x^2\ln x$다(직접 계산한 예).
+예를 들어 $x^2y'' - 3xy' + 4y = 0$($x > 0$)은 $y_1 = x^2$을 가진다. 표준형의 $P = -3/x$이므로 $e^{-\int P} = x^3$이고, $y_2 = x^2\int x^3/x^4\,dx = x^2\ln x$다(교재에 흔한 예이고, 직접 다시 계산했다).
 
 ## 상수계수 동차식
 
@@ -102,12 +102,12 @@ $x^2y'' - xy' + y = 0$은 $r^2 - 2r + 1 = 0$의 중근 1에서 $(c_1 + c_2\ln x)
 | 질량-용수철 | $mx'' + cx' + kx = F(t)$ | $\sqrt{k/m}$ | $c/(2\sqrt{mk})$ |
 | 직렬 RLC | $Lq'' + Rq' + q/C = E(t)$ | $1/\sqrt{LC}$ | $(R/2)\sqrt{C/L}$ |
 
-두 식 모두 $x'' + 2\zeta\omega_nx' + \omega_n^2x = F(t)/m$으로 쓸 수 있다. 특성근은 $-\zeta\omega_n \pm \omega_n\sqrt{\zeta^2 - 1}$이다.
+질량-용수철은 $x'' + 2\zeta\omega_nx' + \omega_n^2x = F(t)/m$으로, RLC는 같은 꼴에 $x$ 대신 $q$, 우변 $E(t)/L$을 넣어 쓸 수 있다. 특성근은 $-\zeta\omega_n \pm \omega_n\sqrt{\zeta^2 - 1}$이다.
 
 | 감쇠 | 조건 | 자유 응답 |
 | --- | --- | --- |
 | 과감쇠 | $\zeta > 1$ | 두 지수의 합, 진동 없음 |
-| 임계감쇠 | $\zeta = 1$ | $(c_1 + c_2t)e^{-\omega_nt}$, 진동하지 않는 경우 가운데 가장 빨리 0에 다가감 |
+| 임계감쇠 | $\zeta = 1$ | $(c_1 + c_2t)e^{-\omega_nt}$, 진동이 없고, 진동하지 않는 경우 가운데 감쇠율이 가장 큼 |
 | 부족감쇠 | $0 < \zeta < 1$ | $e^{-\zeta\omega_nt}(c_1\cos\omega_dt + c_2\sin\omega_dt)$, $\omega_d = \omega_n\sqrt{1 - \zeta^2}$ |
 | 무감쇠 | $\zeta = 0$ | $c_1\cos\omega_nt + c_2\sin\omega_nt$ |
 
@@ -122,12 +122,12 @@ $$
 ![[../../images/linear-second-order-ode/damping.png]]
 *그림 1. 왼쪽은 $x(0) = 1$, $x'(0) = 0$에서 출발한 자유 응답을 감쇠비별로 수치 적분한 것이고, 오른쪽은 위 진폭 식을 정적 변위로 나눈 진폭비다. 직접 계산했다.*
 
-그림 1의 오른쪽에서 $\zeta = 0.1$의 최대 진폭비는 약 5.0, $\zeta = 0.2$는 약 2.55이고, $\zeta = 0.5$에서는 봉우리가 거의 사라진다(직접 계산한 값).
+그림 1의 오른쪽에서 $\zeta = 0.1$의 최대 진폭비는 약 5.0, $\zeta = 0.2$는 약 2.55이고, $\zeta = 0.5$에서는 $0.707\omega_n$에서 약 1.15로 낮아진다. $\zeta \ge 1/\sqrt2$이면 봉우리가 없다(직접 계산한 값).
 
 ## 유의점
 
 - 초기조건은 일반해 $y_c + y_p$에 적용한다. $y_c$에만 적용하면 상수가 틀린다.
-- 미정계수법의 후보가 동차해와 겹치면 겹치는 항만이 아니라 후보 전체에 $x^s$를 곱한다.
+- 미정계수법의 후보가 동차해와 겹치면 후보 전체에 $x^s$를 곱한다. 겹치는 항에만 곱하면 계수가 맞지 않는다.
 - 매개변수 변환법의 $g$는 최고차 계수를 1로 만든 표준형의 우변이다.
 - 공진 봉우리의 위치 $\omega_n\sqrt{1-2\zeta^2}$, 감쇠 진동수 $\omega_d = \omega_n\sqrt{1-\zeta^2}$, 고유진동수 $\omega_n$은 서로 다른 값이다.
 - Cauchy-Euler 방정식은 $x = 0$에서 표준형 계수가 정의되지 않으므로 $x > 0$과 $x < 0$을 따로 푼다.
@@ -137,10 +137,10 @@ $$
 - [[first-order-ode-methods|1계 미분방정식 풀이법 모음]]
 - [[laplace-transform-table|라플라스 변환 공식표]]: 초기조건과 불연속 강제항을 함께 다루는 방법
 - [[linear-systems-ode|연립 선형 미분방정식]]: 2계 식을 1계 연립식으로 바꾸어 푸는 방법
-- [[second-order-systems-numerics|고계 선형식·연립계·수치해]]
+- [[second-order-systems-numerics|고계 선형식·연립계·수치해]]: 상수계수 식, 상태공간, Euler 안정성을 짧게 묶은 개관
 - [[second-order-rlc|RLC 2차 회로]]
 
 ## 참고 자료
 
-- Dennis G. Zill, _Advanced Engineering Mathematics_, Ch. 3 (Higher-Order Differential Equations).
+- Dennis G. Zill, _Advanced Engineering Mathematics_, «Higher-Order Differential Equations» 장(판에 따라 장 번호가 다르다).
 - 예의 해는 모두 직접 계산했고, 원식에 대입해 확인했다.

@@ -39,7 +39,7 @@ $(0, L)$에서만 정의된 함수는 짝 확장하면 코사인 급수로, 홀 
 | $x$, $-\pi < x < \pi$ | $2\sum_{n\ge1}\dfrac{(-1)^{n+1}}{n}\sin nx$ |
 | $\lvert x\rvert$, $-\pi < x < \pi$ | $\dfrac\pi2 - \dfrac4\pi\sum_{n\text{ 홀수}}\dfrac{\cos nx}{n^2}$ |
 
-불연속이 있는 함수의 계수는 $1/n$로, 연속이지만 꺾인 함수는 $1/n^2$로 줄어든다.
+주기 확장한 함수에 불연속이 있으면 계수는 $1/n$로, 연속이지만 꺾여 있으면 $1/n^2$로 줄어든다. 표의 $x$는 구간 안에서 연속이지만 주기 확장하면 $\pm\pi$에서 끊겨 $1/n$로 줄어든다.
 
 ## 변수분리
 
@@ -51,7 +51,7 @@ $u(x, t) = X(x)T(t)$로 두고 방정식에 넣어 양변을 $X$와 $T$의 식�
 | $X'(0) = X'(L) = 0$ | $(n\pi/L)^2$, $n = 0, 1, \dots$ | $\cos(n\pi x/L)$ |
 | $X(0) = 0$, $X'(L) = 0$ | $\big((2n-1)\pi/(2L)\big)^2$ | $\sin\big((2n-1)\pi x/(2L)\big)$ |
 
-이 고윳값 문제는 Sturm-Liouville 문제의 가장 단순한 예다. 일반적으로 서로 다른 고윳값의 고유함수는 가중치를 붙인 적분에서 직교하고, 그래서 푸리에 계수처럼 적분으로 계수를 구할 수 있다.
+이 고윳값 문제는 Sturm-Liouville 문제 $\big(r(x)y'\big)' + \big(q(x) + \lambda p(x)\big)y = 0$의 가장 단순한 예($r = p = 1$, $q = 0$)다. 일반적으로 서로 다른 고윳값의 고유함수는 가중치 $p(x)$를 붙인 적분에서 직교하고, 그래서 푸리에 계수처럼 적분으로 계수를 구할 수 있다.
 
 ## 열 방정식
 
@@ -79,7 +79,7 @@ $$
 u(x, t) = \frac{f(x - ct) + f(x + ct)}{2} + \frac{1}{2c}\int_{x-ct}^{x+ct}g(s)\,ds
 $$
 
-를 쓴다. 처음 모양이 반으로 나뉘어 양쪽으로 속도 $c$로 퍼져 나간다.
+를 쓴다. 처음 속도가 0($g = 0$)이면 처음 모양이 반으로 나뉘어 양쪽으로 속도 $c$로 퍼져 나간다.
 
 ## 라플라스 방정식
 
@@ -91,12 +91,20 @@ $$
 
 다. 네 변 모두에 값이 주어지면 한 변씩 값이 있는 문제 넷으로 나누어 풀고 더한다. 원판이나 원통 영역에서 변수분리하면 반지름 부분이 Bessel 방정식이 되고, 구에서는 각도 부분이 Legendre 방정식이 된다.
 
+반지름 $b$인 원형 막의 축대칭 진동 $u_{tt} = c^2(u_{rr} + u_r/r)$, $u(b, t) = 0$의 해는
+
+$$
+u(r, t) = \sum_{n=1}^{\infty}\big(A_n\cos c\alpha_nt + B_n\sin c\alpha_nt\big)J_0(\alpha_nr)
+$$
+
+이고, $\alpha_nb$는 $J_0$의 $n$번째 영점이다. 계수는 [[series-solutions-special-functions|Fourier-Bessel 전개]]로 구한다. $J_0$의 영점 비(약 1 : 2.30 : 3.60)가 정수가 아니어서, 고유진동수가 줄처럼 기본 진동수의 정수배로 늘어서지 않는다(직접 계산한 값).
+
 ## 유의점
 
 - 불연속점 근처에서 부분합은 점프 크기의 약 9%만큼 넘친다(Gibbs 현상). 항을 늘려도 넘치는 높이는 줄지 않는다.
-- 변수분리는 방정식과 경계조건이 모두 동차일 때 바로 쓸 수 있다. 비동차 경계조건은 정상상태 해를 빼서 동차로 만든 뒤 쓴다.
+- 변수분리는 방정식과 경계조건이 모두 동차일 때 쓸 수 있다. 비동차 경계조건은 정상상태 해를 빼서 동차로 만든 뒤 쓴다.
 - 열 방정식의 해는 시간이 지나면 매끄러워지지만, 파동 방정식의 해는 처음 모양의 꺾임과 불연속을 그대로 실어 나른다.
-- 반범위 전개에서 사인과 코사인 가운데 무엇을 쓸지는 함수가 아니라 경계조건이 정한다.
+- 반범위 전개에서 사인과 코사인 가운데 어느 것을 쓸지는 경계조건이 정한다.
 
 ## 관련 개념
 
@@ -107,5 +115,5 @@ $$
 
 ## 참고 자료
 
-- Dennis G. Zill, _Advanced Engineering Mathematics_, Ch. 12 (Orthogonal Functions and Fourier Series), Ch. 13 (Boundary-Value Problems in Rectangular Coordinates).
+- Dennis G. Zill, _Advanced Engineering Mathematics_, «Orthogonal Functions and Fourier Series»와 «Boundary-Value Problems in Rectangular Coordinates» 장(판에 따라 장 번호가 다르다).
 - 표의 급수와 열 방정식 예의 계수는 직접 계산했고, 해는 원식에 대입해 확인했다.
