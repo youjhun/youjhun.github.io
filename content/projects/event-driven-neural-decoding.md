@@ -60,7 +60,7 @@ CRCNS pmd-1의 순차 reaching 데이터에서 M1·PMd 스파이크와 손 속�
 
 ## 관련 개념과 코드
 
-- [[asbit-wireless-sensor-network|ASBIT]]
+- [[asbit-wireless-sensor-network|논문: ASBIT]]
 - [[linear-regression|단순 선형 회귀]]
 - [[svd|특잇값 분해와 PCA]]
 - [spike-error-tolerance-decoders](https://github.com/youjhun/spike-error-tolerance-decoders)
