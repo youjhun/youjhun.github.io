@@ -1,6 +1,6 @@
 ---
 title: MAS201 응용미분방정식
-description: 상미분방정식의 해와 초기조건, 적분인자와 완전미분.
+description: 상미분방정식의 해와 초기조건, 적분인자와 완전미분, 그리고 공학수학 공식집(1계식, 2계 선형식, 라플라스 변환, 연립 선형식, 급수해, 푸리에 급수와 편미분방정식, 수치해법).
 aliases: [MAS201]
 ---
 
@@ -10,6 +10,20 @@ aliases: [MAS201]
 | --- | --- |
 | 정의·차수·선형성·해의 구간 | [[ode-solutions-initial-values\|미분방정식과 초기값 문제]] |
 | 1차 선형식·적분인자·완전미분·Bernoulli 형태 | [[first-order-linear-exact\|적분인자와 완전미분방정식]] |
+
+## 공학수학 공식집
+
+공식, 판별표, 직접 계산한 예를 모은 글들이다. 주제는 Zill의 _Advanced Engineering Mathematics_ 차례를 따랐다. 확인한 손필기가 1계식 범위여서 강의 범위 밖으로 둔다.
+
+| 주제 | 본문 |
+| --- | --- |
+| 1계식의 꼴 판별과 풀이, 자율 방정식, 대표 모형 | [[first-order-ode-methods\|1계 미분방정식 풀이법 모음]] |
+| 특성방정식, 미정계수법, 매개변수 변환법, Cauchy-Euler, 진동 | [[linear-second-order-ode\|2계 선형 미분방정식 공식집]] |
+| 변환 쌍, 성질, 부분분수, 계단·임펄스 강제항 | [[laplace-transform-table\|라플라스 변환 공식표]] |
+| 고윳값 방법, 행렬 지수, 평형점 분류, 선형화 | [[linear-systems-ode\|연립 선형 미분방정식]] |
+| 거듭제곱급수, Frobenius 방법, Legendre·Bessel 함수 | [[series-solutions-special-functions\|급수해와 특수함수]] |
+| 푸리에 급수, 반범위 전개, 열·파동·라플라스 방정식 | [[fourier-series-pde\|푸리에 급수와 편미분방정식]] |
+| Euler·Heun·RK4, 안정성, 강성, 경계값 문제 | [[numerical-methods-ode\|미분방정식의 수치해법]] |
 
 ## 강의 범위 밖
 
