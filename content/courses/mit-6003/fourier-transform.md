@@ -17,7 +17,9 @@ $$
 a_k = \frac{1}{T}\int_{-S}^{S} e^{-j\frac{2\pi}{T}kt}\, dt = \frac{2}{T}\,\frac{\sin \omega S}{\omega}\bigg|_{\omega = k\frac{2\pi}{T}}
 $$
 
-이다. $T a_k$는 $T$와 상관없이 같은 함수 $2\sin(\omega S)/\omega$ 위의 점들이다. 주기를 두 배로 늘리면 같은 주파수 구간 안에 고조파가 두 배로 들어간다. $T\to\infty$이면 점들이 촘촘해져 연속 함수가 되고, 합성식의 합은 적분이 된다. 그 결과가 푸리에 변환 쌍이다.
+이다. $T a_k$는 $T$와 상관없이 같은 함수 $2\sin(\omega S)/\omega$ 위의 점들이다.
+
+주기를 두 배로 늘리면 같은 주파수 구간 안에 고조파가 두 배로 들어간다. $T\to\infty$이면 점들이 촘촘해져 연속 함수가 되고, 합성식의 합은 적분이 된다. 그 결과가 푸리에 변환 쌍이다.
 
 $$
 X(j\omega) = \int_{-\infty}^{\infty} x(t)\, e^{-j\omega t}\, dt \qquad \text{(분석식)}

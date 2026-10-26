@@ -19,4 +19,6 @@ description: MIT HST.582J Biomedical Signal and Image Processing을 따라가며
 
 ## 강의별 대조 범위
 
-공개 [강의 목록](https://ocw.mit.edu/courses/hst-582j-biomedical-signal-and-image-processing-spring-2007/pages/lecture-notes/)에서 L1–6은 획득·필터·ECG·변환, L7–8은 음성·예측, L9–17은 영상·판정·분할·정합·모달리티, L18–20은 랜덤 신호·BSS에 대응한다. 위 글은 이 묶음들의 기초 모형과 계산을 다룬다. Z 변환은 원강의에서 수업 외 배포 자료다. L21 MRI의 시퀀스별 상세, L22 surgical applications, L23 Random Signals III의 세부, L24 종합은 독립 본문으로 다루지 않았다. 각 강의의 모든 유도·실습을 완료한 상태로 세지 않는다.
+공개 [강의 목록](https://ocw.mit.edu/courses/hst-582j-biomedical-signal-and-image-processing-spring-2007/pages/lecture-notes/)에서 L1–6은 획득·필터·ECG·변환, L7–8은 음성·예측, L9–17은 영상·판정·분할·정합·모달리티, L18–20은 랜덤 신호·BSS에 대응한다. 위 글은 이 묶음들의 기초 모형과 계산을 다룬다.
+
+Z 변환은 원강의에서 수업 외 배포 자료다. L21 MRI의 시퀀스별 상세, L22 surgical applications, L23 Random Signals III의 세부, L24 종합은 독립 본문으로 다루지 않았다. 각 강의의 모든 유도·실습을 완료한 상태로 세지 않는다.
