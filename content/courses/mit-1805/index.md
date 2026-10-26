@@ -1,5 +1,5 @@
 ---
-title: MIT 18.05 확률과 통계
+title: MIT 18.05 Introduction to Probability and Statistics
 description: MIT 18.05 Introduction to Probability and Statistics (Spring 2022)를 따라가며 정리한 개념.
 ---
 

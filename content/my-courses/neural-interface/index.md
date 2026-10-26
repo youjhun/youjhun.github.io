@@ -15,6 +15,6 @@ description: 몸의 신호를 재고, 무선으로 보내고, 전극으로 자�
 | 무선 원격 측정     | 잡음과 물리 채널, 변조, 다중 접속                   | MIT 6.02, Smart Sensors 11–12장 | [[matched-filter\|정합 필터]], [[low-power-mac\|저전력 센서 네트워크의 MAC]], [[wakeup-scheduling-time-sync\|깨어남 일정과 시간 동기화]] |
 | 전극–조직 경계     | 전극 계면과 조직 반응, 기록 임피던스                | Smart Sensors 4장    | [[electrode-tissue-interface\|전극–조직 경계]] |
 | 무선 전력과 전자기 | 준정적 결합, 공진, RF 링크                          | MIT 6.013, Smart Sensors 3장 | [[wireless-power-telemetry\|무선 전력과 원격 측정]] |
-| 시스템 통합        | 측정부터 전송까지 한 시스템으로 묶기                | 위 단원 전체와 논문  | [[asbit-wireless-sensor-network\|논문: ASBIT 무선 센서 네트워크]] |
+| 시스템 통합        | 측정부터 전송까지 한 시스템으로 묶기                | 위 단원 전체와 논문  | [[asbit-wireless-sensor-network\|논문: ASBIT]] |
 | 비침습 BCI         | 운동상상, ERD·ERS, 공간필터                         | EEG·BCI 자료         | [[motor-imagery-eeg\|운동상상 EEG와 ERD·ERS]]                     |
 | 신호 변이성        | trial·세션·사용자 사이의 분포 변화                  | 통계·리만 기하       | [[eeg-variability\|MI-BCI의 EEG 변이성]]                          |

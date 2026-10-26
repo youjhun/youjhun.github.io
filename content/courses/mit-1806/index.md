@@ -1,5 +1,5 @@
 ---
-title: MIT 18.06 선형대수
+title: MIT 18.06 Linear Algebra
 description: MIT 18.06 Linear Algebra를 따라가며 정리한 개념.
 ---
 

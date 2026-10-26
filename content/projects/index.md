@@ -12,4 +12,4 @@ description: 문제를 정의하고, 데이터를 다듬고, 실험으로 주장
 
 ## 프로젝트와 개념의 연결
 
-디코더의 수학은 [[linear-regression|선형 회귀]], [[least-squares|최소제곱]], [[svd|SVD]]와 이어진다. 무선 전송 오류의 배경은 [[asbit-wireless-sensor-network|ASBIT 논문 리뷰]]에 있다.
+디코더의 수학은 [[linear-regression|선형 회귀]], [[least-squares|최소제곱]], [[svd|SVD]]와 이어진다. 무선 전송 오류의 배경은 [[asbit-wireless-sensor-network|ASBIT]]에 있다.

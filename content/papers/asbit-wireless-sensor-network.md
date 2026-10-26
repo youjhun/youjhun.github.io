@@ -1,5 +1,5 @@
 ---
-title: "논문 리뷰: 수천 개 센서를 위한 비동기 무선 네트워크 (ASBIT)"
+title: "An asynchronous wireless network for capturing event-driven data from large populations of autonomous sensors (ASBIT)"
 aliases:
   [
     ASBIT,

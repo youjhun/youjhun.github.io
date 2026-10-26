@@ -1,5 +1,5 @@
 ---
-title: "논문 리뷰: fuse로 제작 뒤 회로를 프로그래밍하기"
+title: "Versatile On-Chip Programming of Circuit Hardware for Wearable and Implantable Biomedical Microdevices"
 aliases: [Versatile On-Chip Programming, metal fuse, anti-fuse]
 tags: [논문, ASIC, 신경공학, 회로]
 date: 2026-10-20
@@ -59,8 +59,8 @@ description: 초소형 바이오 ASIC에 metal fuse와 anti-fuse를 넣고 laser
 
 ## 관련 논문
 
-- [[neurograin-wireless-microimplants|Neurograin 무선 마이크로임플란트]]
-- [[patterned-wireless-brain-stimulation|패턴형 무선 뇌 자극]]
+- [[neurograin-wireless-microimplants|Neurograin]]
+- [[patterned-wireless-brain-stimulation|Patterned wireless brain stimulation]]
 
 ## 참고 자료
 

@@ -53,7 +53,7 @@ $k_B$와 에너지 J는 입자당 기술에서 사용하고, $R$과 J/mol은 몰
 
 ## 관련 개념
 
-- [[courses/mit-1805/index|확률과 통계]]
+- [[courses/mit-1805/index|MIT 18.05]]
 - [[first-order-linear-exact|미분방정식]]
 - [[physiology-mass-balance|생리학의 물질수지]]
 

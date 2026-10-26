@@ -2,3 +2,84 @@
 // 글꼴: Pretendard. fontOrigin을 "local"로 두었으므로 Quartz는 Google Fonts를 넣지 않는다.
 // 외부 CDN 대신 사이트에 직접 넣었다(쓰는 글자 범위의 파일만 받는다).
 @use "./pretendard";
+
+// 읽기 간격. 한글 본문은 기본 줄 간격(약 1.2)에서 글자가 빽빽해 보여 줄과 문단 사이를 넓힌다.
+.page article {
+  font-size: 1.0625rem;
+  line-height: 1.85;
+  letter-spacing: -0.005em;
+  word-break: keep-all;
+
+  // Quartz 기본값이 p·li·tbody의 줄 간격을 1.6rem으로 고정하므로 여기서 다시 정한다.
+  p {
+    line-height: 1.85;
+    margin: 0 0 1.25em;
+  }
+
+  ul,
+  ol {
+    margin: 0.4em 0 1.4em;
+    padding-left: 1.4em;
+  }
+
+  li {
+    line-height: 1.8;
+    margin-bottom: 0.55em;
+  }
+
+  li > p {
+    margin-bottom: 0.4em;
+  }
+
+  h2 {
+    margin-top: 3rem;
+    margin-bottom: 1.1rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 1px solid var(--lightgray);
+  }
+
+  h3 {
+    margin-top: 2.2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .katex-display {
+    margin: 1.4em 0;
+  }
+
+  table {
+    margin: 1.2em 0 1.6em;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  th,
+  td {
+    padding: 0.55rem 0.9rem;
+    vertical-align: top;
+  }
+
+  img {
+    display: block;
+    margin: 1.6rem auto 0.5rem;
+  }
+
+  // 그림 바로 아래의 기울임 한 줄은 캡션으로 작게 보인다.
+  p:has(> img) + p:has(> em:only-child) {
+    font-size: 0.88rem;
+    line-height: 1.65;
+    color: var(--gray);
+    margin-bottom: 1.8em;
+  }
+
+  blockquote.callout {
+    margin: 1.4em 0 2em;
+    line-height: 1.8;
+  }
+}
+
+// 본문 한 줄이 너무 길면 눈이 다음 줄을 놓친다. 가운데 열의 글 폭을 묶는다.
+.page .center > article,
+.page .center > .page-header {
+  max-width: 46rem;
+}

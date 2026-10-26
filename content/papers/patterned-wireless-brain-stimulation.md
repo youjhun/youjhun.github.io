@@ -1,5 +1,5 @@
 ---
-title: "논문 리뷰: 분산 무선 칩으로 패턴형 뇌 자극하기"
+title: "Patterned electrical brain stimulation by a wireless network of implantable microdevices"
 aliases: [Patterned electrical brain stimulation by a wireless network of implantable microdevices]
 tags: [논문, 신경자극, BCI, 무선전력]
 date: 2026-10-20

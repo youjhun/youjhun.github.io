@@ -5,11 +5,11 @@ description: 공부한 과목, 직접 설계한 과목, 프로젝트, 읽은 논
 
 ## 과목
 
-- [[courses/mit-6003/index|MIT 6.003 신호와 시스템]]
-- [[courses/mit-hst582j/index|MIT HST.582J 생체 신호·영상 처리]]
-- [[courses/mit-1805/index|MIT 18.05 확률과 통계]]
-- [[courses/mit-1806/index|MIT 18.06 선형대수]]
-- [[courses/mit-6012/index|MIT 6.012 마이크로전자 소자와 회로]]
+- [[courses/mit-6003/index|MIT 6.003 Signals and Systems]]
+- [[courses/mit-hst582j/index|MIT HST.582J Biomedical Signal and Image Processing]]
+- [[courses/mit-1805/index|MIT 18.05 Introduction to Probability and Statistics]]
+- [[courses/mit-1806/index|MIT 18.06 Linear Algebra]]
+- [[courses/mit-6012/index|MIT 6.012 Microelectronic Devices and Circuits]]
 - [[courses/kaist/index|KAIST 과목 기록]]
 
 ## 내가 만든 과목
@@ -21,10 +21,10 @@ description: 공부한 과목, 직접 설계한 과목, 프로젝트, 읽은 논
 
 ## 논문
 
-- [[asbit-wireless-sensor-network|수천 개 센서를 위한 비동기 무선 네트워크 (ASBIT)]], _Nature Electronics_ 2024
-- [[neurograin-wireless-microimplants|Neurograin 무선 마이크로임플란트]], _Nature Electronics_ 2021
-- [[on-chip-fuse-programming|fuse 기반 on-chip programming]], _Advanced Science_ 2023
-- [[patterned-wireless-brain-stimulation|분산 무선 칩의 패턴형 뇌 자극]], _Nature Communications_ 2024
+- [[asbit-wireless-sensor-network|ASBIT]], _Nature Electronics_ 2024
+- [[neurograin-wireless-microimplants|Neurograin]], _Nature Electronics_ 2021
+- [[on-chip-fuse-programming|On-chip fuse programming]], _Advanced Science_ 2023
+- [[patterned-wireless-brain-stimulation|Patterned wireless brain stimulation]], _Nature Communications_ 2024
 
 ## 프로젝트
 

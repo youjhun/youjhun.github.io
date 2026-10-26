@@ -1,5 +1,5 @@
 ---
-title: "논문 리뷰: 무선 마이크로임플란트 네트워크, Neurograin"
+title: "Neural recording and stimulation using wireless networks of microimplants (Neurograin)"
 aliases: [Neurograin, Neural recording and stimulation using wireless networks of microimplants]
 tags: [논문, 신경공학, 무선전력, BCI]
 date: 2026-10-20
@@ -59,8 +59,8 @@ Neurograin은 반대로 각 접점을 독립된 SoC 노드로 만든다. 개별 
 ## 이후 연구와 연결
 
 - [[asbit-wireless-sensor-network|ASBIT]]는 고정 TDMA 대신 희소 사건과 Gold code를 사용해 기록 uplink의 확장성을 넓혔다.
-- [[patterned-wireless-brain-stimulation|패턴형 무선 뇌 자극]]은 자극 쪽을 30개 만성 이식과 행동 실험으로 확장했다.
-- [[on-chip-fuse-programming|on-chip fuse programming]]은 칩 주소와 회로 파라미터를 제작 뒤에 바꾸는 방법을 다룬다.
+- [[patterned-wireless-brain-stimulation|Patterned wireless brain stimulation]]은 자극 쪽을 30개 만성 이식과 행동 실험으로 확장했다.
+- [[on-chip-fuse-programming|On-chip fuse programming]]은 칩 주소와 회로 파라미터를 제작 뒤에 바꾸는 방법을 다룬다.
 
 ## 참고 자료
 

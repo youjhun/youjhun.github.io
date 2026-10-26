@@ -69,7 +69,7 @@ description: 뇌에 심은 미세전극의 기록 성능이 시간에 따라 떨
 
 - [[wireless-power-telemetry|무선 전력과 원격 측정]]: 이식 장치의 전력, 데이터 전송, 봉지
 - [[quantization-adc|양자화와 ADC]]: 전극 뒤의 측정 경로와 잡음
-- [[neurograin-wireless-microimplants|논문: 뉴로그레인 무선 미세 이식체]]: 무선 미세 이식체의 전극과 시스템
+- [[neurograin-wireless-microimplants|논문: Neurograin]]: 무선 미세 이식체의 전극과 시스템
 
 ## 참고 자료
 

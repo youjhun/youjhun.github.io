@@ -1,5 +1,5 @@
 ---
-title: MIT HST.582J 생체 신호·영상 처리
+title: MIT HST.582J Biomedical Signal and Image Processing
 description: MIT HST.582J Biomedical Signal and Image Processing을 따라가며 정리한 개념.
 ---
 

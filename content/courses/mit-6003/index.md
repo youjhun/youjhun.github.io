@@ -1,5 +1,5 @@
 ---
-title: MIT 6.003 신호와 시스템
+title: MIT 6.003 Signals and Systems
 description: MIT 6.003 Signals and Systems (Fall 2011)를 따라가며 정리한 개념.
 ---
 

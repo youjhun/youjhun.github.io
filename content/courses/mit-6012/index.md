@@ -1,5 +1,5 @@
 ---
-title: MIT 6.012 마이크로전자 소자와 회로
+title: MIT 6.012 Microelectronic Devices and Circuits
 description: MIT 6.012 Microelectronic Devices and Circuits (Fall 2005)를 따라가며 정리한 개념.
 ---
 
