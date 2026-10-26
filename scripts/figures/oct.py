@@ -68,7 +68,9 @@ while spec[hi] > half:
 print(f"axial resolution formula {dz_formula*1e6:.2f} um, measured FWHM {(z_axis[hi]-z_axis[lo])*1e6:.2f} um")
 print(f"imaging range formula {range_formula*1e3:.2f} mm, FFT Nyquist {zmax*1e3:.2f} mm")
 print(f"peak depths {[round(float(z_axis[int(np.argmin(abs(z_axis-z)))]*1e3),3) for z,_ in reflectors]} mm")
-print(f"SNR gain Ns/2 = {NS/2:.0f} = {10*np.log10(NS/2):.1f} dB")
+ns_fwhm = NS / SPAN
+print(f"Ns within FWHM = {ns_fwhm:.0f}, SNR gain Ns/2 = {ns_fwhm/2:.0f} = {10*np.log10(ns_fwhm/2):.1f} dB")
+print(f"T/tau = range/dz = {range_formula/dz_formula:.0f} = {10*np.log10(range_formula/dz_formula):.1f} dB")
 print(f"axial resolution in air (n=1) {dz_formula*N_TISSUE*1e6:.2f} um")
 
 # 도플러 위상차 예: A-line 간격 T_A, 빔 방향 속도 v
