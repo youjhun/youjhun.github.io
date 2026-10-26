@@ -1,5 +1,5 @@
 ---
-title: "Neural recording and stimulation using wireless networks of microimplants (Neurograin)"
+title: "Neural recording and stimulation using wireless networks of microimplants"
 aliases: [Neurograin, Neural recording and stimulation using wireless networks of microimplants]
 tags: [논문, 신경공학, 무선전력, BCI]
 date: 2026-10-20

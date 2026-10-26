@@ -1,5 +1,5 @@
 ---
-title: "An asynchronous wireless network for capturing event-driven data from large populations of autonomous sensors (ASBIT)"
+title: "An asynchronous wireless network for capturing event-driven data from large populations of autonomous sensors"
 aliases:
   [
     ASBIT,

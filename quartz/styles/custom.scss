@@ -50,12 +50,12 @@
   table {
     margin: 1.2em 0 1.6em;
     font-size: 0.95rem;
-    line-height: 1.6;
   }
 
-  th,
-  td {
+  .table-container > table th,
+  .table-container > table td {
     padding: 0.55rem 0.9rem;
+    line-height: 1.6;
     vertical-align: top;
   }
 
@@ -64,12 +64,16 @@
     margin: 1.6rem auto 0.5rem;
   }
 
-  // 그림 바로 아래의 기울임 한 줄은 캡션으로 작게 보인다.
-  p:has(> img) + p:has(> em:only-child) {
+  // 그림 바로 다음 줄의 기울임 글은 그림과 같은 문단에 들어가 캡션이 된다.
+  // Quartz 기본값은 캡션을 위로 1rem 끌어올리므로 이를 풀고 작게 보인다.
+  p > img + em {
+    display: block;
+    transform: none;
+    margin-top: 0.5rem;
+    margin-bottom: 0.6rem;
     font-size: 0.88rem;
     line-height: 1.65;
     color: var(--gray);
-    margin-bottom: 1.8em;
   }
 
   blockquote.callout {
@@ -80,6 +84,7 @@
 
 // 본문 한 줄이 너무 길면 눈이 다음 줄을 놓친다. 가운데 열의 글 폭을 묶는다.
 .page .center > article,
-.page .center > .page-header {
-  max-width: 46rem;
+.page .center > .page-header,
+.page .center > .page-listing {
+  max-width: 44rem;
 }
