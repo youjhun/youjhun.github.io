@@ -16,6 +16,7 @@ description: 뇌파에 묶이지 않고 여러 생체 신호의 공통 구조를
 | 공통 측정 구조 | 생리 현상이 어떤 단계를 거쳐 숫자가 되는가?                | [[biosignal-measurement-chain\|생체신호 측정 사슬]]                           |
 | 전기 생체신호  | 피부 전위차에서 심장 활동을 어떻게 관측하는가?             | [[ecg\|ECG 측정 원리]]                                              |
 | 광학 생체신호  | 빛의 흡수 변화에서 맥동 혈액량과 SpO₂를 어떻게 추정하는가? | [[pulse-oximetry-ppg\|PPG와 맥박산소측정]]                                    |
+| 광학 단층 영상 | 빛의 간섭으로 조직 속 반사의 깊이를 어떻게 재는가?         | [[optical-coherence-tomography\|광간섭 단층 촬영(OCT)]]                        |
 | 디지털화       | 어떤 표본과 숫자가 원신호를 보존하는가?                    | [[sampling-aliasing\|샘플링과 앨리어싱]] · [[quantization-adc\|양자화와 ADC]] |
 | 주파수 표현    | 기록 길이와 창 함수가 스펙트럼을 어떻게 바꾸는가?          | [[dft-fft\|DFT와 FFT]]                                                        |
 

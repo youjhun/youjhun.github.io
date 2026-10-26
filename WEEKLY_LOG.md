@@ -134,3 +134,9 @@
 - 쓴 글: Human Sensing & Neural Interface [저전력 센서 네트워크의 MAC]. 과목 단원표의 무선 원격 측정 행에 연결하고, 전극–조직 경계와 무선 전력 행의 설명과 참고 자료를 실제 글에 맞췄다.
 - 재료: C.-M. Kyung 편, _Smart Sensors for Health and Environment Monitoring_(Springer, 2015) 11장 §2와 12장 §2(Topdown에 올린 원문). 책의 그림은 싣지 않았다. 저전력 청취의 확인 주기와 웨이크업 라디오의 평균 전력은 단순 모형으로 직접 계산했고, 원문 밖의 계산이라고 글에 밝혔다.
 - 막힌 것: 없음. 원문 11장 식 (1)–(2) 앞 문장은 두 에너지 기호의 이름을 바꿔 적어, 식과 그 아래 설명을 따랐다.
+
+## 2026-10-26 (추가 실행 20)
+
+- 쓴 글: Human Sensing & Neural Interface [센서 네트워크의 깨어남 일정과 시간 동기화]. 무선 원격 측정 행에 연결하고, [저전력 센서 네트워크의 MAC]에서 이어지게 했다. Physiological & Human Sensing [광간섭 단층 촬영(OCT)]. 과목 단원표에 광학 단층 영상 행을 더했다.
+- 재료: C.-M. Kyung 편, _Smart Sensors for Health and Environment Monitoring_(Springer, 2015) 5장, 11장 §3–4, 12장 §3.2–3.3(Topdown에 올린 원문). 책의 그림과 임상 영상은 싣지 않았다. 파이프라인 일정의 전달 시간, TPSN 교환의 예, OFDI 간섭 신호와 깊이 분포, 도플러 위상차는 직접 계산했고 글에 그렇게 밝혔다.
+- 막힌 것: 없음. 원문 11장은 TPSN 식의 Δ를 시계 흐름(drift)이라고 부르지만 식이 구하는 값은 시계 차이(오프셋)여서 글에 그 차이를 적었다.
