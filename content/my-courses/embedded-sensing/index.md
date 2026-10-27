@@ -8,3 +8,6 @@ description: 센서에서 기기 안의 추론까지를 하나의 시스템으�
 ## 관련 글
 
 [[quantization-adc|양자화와 ADC]]와 [[dft-fft|DFT와 FFT]]가 이 과목의 출발점이 된다.
+
+- [[system-budgets-latency-power|전력·지연·데이터율 예산]]
+- [[on-device-inference|기기 안 추론과 모델 경량화]]
