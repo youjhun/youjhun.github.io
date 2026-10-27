@@ -83,9 +83,9 @@ Runge-Kutta 방법은 한 걸음 안에서 기울기를 여러 번 계산한다.
 
 | 방법 | 공식 | 차수 |
 | --- | --- | --- |
-| Adams-Bashforth 2단 | $y_{n+1} = y_n + \tfrac h2(3f_n - f_{n-1})$ | 2 |
-| Adams-Bashforth 4단 | $y_{n+1} = y_n + \tfrac{h}{24}(55f_n - 59f_{n-1} + 37f_{n-2} - 9f_{n-3})$ | 4 |
-| Adams-Moulton 4차 (보정) | $y_{n+1} = y_n + \tfrac{h}{24}(9f_{n+1} + 19f_n - 5f_{n-1} + f_{n-2})$ | 4 |
+| Adams-Bashforth 2단(2차) | $y_{n+1} = y_n + \tfrac h2(3f_n - f_{n-1})$ | 2 |
+| Adams-Bashforth 4단(4차) | $y_{n+1} = y_n + \tfrac{h}{24}(55f_n - 59f_{n-1} + 37f_{n-2} - 9f_{n-3})$ | 4 |
+| Adams-Moulton 3단(4차), 보정 | $y_{n+1} = y_n + \tfrac{h}{24}(9f_{n+1} + 19f_n - 5f_{n-1} + f_{n-2})$ | 4 |
 
 $f_k = f(t_k, y_k)$다. Adams-Bashforth는 명시적이고, Adams-Moulton은 $f_{n+1}$이 들어 있어 음함수다. 보통 Adams-Bashforth로 $y_{n+1}$을 예측하고 그 값으로 $f_{n+1}$을 계산해 Adams-Moulton으로 한 번 보정한다(예측자-보정자).
 

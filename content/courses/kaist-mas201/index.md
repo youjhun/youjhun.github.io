@@ -23,9 +23,9 @@ aliases: [MAS201]
 | 특성방정식, 미정계수법, 매개변수 변환법, Cauchy-Euler, 진동 | [[linear-second-order-ode\|2계 선형 미분방정식 공식집]] |
 | 변환 쌍, 성질, 부분분수, 계단·임펄스 강제항 | [[laplace-transform-table\|라플라스 변환 공식표]] |
 | 고윳값 방법, 행렬 지수, 평형점 분류, 선형화 | [[linear-systems-ode\|연립 선형 미분방정식]] |
-| 거듭제곱급수, Frobenius 방법, Legendre·Bessel 함수 | [[series-solutions-special-functions\|급수해와 특수함수]] |
-| 푸리에 급수, 반범위 전개, 열·파동·라플라스 방정식 | [[fourier-series-pde\|푸리에 급수와 편미분방정식]] |
-| Euler·Heun·RK4, 안정성, 강성, 경계값 문제 | [[numerical-methods-ode\|미분방정식의 수치해법]] |
+| 거듭제곱급수, Frobenius 방법, Legendre·Bessel·Hermite·Chebyshev·Laguerre | [[series-solutions-special-functions\|급수해와 특수함수]] |
+| 푸리에 급수, 반범위 전개, 열·파동·라플라스 방정식, 비동차 방정식, 푸리에 변환 | [[fourier-series-pde\|푸리에 급수와 편미분방정식]] |
+| Euler·Heun·RK4, Adams 다단계법, 간격 조절, 안정성, 강성, 경계값 문제 | [[numerical-methods-ode\|미분방정식의 수치해법]] |
 
 ### 그 밖의 글
 
