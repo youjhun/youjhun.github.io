@@ -24,7 +24,7 @@ description: 공부한 과목, 직접 설계한 과목, 프로젝트, 읽은 논
 - [[asbit-wireless-sensor-network|ASBIT]], _Nature Electronics_ 2024
 - [[neurograin-wireless-microimplants|Neurograin]], _Nature Electronics_ 2021
 - [[on-chip-fuse-programming|On-chip fuse programming]], _Advanced Science_ 2023
-- [[patterned-wireless-brain-stimulation|Patterned wireless brain stimulation]], _Nature Communications_ 2024
+- [[patterned-wireless-brain-stimulation|Patterned stimulation]], _Nature Communications_ 2024
 
 ## 프로젝트
 

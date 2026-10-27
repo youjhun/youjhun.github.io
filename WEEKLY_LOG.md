@@ -166,6 +166,6 @@
 
 ## 2026-10-27 (추가 실행 25)
 
-- 보강한 글: 논문 리뷰 세 편. [Patterned stimulation]을 3-coil 링크, daisy-chain 명령, 칩 특성, 급성·만성 실험, 링크 안정성, SAR, 한계 순으로 다시 썼다. [On-chip fuse programming]에 laser·FIB 공정 조건과 증폭기·주소·공진·공급 전압 네 사례의 수치를, [Neurograin]에 칩 회로, 두 TDMA 방식의 측정값, 3-coil 효율 식과 위치별 효율, SAR, 급성 실험을 더했다. ASBIT 리뷰에는 Neurograin 링크를 더했다.
-- 재료: Topdown에 올린 세 논문의 원문(본문·Methods·그림 설명)과 읽으며 남긴 질문. 이항검정과 dB 환산은 직접 계산해 확인했다.
-- 막힌 것: 세 논문 모두 보충 자료는 읽지 않았다. 인지과학 논문(Piercing of Consciousness)은 읽은 기록이 없어 리뷰를 쓰지 않았다.
+- 보강한 글: 논문 리뷰 세 편. [Patterned stimulation]을 3-coil 링크, daisy-chain 명령, 칩 특성, 급성·만성 실험, 링크 안정성, SAR, 한계 순으로 다시 썼다. [On-chip fuse programming]에 laser·FIB 공정 조건과 증폭기·주소·공진·공급 전압 네 사례의 수치를, [Neurograin]에 칩 회로, 두 TDMA 방식의 측정값, 3-coil 효율 식과 위치별 효율, SAR, 급성 실험을 더했다. ASBIT 리뷰에는 보충 자료(Supplementary Note 1–6, 표 S1·S2)에서 정합 필터 템플릿, 수신 세기 식, 칩 수율과 클록, 이상적 용량 식, 다른 방식과의 비교, SNR별 디코딩, 4-coil 전력 시뮬레이션을 더하고 Neurograin 링크를 걸었다.
+- 재료: Topdown에 올린 세 논문의 원문(본문·Methods·그림 설명). 이항검정과 dB 환산은 직접 계산해 확인했다.
+- 막힌 것: Patterned·On-chip fuse·Neurograin 세 논문의 보충 자료는 읽지 않았다. ASBIT 보충 자료의 용량 169개와 IC 면적 0.42 mm²는 본문 값으로 다시 맞춰 보지 못했다.

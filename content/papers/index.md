@@ -8,4 +8,4 @@ description: 읽은 논문을 정리한 리뷰.
 1. [[neurograin-wireless-microimplants|Neurograin]] — 분산 칩의 기록·자극·TDMA 네트워크를 처음 한 시스템으로 시연.
 2. [[on-chip-fuse-programming|On-chip fuse programming]] — 주소와 회로 파라미터를 post-foundry 편집.
 3. [[asbit-wireless-sensor-network|ASBIT]] — 희소 event uplink를 수천 노드로 확장.
-4. [[patterned-wireless-brain-stimulation|Patterned wireless brain stimulation]] — 30개 칩의 만성 패턴 자극과 행동 실험.
+4. [[patterned-wireless-brain-stimulation|Patterned stimulation]] — 30개 칩의 만성 패턴 자극과 행동 실험.

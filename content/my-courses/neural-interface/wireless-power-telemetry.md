@@ -79,7 +79,7 @@ $$
 - [[electrode-tissue-interface|전극–조직 경계]]: 전극 쪽의 조직 반응과 임피던스
 - [[asbit-wireless-sensor-network|논문: ASBIT]]: 많은 무선 센서의 비동기 데이터 전송
 - [[neurograin-wireless-microimplants|논문: Neurograin]]: 무선 미세 이식체 네트워크
-- [[patterned-wireless-brain-stimulation|논문: Patterned wireless brain stimulation]]: 무선 이식 칩 네트워크로 하는 뇌 자극
+- [[patterned-wireless-brain-stimulation|논문: Patterned stimulation]]: 무선 이식 칩 네트워크로 하는 뇌 자극
 - [[modulation|변조]]: FM
 
 ## 참고 자료
