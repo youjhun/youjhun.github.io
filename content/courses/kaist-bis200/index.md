@@ -19,18 +19,18 @@ aliases:
 
 ## 단원
 
-| 단원 | 본문 |
-| --- | --- |
-| Biomolecular Principles | [[biomolecules-binding\|생체분자와 결합 평형]] · [[transcription-translation\|전사와 번역]] · [[cell-analysis-genetics\|분자 분석법]] |
-| Cellular Principles | [[cell-adhesion-stem-cells\|세포 부착·줄기세포·오가노이드]] · [[cell-cycle-cancer\|세포주기]] |
-| Communication Systems | [[neural-endocrine-control\|신경·내분비 신호와 항상성]] · [[cell-signaling-pathways\|수용체별 신호전달]] |
-| Physiological Principles | [[physiology-mass-balance\|물질수지와 약동학]] · [[physiology-circulation-respiration\|호흡·순환·신장]] |
-| Cancer | [[cancer-genes-metastasis\|암의 유전자·조직 환경·진단]] |
-| Engineering Immunity | [[antibodies-vaccines-immunotherapy\|항체·백신·면역치료]] |
-| Drug Delivery Engineering | [[physiology-mass-balance\|구획 모형과 clearance]] · [[antibodies-vaccines-immunotherapy\|생체분자 전달]] |
-| Tissue Engineering | [[tissue-engineering-scaffolds\|조직공학·스캐폴드·혈관화]] |
-| Bioinstrumentation | [[biosensor-performance\|센서 성능과 변환 방식]] · [[biosignal-measurement-chain\|생체신호 측정 사슬]] |
-| Biomedical Imaging | [[medical-imaging-physics\|X선·CT·초음파·핵의학·MRI]] |
+| 단원                      | 본문                                                                                                                                                             |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Biomolecular Principles   | [[biomolecules-binding\|생체분자와 결합 평형]] · [[transcription-translation\|전사와 번역]] · [[cell-analysis-genetics\|분자 분석법]]                            |
+| Cellular Principles       | [[cell-adhesion-stem-cells\|세포 부착·줄기세포·오가노이드]] · [[cell-cycle-cancer\|세포주기]]                                                                    |
+| Communication Systems     | [[neural-endocrine-control\|신경·내분비 신호와 항상성]] · [[cell-signaling-pathways\|수용체별 신호전달]]                                                         |
+| Physiological Principles  | [[physiology-mass-balance\|물질수지와 약동학]] · [[physiology-circulation-respiration\|호흡·순환·신장]]                                                          |
+| Cancer                    | [[cancer-genes-metastasis\|암의 유전자·조직 환경·진단]]                                                                                                          |
+| Engineering Immunity      | [[antibodies-vaccines-immunotherapy\|항체·백신·면역치료]]                                                                                                        |
+| Drug Delivery Engineering | [[physiology-mass-balance\|구획 모형과 clearance]] · [[controlled-drug-delivery\|방출 메커니즘과 표적화]] · [[antibodies-vaccines-immunotherapy\|생체분자 전달]] |
+| Tissue Engineering        | [[tissue-engineering-scaffolds\|조직공학·스캐폴드·혈관화]]                                                                                                       |
+| Bioinstrumentation        | [[biosensor-performance\|센서 성능과 변환 방식]] · [[biosignal-measurement-chain\|생체신호 측정 사슬]]                                                           |
+| Biomedical Imaging        | [[medical-imaging-physics\|X선·CT·초음파·핵의학·MRI]]                                                                                                            |
 
 ## 관련 측정
 
