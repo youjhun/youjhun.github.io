@@ -1,9 +1,9 @@
 ---
 title: 푸리에 급수와 편미분방정식
-aliases: [반범위 전개, half-range expansion, 변수분리법, separation of variables, 열 방정식, heat equation, 파동 방정식, wave equation, 라플라스 방정식, Laplace equation, Sturm-Liouville 문제, d'Alembert 해]
+aliases: [반범위 전개, half-range expansion, 변수분리법, separation of variables, 열 방정식, heat equation, 파동 방정식, wave equation, 라플라스 방정식, Laplace equation, Sturm-Liouville 문제, d'Alembert 해, 고유함수 전개, 열 핵, heat kernel]
 date: 2026-10-26
 tags: [MAS201, 공학수학, 공식집]
-description: 주기 2L 함수의 푸리에 급수 공식과 반범위 전개, 수렴 조건, 그리고 1차원 열 방정식·파동 방정식과 직사각형 영역의 라플라스 방정식을 변수분리로 푸는 공식과 경계조건별 고유함수를 한곳에 모은 공식집.
+description: 주기 2L 함수의 푸리에 급수 공식과 반범위 전개, 수렴 조건, 그리고 1차원 열 방정식·파동 방정식과 직사각형 영역의 라플라스 방정식을 변수분리로 푸는 공식과 경계조건별 고유함수, 비동차 방정식의 고유함수 전개, 푸리에 변환과 무한 구간 열 방정식을 한곳에 모은 공식집.
 ---
 
 > [!abstract] 한눈에
@@ -99,6 +99,52 @@ $$
 
 이고, $\alpha_nb$는 $J_0$의 $n$번째 영점이다. 계수는 [[series-solutions-special-functions|Fourier-Bessel 전개]]로 구한다. $J_0$의 영점 비(약 1 : 2.30 : 3.60)가 정수가 아니어서, 고유진동수가 줄처럼 기본 진동수의 정수배로 늘어서지 않는다(직접 계산한 값).
 
+## 비동차 방정식
+
+열원이 있는 막대 $u_t = ku_{xx} + F(x, t)$, $u(0, t) = u(L, t) = 0$은 해를 경계조건에 맞는 고유함수로 전개해 푼다. $u = \sum T_n(t)\sin(n\pi x/L)$로 두고 $F$도 같은 사인 급수로 전개하면, 계수마다 1계 선형식
+
+$$
+T_n' + k\lambda_nT_n = F_n(t), \qquad \lambda_n = (n\pi/L)^2
+$$
+
+을 얻는다. $T_n(0)$은 초기 온도의 사인 계수이고, 해는 [[first-order-ode-methods|1계 선형식]]의 적분인자 공식으로 쓴다.
+
+$F = Q$(상수)이고 처음 온도가 0이면, 정상상태 $u_s = Qx(L - x)/(2k)$를 먼저 구해 빼는 편이 간단하다. 남은 부분은 처음값이 $-u_s$인 동차 열 방정식이어서
+
+$$
+u(x, t) = \frac{Qx(L - x)}{2k} - \sum_{n\text{ 홀수}}\frac{4L^2Q}{\pi^3kn^3}e^{-k(n\pi/L)^2t}\sin\frac{n\pi x}{L}
+$$
+
+이다(직접 계산한 예).
+
+## 푸리에 변환
+
+무한한 구간에서는 급수 대신 적분을 쓴다. 공학에서 흔한 관례로
+
+$$
+F(\omega) = \int_{-\infty}^{\infty}f(t)e^{-i\omega t}\,dt, \qquad f(t) = \frac{1}{2\pi}\int_{-\infty}^{\infty}F(\omega)e^{i\omega t}\,d\omega
+$$
+
+로 정의한다. 교재마다 지수의 부호와 $2\pi$를 어디에 두는지가 달라, 표를 섞어 쓸 때는 관례를 먼저 맞춘다.
+
+| $f(t)$ | $F(\omega)$ |
+| --- | --- |
+| $e^{-a\lvert t\rvert}$ ($a > 0$) | $2a/(a^2 + \omega^2)$ |
+| $\lvert t\rvert < T/2$에서 1, 밖에서 0 | $2\sin(\omega T/2)/\omega$ |
+| $e^{-t^2/(2\sigma^2)}$ | $\sigma\sqrt{2\pi}\,e^{-\sigma^2\omega^2/2}$ |
+| $\delta(t)$ | $1$ |
+| $f'(t)$ | $i\omega F(\omega)$ |
+| $f(t - t_0)$ | $e^{-i\omega t_0}F(\omega)$ |
+| $(f * g)(t)$ | $F(\omega)G(\omega)$ |
+
+에너지는 $\int\lvert f\rvert^2\,dt = \frac{1}{2\pi}\int\lvert F\rvert^2\,d\omega$로 보존된다(Parseval). 무한한 막대의 열 방정식 $u_t = ku_{xx}$, $u(x, 0) = f(x)$를 $x$에 대해 변환하면 $\hat u_t = -k\omega^2\hat u$가 되어
+
+$$
+u(x, t) = \int_{-\infty}^{\infty}f(\xi)\frac{1}{\sqrt{4\pi kt}}e^{-(x - \xi)^2/(4kt)}\,d\xi
+$$
+
+를 얻는다. 처음 온도 분포를 폭이 $\sqrt{2kt}$로 넓어지는 가우스 함수와 합성곱한 꼴이다. 표의 쌍과 이 해는 sympy로 확인했다.
+
 ## 유의점
 
 - 불연속점 근처에서 부분합은 점프 크기의 약 9%만큼 넘친다(Gibbs 현상). 항을 늘려도 넘치는 높이는 줄지 않는다.
@@ -109,6 +155,7 @@ $$
 ## 관련 개념
 
 - [[fourier-series|푸리에 급수]]: 복소 지수 형태, 스펙트럼, Gibbs 현상의 그림
+- [[fourier-transform|연속시간 푸리에 변환]]: 신호처리 관점의 성질과 쌍
 - [[series-solutions-special-functions|급수해와 특수함수]]
 - [[diffusion-ficks-law|확산과 Fick 법칙]]: 열 방정식과 같은 꼴의 확산 방정식
 - [[linear-second-order-ode|2계 선형 미분방정식 공식집]]

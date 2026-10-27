@@ -1,9 +1,9 @@
 ---
 title: 급수해와 특수함수
-aliases: [급수해, power series solution, Frobenius 방법, Frobenius method, 결정방정식, indicial equation, Legendre 방정식, Legendre 다항식, Bessel 방정식, Bessel 함수, 감마 함수, gamma function]
+aliases: [급수해, power series solution, Frobenius 방법, Frobenius method, 결정방정식, indicial equation, Legendre 방정식, Legendre 다항식, Bessel 방정식, Bessel 함수, 감마 함수, gamma function, Hermite 다항식, Chebyshev 다항식, Laguerre 다항식, 직교 다항식]
 date: 2026-10-26
 tags: [MAS201, 공학수학, 공식집]
-description: 계수가 상수가 아닌 2계 선형식을 거듭제곱급수로 푸는 방법, 정칙특이점에서의 Frobenius 방법과 세 경우, Legendre 방정식과 다항식, Bessel 방정식과 Bessel 함수의 공식과 성질을 한곳에 모은 공식집.
+description: 계수가 상수가 아닌 2계 선형식을 거듭제곱급수로 푸는 방법, 정칙특이점에서의 Frobenius 방법과 세 경우, Legendre 방정식과 다항식, Bessel 방정식과 Bessel 함수, Hermite·Chebyshev·Laguerre 다항식의 공식과 성질을 한곳에 모은 공식집.
 ---
 
 > [!abstract] 한눈에
@@ -47,7 +47,7 @@ $2xy'' + y' + y = 0$은 결정방정식 $2r(r-1) + r = 0$에서 $r = 0$, $1/2$�
 
 ## Legendre 방정식
 
-$(1 - x^2)y'' - 2xy' + n(n+1)y = 0$은 $x = \pm1$에 정칙특이점이 있다. $n$이 0 이상의 정수이면 급수 하나가 끊겨 다항식이 되고, $P_n(1) = 1$로 맞춘 것이 Legendre 다항식이다.
+$(1 - x^2)y'' - 2xy' + n(n+1)y = 0$은 $x = \pm1$에 정칙특이점이 있다. $n$이 0 이상의 정수이면 급수 하나가 끊겨 다항식이 된다. 이 다항식을 $P_n(1) = 1$이 되도록 정규화해 Legendre 다항식 $P_n$이라 부른다.
 
 | $n$ | $P_n(x)$ |
 | --- | --- |
@@ -90,6 +90,18 @@ $$
 - Fourier-Bessel 전개: $f(x) = \sum_i c_iJ_n(\alpha_ix)$, $c_i = \dfrac{2}{b^2J_{n+1}(\alpha_ib)^2}\int_0^b xJ_n(\alpha_ix)f(x)\,dx$
 
 감마 함수는 $\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}\,dt$이고 $\Gamma(z+1) = z\Gamma(z)$, $\Gamma(n+1) = n!$, $\Gamma(1/2) = \sqrt\pi$다.
+
+## 그 밖의 직교 다항식
+
+다른 2계 방정식에서도 $n$이 정수이면 다항식 해가 나오고, 각 다항식은 정해진 구간과 가중치에서 서로 직교한다.
+
+| 이름 | 방정식 | 구간, 가중치 | 처음 몇 개 | $\int w\,y_n^2\,dx$ |
+| --- | --- | --- | --- | --- |
+| Hermite $H_n$ | $y'' - 2xy' + 2ny = 0$ | $(-\infty, \infty)$, $e^{-x^2}$ | $1$, $2x$, $4x^2 - 2$, $8x^3 - 12x$ | $2^nn!\sqrt\pi$ |
+| Chebyshev $T_n$ | $(1 - x^2)y'' - xy' + n^2y = 0$ | $(-1, 1)$, $1/\sqrt{1 - x^2}$ | $1$, $x$, $2x^2 - 1$, $4x^3 - 3x$ | $\pi$ ($n = 0$), $\pi/2$ ($n \ge 1$) |
+| Laguerre $L_n$ | $xy'' + (1 - x)y' + ny = 0$ | $(0, \infty)$, $e^{-x}$ | $1$, $1 - x$, $\tfrac12(x^2 - 4x + 2)$ | $1$ |
+
+Hermite 다항식은 양자 조화진동자에서, 연관 Laguerre 다항식은 수소 원자의 반지름 방향 해에서 나온다. Chebyshev 다항식은 $T_n(\cos\theta) = \cos n\theta$를 만족해 $[-1, 1]$에서 값이 $\pm1$ 사이를 고르게 오르내리고, 이 성질 때문에 함수 근사와 필터 설계에 쓰인다. 표의 다항식과 노름은 sympy로 확인했다.
 
 ## 유의점
 

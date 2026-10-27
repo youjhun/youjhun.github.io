@@ -1,9 +1,9 @@
 ---
 title: 미분방정식의 수치해법
-aliases: [수치해법, Euler 방법, Euler method, 개선된 Euler 방법, Heun 방법, Runge-Kutta 방법, RK4, 국소 절단 오차, 강성 문제, stiff equation, 사격법, shooting method, 유한차분법]
+aliases: [수치해법, Euler 방법, Euler method, 개선된 Euler 방법, Heun 방법, Runge-Kutta 방법, RK4, 국소 절단 오차, 강성 문제, stiff equation, 사격법, shooting method, 유한차분법, Adams-Bashforth 방법, Adams-Moulton 방법, 예측자-보정자, RK45, 적응 간격]
 date: 2026-10-26
 tags: [MAS201, 공학수학, 공식집]
-description: 초기값 문제를 푸는 Euler, 개선된 Euler(Heun), 4차 Runge-Kutta 방법의 공식과 오차 차수, 시험 방정식으로 본 안정 조건, 강성 문제와 음함수 방법, 연립식과 경계값 문제(사격법, 유한차분법)를 한곳에 모은 공식집.
+description: 초기값 문제를 푸는 Euler, 개선된 Euler(Heun), 4차 Runge-Kutta 방법의 공식과 오차 차수, 시험 방정식으로 본 안정 조건, 강성 문제와 음함수 방법, 연립식과 경계값 문제(사격법, 유한차분법), Adams 다단계법과 적응 간격 조절을 한곳에 모은 공식집.
 ---
 
 > [!abstract] 한눈에
@@ -76,6 +76,28 @@ $y'' = f(x, y, y')$, $y(a) = \alpha$, $y(b) = \beta$처럼 조건이 양 끝에 
 
 - 사격법: $y'(a) = s$를 추측해 초기값 문제로 풀고, $y(b) - \beta$가 0이 되도록 $s$를 이분법이나 할선법으로 고친다. 선형식이면 추측 두 번의 선형결합으로 맞춘다.
 - 유한차분법: 구간을 $N$등분하고 $y'' \approx (y_{i+1} - 2y_i + y_{i-1})/h^2$, $y' \approx (y_{i+1} - y_{i-1})/(2h)$로 바꾸어 연립 대수방정식을 푼다. 선형식이면 삼중대각 행렬이 되고 오차는 $O(h^2)$이다.
+
+## 다단계법
+
+Runge-Kutta 방법은 한 걸음 안에서 기울기를 여러 번 계산한다. 다단계법은 이미 구한 앞 점들의 기울기를 다시 써서, 한 걸음에 $f$를 한두 번만 계산한다.
+
+| 방법 | 공식 | 차수 |
+| --- | --- | --- |
+| Adams-Bashforth 2단 | $y_{n+1} = y_n + \tfrac h2(3f_n - f_{n-1})$ | 2 |
+| Adams-Bashforth 4단 | $y_{n+1} = y_n + \tfrac{h}{24}(55f_n - 59f_{n-1} + 37f_{n-2} - 9f_{n-3})$ | 4 |
+| Adams-Moulton 4차 (보정) | $y_{n+1} = y_n + \tfrac{h}{24}(9f_{n+1} + 19f_n - 5f_{n-1} + f_{n-2})$ | 4 |
+
+$f_k = f(t_k, y_k)$다. Adams-Bashforth는 명시적이고, Adams-Moulton은 $f_{n+1}$이 들어 있어 음함수다. 보통 Adams-Bashforth로 $y_{n+1}$을 예측하고 그 값으로 $f_{n+1}$을 계산해 Adams-Moulton으로 한 번 보정한다(예측자-보정자).
+
+다단계법은 처음 몇 점이 없으므로 시작값을 RK4 같은 한 단계 방법으로 만든다. 간격을 바꾸면 앞 점들이 같은 간격으로 놓이지 않아 공식을 그대로 쓸 수 없다.
+
+## 간격 조절
+
+실제 풀이기는 걸음마다 국소 오차를 추정해 간격을 바꾼다. Runge-Kutta-Fehlberg나 Dormand-Prince(RK45) 방법은 같은 기울기들로 4차와 5차 근삿값을 함께 계산하고, 둘의 차이를 국소 오차 추정값 $e$로 쓴다.
+
+- $e$가 허용 오차 tol보다 크면 그 걸음을 버리고 $h$를 줄여 다시 계산한다.
+- 받아들인 걸음 뒤에는 $h_\text{new} = 0.9\,h\,(\text{tol}/e)^{1/5}$ 정도로 간격을 다시 정한다. 0.9는 다음 걸음이 다시 거절되지 않도록 둔 여유이고, 지수 1/5는 국소 오차가 $h^5$에 비례하는 데서 온다.
+- 강성 문제에서는 이런 명시적 방법이 안정 한계 때문에 아주 작은 간격만 고르므로, 음함수 방법(후진 미분 공식 등)으로 바꾼다.
 
 ## 유의점
 

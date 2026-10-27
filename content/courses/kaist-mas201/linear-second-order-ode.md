@@ -107,7 +107,7 @@ $x^2y'' - xy' + y = 0$은 $r^2 - 2r + 1 = 0$의 중근 1에서 $(c_1 + c_2\ln x)
 | 감쇠 | 조건 | 자유 응답 |
 | --- | --- | --- |
 | 과감쇠 | $\zeta > 1$ | 두 지수의 합, 진동 없음 |
-| 임계감쇠 | $\zeta = 1$ | $(c_1 + c_2t)e^{-\omega_nt}$, 진동이 없고, 진동하지 않는 경우 가운데 감쇠율이 가장 큼 |
+| 임계감쇠 | $\zeta = 1$ | $(c_1 + c_2t)e^{-\omega_nt}$, 진동하지 않는 경우 가운데 감쇠율이 가장 큼 |
 | 부족감쇠 | $0 < \zeta < 1$ | $e^{-\zeta\omega_nt}(c_1\cos\omega_dt + c_2\sin\omega_dt)$, $\omega_d = \omega_n\sqrt{1 - \zeta^2}$ |
 | 무감쇠 | $\zeta = 0$ | $c_1\cos\omega_nt + c_2\sin\omega_nt$ |
 
