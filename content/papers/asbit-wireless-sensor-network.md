@@ -118,6 +118,7 @@ _그림 3. 클록 방식별 수용 노드 수. 자유 발진기 750개(EER $1.19
 
 - [[matched-filter|정합 필터]]: 수신기가 겹친 신호에서 칩별 사건을 찾는 방법, Gold code의 상관 성질
 - [[sampling-aliasing|샘플링과 앨리어싱]]: 수신기가 RF 신호를 디지털로 받아들이는 첫 단계
+- [[neurograin-wireless-microimplants|논문: Neurograin]]: 같은 그룹의 TDMA 기반 분산 칩 네트워크
 - 이 논문에서 출발해, 공개 데이터(CRCNS pmd-1)로 여러 디코더의 스파이크 오류 내성을 따져 본 작업: [spike-error-tolerance-decoders](https://github.com/youjhun/spike-error-tolerance-decoders)
 
 ## 참고 자료

@@ -163,3 +163,9 @@
 - 바꾼 것: 다섯 문장 이상으로 남아 있던 문단 11개를 나눴다. 한 곳은 «이를»을 «누설을»로 바꿔 앞 문단 없이 읽히게 했다.
 - 재료: Dennis G. Zill, _Advanced Engineering Mathematics_. 새 공식과 예는 sympy로 확인했다.
 - 막힌 것: 없음.
+
+## 2026-10-27 (추가 실행 25)
+
+- 보강한 글: 논문 리뷰 세 편. [Patterned stimulation]을 3-coil 링크, daisy-chain 명령, 칩 특성, 급성·만성 실험, 링크 안정성, SAR, 한계 순으로 다시 썼다. [On-chip fuse programming]에 laser·FIB 공정 조건과 증폭기·주소·공진·공급 전압 네 사례의 수치를, [Neurograin]에 칩 회로, 두 TDMA 방식의 측정값, 3-coil 효율 식과 위치별 효율, SAR, 급성 실험을 더했다. ASBIT 리뷰에는 Neurograin 링크를 더했다.
+- 재료: Topdown에 올린 세 논문의 원문(본문·Methods·그림 설명)과 읽으며 남긴 질문. 이항검정과 dB 환산은 직접 계산해 확인했다.
+- 막힌 것: 세 논문 모두 보충 자료는 읽지 않았다. 인지과학 논문(Piercing of Consciousness)은 읽은 기록이 없어 리뷰를 쓰지 않았다.
