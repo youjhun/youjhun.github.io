@@ -1,6 +1,6 @@
 ---
 title: 증명 방법을 고르는 법
-aliases: [Proof Methods, 직접증명, 귀류법]
+aliases: [직접증명, 귀류법]
 tags: [CS204, 이산수학, 증명]
 date: 2026-10-21
 description: 직접증명·대우·모순·경우분석·반례를 명제 구조에 맞게 선택한다.

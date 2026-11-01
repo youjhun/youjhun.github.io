@@ -1,6 +1,6 @@
 ---
 title: IMU로 움직임 읽기
-aliases: [IMU, 관성센서, Accelerometer, Gyroscope]
+aliases: [관성센서, Accelerometer, Gyroscope]
 tags: [Human Sensing, IMU, 센서]
 date: 2026-10-21
 description: 가속도계와 자이로스코프의 측정량, 좌표계와 드리프트, 센서 융합의 기본.

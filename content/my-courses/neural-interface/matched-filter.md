@@ -67,6 +67,41 @@ _그림 2. 길이 31 Gold code. 왼쪽은 제 부호와의 상관으로 정렬�
 ![겹친 두 신호를 각자의 정합 필터로 가르기](../../images/matched-filter/separation.png)
 _그림 3. 겹친 신호에서 노드 A와 B를 각자의 정합 필터로 따로 찾아낸다._
 
+## 복소 상관과 I/Q
+
+복소 기저대역 수신 신호를 $r[n]=I[n]+jQ[n]$라 하면 시작 위치 $m$의 상관은
+
+$$z[m]=\sum_{k=0}^{L-1}r[m+k]s^*[k]$$
+
+다. 실수 부호 $s[k]\in\{-1,1\}$의 경우 I와 Q를 각각 같은 부호로 상관시킨 결과가 $z$의 실수부와 허수부가 된다. 길이 $L$의 causal FIR로 구현하면 $h[k]=s^*[L-1-k]$를 쓰고, 시작 시점 $m$의 정렬 봉우리는 출력 인덱스 $m+L-1$에 나온다.
+
+수신 위상이 일정하지만 알려지지 않아 $r[m+k]=Ae^{j\phi}s[k]+w[m+k]$라면 잡음을 제외한 상관은 $AE_se^{j\phi}$이고, $E_s=\sum_k|s[k]|^2$다. 실수부만 사용하면 $\phi=\pi/2$에서 신호 기여가 0이 되지만, $|z|$ 또는 $|z|^2$를 쓰면 일정한 위상 회전에 무관한 검출 점수를 얻는다.
+
+![수신 위상에 따른 상관 점수](../../images/matched-filter/iq-phase.png)
+_그림 4. 잡음 없는 단위 진폭 신호의 상관을 에너지로 정규화한 직접 계산. I만 사용한 점수는 위상에 따라 변하고 I/Q 상관의 크기는 일정하다. 위상은 패킷 안에서 일정하다고 가정했다._
+
+I/Q만으로 여러 송신기가 분리되는 것은 아니다. 부호별 상관이 송신기를 구별하고, I/Q는 각 복소 상관의 위상 정보를 보존한다. 위상을 이미 알고 coherent하게 검출하는 경우와 magnitude로 비동기 위상을 처리하는 경우는 검출 통계량과 문턱 조건도 다르다.
+
+## 주파수 오차와 템플릿 불일치
+
+일정한 위상 차이는 magnitude로 처리할 수 있지만, 주파수 오차 $\Delta f$는 패킷 안에서 위상을 계속 돌린다. 단위 크기 chip과 chip 간격 $T_c$를 가정하면 정렬된 상관의 정규화 크기는
+
+$$\frac{|z|}{AL}=\left|\frac{\sin(\pi L\Delta fT_c)}{L\sin(\pi\Delta fT_c)}\right|$$
+
+다. 분모와 분자가 모두 0인 점은 연속 극한으로 읽는다. 상관을 길게 누적해 얻는 이득은 주파수 오차에 대한 민감도와 함께 평가한다.
+
+chip clock 오차는 부호 경계의 시간을 바꾸므로 이 식의 반송파 주파수 오차와 별도로 다룬다. 여러 시간 지연·위상·clock rate의 템플릿을 비교하면 불일치를 줄일 수 있지만 연산과 검출 후보 수가 늘어난다. 부호 위상을 바꾸는 연산과 반송파 I/Q 회전도 구별한다.
+
+## 문턱과 오류의 단위
+
+복소 백색 원형 Gaussian 잡음에서, 각 표본의 I와 Q 잡음 분산을 각각 $\sigma^2$라 하자. 신호가 없을 때 $z$의 각 성분 분산은 $\sigma^2E_s$이며, 한 번의 비교에 대해
+
+$$P\left(|z|^2>\gamma\mid H_0\right)=\exp\left(-\frac{\gamma}{2\sigma^2E_s}\right)$$
+
+다. 한 위치의 false alarm 확률과 1초 동안 모든 부호·시점에서 발생하는 false event 수는 다르다. 겹치는 창의 점수는 서로 상관되므로, 독립 시행 수를 그대로 곱해 전체 오류율로 쓰지 않는다.
+
+실제 이벤트 검출은 문턱 외에도 봉우리 선택, 중복 제거 시간, 정답과의 허용 시간창을 정해야 한다. event miss, false event, timing error를 나누어 기록하면 낮은 표본별 오류율에 가려진 문제를 찾을 수 있다.
+
 ## 유의점
 
 - 정합 필터는 원래 파형을 되살리지 않는다. 출력은 각 위치가 $s$와 얼마나 닮았는지 나타내는 점수이고, 출력 봉우리의 모양은 원래 신호 모양이 아닌 $s$의 자기상관 모양을 따른다.
@@ -83,3 +118,5 @@ _그림 3. 겹친 신호에서 노드 A와 B를 각자의 정합 필터로 따�
 
 - J. G. Proakis, M. Salehi, _Digital Communications_, 5th ed., Ch. 4 (최적 수신기와 정합 필터)
 - R. Gold, "Optimal binary sequences for spread spectrum multiplexing," _IEEE Transactions on Information Theory_ 13(4), 619–621 (1967)
+
+- MIT OCW, [6.011 Signals, Systems and Inference, lecture notes](https://www.ocw.mit.edu/courses/6-011-signals-systems-and-inference-spring-2018/resources/lecture-notes/), Matched Filtering. 복소 상관·위상·오류 문턱의 식과 그림 4는 명시한 단순 모형으로 직접 유도했다.

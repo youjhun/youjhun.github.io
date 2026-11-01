@@ -1,6 +1,6 @@
 ---
 title: EMG는 무엇을 측정하는가
-aliases: [EMG, 근전도, Electromyography]
+aliases: [근전도, Electromyography]
 tags: [생체신호, Human Sensing, EMG]
 date: 2026-10-21
 description: 운동단위 활동이 피부 전극의 근전도 파형이 되기까지와 해석의 한계.

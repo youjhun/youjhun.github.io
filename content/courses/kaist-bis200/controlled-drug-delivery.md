@@ -1,6 +1,6 @@
 ---
 title: 제어 약물전달
-aliases: [Controlled Drug Delivery, Drug Delivery]
+aliases: [Drug Delivery]
 tags: [BiS200, 약물전달, 생체재료]
 date: 2026-10-21
 description: 약물의 양뿐 아니라 어디에 얼마나 빠르게 도달하는지를 공학적으로 설계하는 관점.
