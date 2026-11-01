@@ -1,18 +1,16 @@
 ---
 title: 무선 전력과 원격 측정
 aliases:
-  [
-    이식 장치 무선 전력,
-    wireless power transfer,
-    유도 결합,
-    inductive coupling,
-    결합 계수,
-    coupling coefficient,
-    신경 원격 측정,
-    neural telemetry,
-    생체 봉지,
-    encapsulation,
-  ]
+  - 이식 장치 무선 전력
+  - wireless power transfer
+  - 유도 결합
+  - inductive coupling
+  - 결합 계수
+  - coupling coefficient
+  - 신경 원격 측정
+  - neural telemetry
+  - 생체 봉지
+  - encapsulation
 tags: [신경공학, 무선, 이식 장치]
 date: 2026-10-26
 description: 이식형 신경 기록 장치가 선 없이 데이터를 보내고 전력을 받는 방법. 유도 결합과 결합 계수, 링크 효율, 데이터 전송 방식(FSK, UWB, 적외선), 중간장·광·초음파 전력 전달, 몸 안에서 전자 회로를 지키는 봉지 재료.
@@ -66,7 +64,7 @@ _그림 1. 왼쪽은 같은 축 위의 두 원형 고리(외부 고리 반지름
 
 $$P_{\mathrm{dBm}}=10\log_{10}(P_{\mathrm{mW}})$$
 
-다. dB는 전력비를 나타내므로 같은 기준면으로 정의한 경로 이득 $G_{\mathrm{link,dB}}$에 대해 $P_{\mathrm{rx,dBm}}=P_{\mathrm{tx,dBm}}+G_{\mathrm{link,dB}}$로 계산한다.
+다. dB는 전력비를 나타내므로 명시한 송신·수신 기준면 사이의 경로 이득 $G_{\mathrm{link,dB}}$에 대해 $P_{\mathrm{rx,dBm}}=P_{\mathrm{tx,dBm}}+G_{\mathrm{link,dB}}$로 계산한다.
 
 가상 예에서 송신 포트 전력 18 dBm, 수신 포트까지의 이득 $-21$ dB이면 수신 전력은 $-3$ dBm, 약 0.501 mW다. 그 조건의 정류 효율 40%, regulator 효율 80%를 가정하면 부하에는 약 0.160 mW가 남는다. 0.120 mW를 쓰는 부하에 약 0.040 mW의 여유가 있지만, 정렬과 부하 변화에 따른 효율 변화를 반영한 값은 아니다.
 
@@ -86,7 +84,7 @@ backscatter 노드는 안테나나 코일에 연결된 부하를 바꾸어 반�
 
 수신기는 전력 공급이 되는 조건과 응답을 검출하는 조건을 모두 만족해야 한다. 칩이 켜져도 backscatter가 수신 감도 아래에 있거나, 누설 반송파가 수신기를 압축하면 데이터 링크가 실패할 수 있다. 반대로 수신 감도가 좋아도 칩에 동작 전력이 도달하지 않으면 응답이 생기지 않는다.
 
-duplexer는 서로 다른 주파수 대역의 송신·수신 경로를 필터로 분리해 하나의 안테나를 공유하게 하는 소자다. 같은 주파수에서 진행 방향을 가르는 circulator와 역할이 다르다. 주파수 분리를 사용하는 시스템에서도 삽입 손실, 유한한 격리도, 송신 잡음과 수신기 동적 범위를 함께 확인한다.
+주파수 분할 방식의 duplexer는 서로 다른 주파수 대역의 송신·수신 경로를 필터로 분리해 하나의 안테나를 공유하게 한다. 같은 주파수에서 진행 방향을 가르는 circulator와 역할이 다르다. 주파수 분리를 사용하는 시스템에서도 삽입 손실, 유한한 격리도, 송신 잡음과 수신기 동적 범위를 함께 확인한다.
 
 ## 다른 전력 전달 방식
 
@@ -104,7 +102,7 @@ duplexer는 서로 다른 주파수 대역의 송신·수신 경로를 필터로
 2. 체액으로부터 전자 회로를 보호한다.
 3. 기계적 응력으로부터 조립체를 보호한다.
 
-봉지 장벽은 물과 물에 녹은 이온을 어느 방향으로도 통과시키지 않아야 한다. 티타늄이나 유리로 밀봉한 패키지는 생체 적합성이 좋고 물과 기체 투과율이 매우 낮으며 튼튼하지만 크다. 초기 장치에는 다루기 쉽고 생체 적합한 PDMS(실리콘 엘라스토머)를 두껍게 입혔고, 물에 약한 정도가 부분마다 달라 장벽 두께를 부분마다 달리했다. 이 장은 물 흡수와 투과가 훨씬 적은 열가소성 고분자인 액정 고분자(LCP)를 봉지재나 유연 기판으로 쓴다.
+봉지 장벽은 물과 물에 녹은 이온을 어느 방향으로도 통과시키지 않아야 한다. 티타늄이나 유리로 밀봉한 패키지는 생체 적합성이 좋고 물과 기체 투과율이 매우 낮으며 튼튼하지만 크다. 초기 장치에는 다루기 쉽고 생체 적합한 PDMS(실리콘 엘라스토머)를 두껍게 입혔고, 물에 약한 정도가 부분마다 달라 장벽 두께를 부분마다 달리했다. 원문은 PDMS보다 물 흡수와 투과가 적은 열가소성 고분자인 액정 고분자(LCP)를 봉지재나 유연 기판으로 사용하는 사례를 소개한다.
 
 ## 유의점
 
@@ -128,3 +126,6 @@ duplexer는 서로 다른 주파수 대역의 송신·수신 경로를 필터로
 
 - Joseph Creech, Analog Devices, [S-Parameters Allow High-Frequency Verification of RF Switch Models](https://www.analog.com/en/resources/analog-dialogue/articles/s-parameters-allow-hi-freq-verification.html): 정합 기준의 S-parameter와 반사·전달 측정.
 - 링크 예산 수치는 특정 논문의 실험 재현값이 아닌 본문 조건의 직접 계산이다.
+
+- NIST, [Baseband Voltage and Power in Load-Modulated Digital Backscatter](https://www.nist.gov/publications/baseband-voltage-and-power-load-modulated-digital-backscatter): 부하 변조와 backscatter 수신 전압·전력.
+- Tait Communications, [When and where to use a duplexer](https://www.taitcommunications.com/en/about-us/news/2014/05/13/when-and-where-to-use-a-duplexer): 주파수 분리와 공용 안테나의 송수신 격리.
