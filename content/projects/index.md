@@ -10,6 +10,10 @@ description: 문제를 정의하고, 데이터를 다듬고, 실험으로 주장
 - [[schizophrenia-eeg|EEG로 조현병 분류하기 (실습)]]: 뇌파 특징과 사람 단위 교차검증
 - 배운 것: [[data-leakage|데이터 누수와 검증 단위]]
 
+## 아날로그 계측
+
+- [[emg-afe-kicad|EMG 앞단 회로 시뮬레이션]]: 기준전압·차동 증폭·고역통과·추가 증폭과 오프셋을 KiCad에서 비교한다.
+
 ## 프로젝트와 개념의 연결
 
 디코더의 수학은 [[linear-regression|선형 회귀]], [[least-squares|최소제곱]], [[svd|SVD]]와 이어진다. 무선 전송 오류의 배경은 [[asbit-wireless-sensor-network|ASBIT]]에 있다.
