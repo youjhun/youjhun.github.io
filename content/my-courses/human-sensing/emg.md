@@ -36,3 +36,5 @@ description: 운동단위 활동이 피부 전극의 근전도 파형이 되기�
 
 - [[biosignal-measurement-chain|생체신호 측정 사슬]]
 - [[imu|IMU로 움직임 읽기]]
+
+- [[emg-afe-kicad|프로젝트: EMG 앞단 회로 시뮬레이션]]
