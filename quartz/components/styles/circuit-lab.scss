@@ -1,0 +1,160 @@
+@use "../../styles/variables.scss" as *;
+
+.circuit-lab {
+  --trace-0: #16736b;
+  --trace-1: #7550a4;
+  --trace-2: #9a5718;
+
+  section {
+    margin-block: 1.5rem;
+    padding: 1rem clamp(0.6rem, 2vw, 1.25rem);
+    border: 1px solid var(--lightgray);
+    border-radius: 0.75rem;
+    scroll-margin-top: 1rem;
+
+    @media all and ($mobile) {
+      scroll-margin-top: 8rem;
+    }
+  }
+
+  h2 {
+    margin: 0 0 0.65rem;
+  }
+
+  .circuit-lab-controls {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(10rem, 100%), 1fr));
+    gap: 0.65rem 1rem;
+    margin-block: 1rem;
+  }
+
+  .circuit-lab-control {
+    display: grid;
+    align-content: space-between;
+    gap: 0.3rem;
+    color: var(--dark);
+    font-size: 0.94rem;
+    font-weight: 600;
+  }
+
+  input,
+  select {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 2rem;
+    margin: 0;
+    accent-color: var(--trace-0);
+    color: var(--dark);
+    font: inherit;
+  }
+
+  select {
+    padding: 0.2rem;
+    border: 1px solid var(--gray);
+    border-radius: 0.3rem;
+    background: var(--light);
+  }
+
+  .circuit-lab-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.9rem;
+    margin: 0.5rem 0 0.25rem;
+    padding: 0;
+    list-style: none;
+    font-size: 0.86rem;
+
+    li::before {
+      display: inline-block;
+      width: 1.4rem;
+      margin: 0 0.35rem 0.2em 0;
+      border-top: 2px solid var(--trace);
+      content: "";
+    }
+
+    .series-1::before {
+      border-top-style: dashed;
+    }
+
+    .series-2::before {
+      border-top-style: dotted;
+    }
+  }
+
+  .series-0 {
+    --trace: var(--trace-0);
+  }
+
+  .series-1 {
+    --trace: var(--trace-1);
+  }
+
+  .series-2 {
+    --trace: var(--trace-2);
+  }
+
+  .circuit-lab-chart {
+    display: block;
+    width: 100%;
+    margin: 0.3rem 0 0.65rem;
+
+    text {
+      fill: var(--darkgray);
+      font: 17px var(--bodyFont);
+    }
+
+    line {
+      vector-effect: non-scaling-stroke;
+    }
+
+    .grid {
+      stroke: var(--lightgray);
+    }
+
+    .axis,
+    .cursor {
+      stroke: var(--gray);
+    }
+
+    .cursor {
+      stroke-dasharray: 2 3;
+    }
+
+    polyline {
+      fill: none;
+      stroke: var(--trace);
+      stroke-width: 2.2px;
+      vector-effect: non-scaling-stroke;
+
+      &.series-1 {
+        stroke-dasharray: 8 5;
+      }
+
+      &.series-2 {
+        stroke-dasharray: 2 4;
+      }
+    }
+
+    circle {
+      fill: var(--trace);
+    }
+  }
+
+  output {
+    display: block;
+    padding: 0.55rem 0.75rem;
+    border-radius: 0.35rem;
+    background: var(--highlight);
+    color: var(--dark);
+    font-size: 0.9rem;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.55;
+    white-space: pre-line;
+  }
+}
+
+:root[saved-theme="dark"] .circuit-lab {
+  --trace-0: #74d2c2;
+  --trace-1: #c8adeb;
+  --trace-2: #f3b87d;
+}

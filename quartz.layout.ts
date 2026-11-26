@@ -1,11 +1,12 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
+import CircuitLab from "./quartz/components/CircuitLab"
 
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
-  afterBody: [],
+  afterBody: [CircuitLab({ slug: "courses/kaist-ee201/circuit-response-lab" })],
   footer: Component.Footer({
     links: {
       GitHub: "https://github.com/youjhun",
